@@ -8,4 +8,23 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="dependencies\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="imapimgd">
+      <HintPath>..\..\Program Files\Nanosoft\nanoCAD x64 25.0\bin_nPlat\imapimgd.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MapiBaseTypes">
+      <HintPath>..\..\Program Files\Nanosoft\nanoCAD x64 25.0\bin_nPlat\mapibasetypes.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="mapimgd">
+      <HintPath>..\..\Program Files\Nanosoft\nanoCAD x64 25.0\bin_nPlat\mapimgd.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+
 </Project>
