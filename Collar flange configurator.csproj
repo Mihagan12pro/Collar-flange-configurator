@@ -11,20 +11,32 @@
   <ItemGroup>
     <Reference Include="imapimgd">
       <HintPath>..\..\Program Files\Nanosoft\nanoCAD x64 25.0\bin_nPlat\imapimgd.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="MapiBaseTypes">
       <HintPath>..\..\Program Files\Nanosoft\nanoCAD x64 25.0\bin_nPlat\mapibasetypes.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="mapimgd">
       <HintPath>..\..\Program Files\Nanosoft\nanoCAD x64 25.0\bin_nPlat\mapimgd.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Wpf override\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="dependencies\imapimgd.dll">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="dependencies\mapibasetypes.dll">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="dependencies\mapimgd.dll">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
