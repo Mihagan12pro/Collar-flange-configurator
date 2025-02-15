@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0-windows</TargetFramework>
@@ -21,6 +21,10 @@
       <HintPath>..\..\Program Files\Nanosoft\nanoCAD x64 25.0\bin_nPlat\mapimgd.dll</HintPath>
       <Private>True</Private>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Wpf override\" />
   </ItemGroup>
 
 </Project>
