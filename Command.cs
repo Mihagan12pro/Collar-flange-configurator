@@ -16,7 +16,9 @@ namespace Collar_flange_configurator
         [CommandMethod("Collar_flange", CommandFlags.NoCheck | CommandFlags.NoPrefix)]
         public void CreateMainDialog()
         {
+            MainDialog main = new MainDialog();
 
+            main.ShowDialog();
         }
     }
 }
