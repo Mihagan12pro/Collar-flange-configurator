@@ -9,10 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="dependencies\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="imapimgd">
       <HintPath>..\..\Program Files\Nanosoft\nanoCAD x64 25.0\bin_nPlat\imapimgd.dll</HintPath>
       <Private>True</Private>
