@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,10 +22,6 @@
       <HintPath>..\..\Program Files\Nanosoft\nanoCAD x64 25.0\bin_nPlat\mapimgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Wpf override\" />
   </ItemGroup>
 
   <ItemGroup>
