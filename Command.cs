@@ -13,6 +13,10 @@ namespace Collar_flange_configurator
 {
     internal class Command
     {
-       
+        [CommandMethod("Collar_flange","Воротниковый_фланец", CommandFlags.NoCheck | CommandFlags.NoPrefix)]
+        public void CreateMainDialog()
+        {
+
+        }
     }
 }
