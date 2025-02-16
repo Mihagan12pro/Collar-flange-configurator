@@ -18,7 +18,7 @@ namespace Collar_flange_configurator
         {
             MainDialog main = new MainDialog();
 
-            main.ShowDialog();
+            main.Show();
         }
     }
 }

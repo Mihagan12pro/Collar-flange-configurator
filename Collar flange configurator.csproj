@@ -10,18 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <COMReference Include="nanoCAD">
-      <WrapperTool>tlbimp</WrapperTool>
-      <VersionMinor>0</VersionMinor>
-      <VersionMajor>25</VersionMajor>
-      <Guid>6d7a780f-9c4c-4abb-ad65-602564f354c0</Guid>
-      <Lcid>0</Lcid>
-      <Isolated>false</Isolated>
-      <EmbedInteropTypes>true</EmbedInteropTypes>
-    </COMReference>
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="imapimgd">
       <HintPath>..\..\Program Files\Nanosoft\nanoCAD x64 25.0\bin_nPlat\imapimgd.dll</HintPath>
       <Private>False</Private>
