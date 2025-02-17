@@ -10,6 +10,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="MainDialog.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="MainDialog.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="hostdbmgd">
+      <HintPath>dependencies\hostdbmgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="hostmgd">
+      <HintPath>dependencies\hostmgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="imapimgd">
       <HintPath>..\..\Program Files\Nanosoft\nanoCAD x64 25.0\bin_nPlat\imapimgd.dll</HintPath>
       <Private>False</Private>

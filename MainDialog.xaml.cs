@@ -11,7 +11,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using Multicad.Runtime;
+using System.Windows.Documents;
+using System.IO;
+using System.Diagnostics;
 namespace Collar_flange_configurator
 {
     /// <summary>
@@ -22,6 +25,13 @@ namespace Collar_flange_configurator
         public MainDialog()
         {
             InitializeComponent();
+
+
+            //Process currentProcess = Process.GetCurrentProcess();
+
+            //this.Owner = currentProcess.MainWindowTitle.;
         }
+
+       
     }
 }
