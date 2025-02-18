@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Collar_flange_configurator"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Width="300" Background="White">
+    <Grid  Background="White">
         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="8" Orientation="Horizontal" Width="300">
             <Label Content="Количество примитивов в модели:"/>
             <Label Name="NumEntsLabel" Content="0" MinWidth="50"/>
