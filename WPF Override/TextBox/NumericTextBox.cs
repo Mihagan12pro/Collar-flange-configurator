@@ -8,10 +8,10 @@ using System.Windows.Input;
 
 namespace Collar_flange_configurator.WPF_Override
 {
-    internal abstract class CustomTextBox : TextBox
+    internal abstract class NumericTextBox : TextBox
     {
 
-        public CustomTextBox()
+        public NumericTextBox()
         {
             KeyDown += CustomTextBox_KeyDown;
             LostFocus += CustomTextBox_LostFocus;

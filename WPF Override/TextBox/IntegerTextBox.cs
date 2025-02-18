@@ -7,9 +7,9 @@ using System.Windows.Input;
 
 namespace Collar_flange_configurator.WPF_Override
 {
-    internal class NumberTextBox : CustomTextBox
+    internal class IntegerTextBox : NumericTextBox
     {
-        public NumberTextBox()
+        public IntegerTextBox()
         {
             
         }
