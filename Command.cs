@@ -49,7 +49,7 @@ namespace Collar_flange_configurator
 
             paletteSet.Visible = true;
 
-
+            
         }
     }
 }

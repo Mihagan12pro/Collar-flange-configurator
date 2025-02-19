@@ -10,10 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="CollarFlangeMainWindow.xaml.cs" />
     <Compile Remove="MainDialog.xaml.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <Page Remove="CollarFlangeMainWindow.xaml" />
     <Page Remove="MainDialog.xaml" />
   </ItemGroup>
 

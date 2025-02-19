@@ -4,15 +4,20 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Collar_flange_configurator"
-             xmlns:override ="clr-namespace:Collar_flange_configurator.WPF_Override"
+             xmlns:override ="clr-namespace:Collar_flange_configurator.WPF_Override.TextBox"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid  Background="White">
         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="8" Orientation="Horizontal" Width="300">
+            <Label>Дробное</Label>
+            <override:DoubleTextBox></override:DoubleTextBox>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30" Orientation="Horizontal" Width="300">
+            <Label>Целочисленное</Label>
             <override:IntegerTextBox></override:IntegerTextBox>
         </StackPanel>
 
-        
+
 
     </Grid>
 </UserControl>

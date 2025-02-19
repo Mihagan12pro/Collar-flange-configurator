@@ -5,13 +5,33 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace Collar_flange_configurator.WPF_Override
+namespace Collar_flange_configurator.WPF_Override.TextBox
 {
     internal class IntegerTextBox : NumericTextBox
     {
         public IntegerTextBox()
         {
-            
+         
         }
+        protected override bool IsValideKeyDown(Key key)
+        {
+            if ((key >= Key.D0 && key <= Key.D9) || (key >= Key.NumPad0 && key <= Key.NumPad9))
+            {
+                return true;
+            }
+            return false;
+        }
+        //protected override bool IsValideKeyDown(Key key)
+        //{
+        //    if (base.IsValideKeyDown(key))
+        //    {
+        //        if (StartsWithZero() && CaretIndex != 0)
+        //        {
+        //            return false;
+        //        }
+        //        return base.IsValideKeyDown(key);
+        //    }
+        //    return false;
+        //}
     }
 }

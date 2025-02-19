@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Controls;
 using System.Windows.Input;
-
 namespace Collar_flange_configurator.WPF_Override
 {
-    internal abstract class NumericTextBox : TextBox
+    internal abstract class NumericTextBox : System.Windows.Controls.TextBox
     {
-
+        protected Key[] numberKeys;
         public NumericTextBox()
         {
+            //numberKeys = new Key[] {Key.D0, Key.D1, Key.D2, Key.D3, Key.D4, Key.D5
+            //,Key.D6,Key.D7,Key.D8,Key.D9,Key.Num};
             KeyDown += CustomTextBox_KeyDown;
             LostFocus += CustomTextBox_LostFocus;
         }
@@ -35,11 +35,16 @@ namespace Collar_flange_configurator.WPF_Override
 
         protected virtual bool IsValideKeyDown(System.Windows.Input.Key key)
         {
-            if (key < Key.D0 || key > Key.D9)
+            if ((key >= Key.D0 && key <= Key.D9) || (key >= Key.NumPad0 && key <= Key.NumPad9))
             {
                 return false;
             }
             return true;
         }
+
+        //protected bool StartsWithZero()
+        //{
+        //    return Text.StartsWith('0');
+        //}
     }
 }

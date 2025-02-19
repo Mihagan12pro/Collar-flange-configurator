@@ -6,6 +6,10 @@
     "Профиль 1": {
       "commandName": "Executable",
       "executablePath": "C:\\Program Files\\Nanosoft\\nanoCAD Mechanica PRO 1.0\\nmp.exe"
+    },
+    "nanoCAD": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files\\Nanosoft\\nanoCAD x64 25.0\\nCad.exe"
     }
   }
 }
