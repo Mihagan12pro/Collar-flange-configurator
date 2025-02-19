@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Collar_flange_configurator.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,8 @@ namespace Collar_flange_configurator
         public CollarFlangeMaster()
         {
             InitializeComponent();
+
+            DataContext = new CollarFlangeViewModel();
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Collar_flange_configurator
         [CommandMethod("Collar_flange")]
         public void CreateMainDialog()
         {
-
+            
 
 
             paletteSet = new PaletteSet("Мастер воротникового фланца");
