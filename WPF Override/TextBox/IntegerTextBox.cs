@@ -21,17 +21,5 @@ namespace Collar_flange_configurator.WPF_Override.TextBox
             }
             return false;
         }
-        //protected override bool IsValideKeyDown(Key key)
-        //{
-        //    if (base.IsValideKeyDown(key))
-        //    {
-        //        if (StartsWithZero() && CaretIndex != 0)
-        //        {
-        //            return false;
-        //        }
-        //        return base.IsValideKeyDown(key);
-        //    }
-        //    return false;
-        //}
     }
 }

@@ -21,14 +21,6 @@ namespace Collar_flange_configurator.WPF_Override.TextBox
                     }
                 }
                 return true;
-                //else
-                //{
-                //    if (StartsWithZero() && (!Text.Contains(',') && key != Key.OemComma) && CaretIndex != 0)
-                //    {
-                //        return false;
-                //    }
-                //}
-                //return true; 
             }
             return false;
         }

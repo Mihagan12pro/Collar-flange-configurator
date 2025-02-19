@@ -11,8 +11,6 @@ namespace Collar_flange_configurator.WPF_Override
         protected Key[] numberKeys;
         public NumericTextBox()
         {
-            //numberKeys = new Key[] {Key.D0, Key.D1, Key.D2, Key.D3, Key.D4, Key.D5
-            //,Key.D6,Key.D7,Key.D8,Key.D9,Key.Num};
             KeyDown += CustomTextBox_KeyDown;
             LostFocus += CustomTextBox_LostFocus;
         }
@@ -41,10 +39,5 @@ namespace Collar_flange_configurator.WPF_Override
             }
             return true;
         }
-
-        //protected bool StartsWithZero()
-        //{
-        //    return Text.StartsWith('0');
-        //}
     }
 }
