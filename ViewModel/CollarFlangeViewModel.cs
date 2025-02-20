@@ -12,19 +12,7 @@ namespace Collar_flange_configurator.ViewModel
 {
     internal class CollarFlangeViewModel : INotifyPropertyChanged
     {
-        private BitmapImage mainTabPlaceholder;
-        public BitmapImage MainTabPlaceholder
-        {
-            get
-            {
-                return mainTabPlaceholder;
-            }
-            private set
-            {
-                mainTabPlaceholder = value;
-                OnPropertyChanged();
-            }
-        }
+     
 
 
         public event PropertyChangedEventHandler? PropertyChanged;
@@ -37,7 +25,8 @@ namespace Collar_flange_configurator.ViewModel
 
         public CollarFlangeViewModel()
         {
-            MainTabPlaceholder = new BitmapImage(new Uri(new FileInfo(@"..\..\..\..\Images\Placeholders\MainTab Placeholder.bmp").FullName));
+      
+           
         }
     }
 }

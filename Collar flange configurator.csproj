@@ -15,6 +15,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Images\Placeholders\MainTab Placeholder.bmp" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Page Remove="CollarFlangeMainWindow.xaml" />
     <Page Remove="MainDialog.xaml" />
   </ItemGroup>
@@ -56,6 +60,10 @@
 
   <ItemGroup>
     <Folder Include="Images\Sketches\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Placeholders\MainTab Placeholder.bmp" />
   </ItemGroup>
 
 </Project>

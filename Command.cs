@@ -23,7 +23,7 @@ namespace Collar_flange_configurator
 
 
             paletteSet = new PaletteSet("Мастер воротникового фланца");
-            paletteSet.Size = new System.Drawing.Size(600, 600);
+            paletteSet.Size = new System.Drawing.Size(600, 650);
             paletteSet.MinimumSize = new System.Drawing.Size(300, 300);
 
             CollarFlangeMaster master = new CollarFlangeMaster();

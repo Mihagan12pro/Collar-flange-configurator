@@ -12,10 +12,12 @@
             <TabItem Header="Главная" Name="MainTabItem">
                 <StackPanel Orientation="Vertical">
                     <Border BorderBrush="Black" BorderThickness="2" >
-                        <Image Stretch="Fill" Source="{Binding MainTabPlaceholder}">
+                        <Image Stretch="Fill" StretchDirection="Both"  Source="Images\Placeholders\MainTab Placeholder.bmp">
                             
                         </Image>
                     </Border>
+                    <RadioButton Name="Config3DModelRadio">Конфигурация 3D модели</RadioButton>
+                    <RadioButton Name="AdaptingModelToAssembleRadio">Подгон модели под сборку</RadioButton>
                 </StackPanel>
             </TabItem>
             <TabItem Header="Размеры ГОСТ 33259-2015">
