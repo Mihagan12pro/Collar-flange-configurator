@@ -9,25 +9,27 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid  Background="White">
         <TabControl>
+            
             <TabItem Header="Главная" Name="MainTabItem">
-                <StackPanel Orientation="Vertical">
-                    <Border BorderBrush="Black" BorderThickness="2" >
-                        <Image Stretch="Fill" StretchDirection="Both"  Source="Images\Placeholders\MainTab Placeholder.bmp"></Image>
-                    </Border>
-                    <Viewbox  Margin="5">
-                        <StackPanel Orientation="Horizontal">
-                            <StackPanel>
-                                <RadioButton Name="Config3DModelRadio">Конфигурация 3D модели</RadioButton>
-                                <RadioButton Name="AdaptingModelToAssembleRadio">Подгон модели под сборку</RadioButton> 
+                <Viewbox>
+                    <StackPanel Orientation="Vertical" >
+                        
+                        <Border BorderBrush="Black" BorderThickness="2" >
+                            <Image Name="MainTabImage"  Source="Images\Placeholders\MainTab Placeholder.bmp" SizeChanged="Image_SizeChanged"></Image>
+                        </Border>
+
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel>
+                                    <RadioButton Name="Config3DModelRadio">Конфигурация 3D модели</RadioButton>
+                                    <RadioButton Name="AdaptingModelToAssembleRadio">Подгон модели под сборку</RadioButton>
+                                </StackPanel>
+
+                            <Button Margin="5" Width="100">Построить</Button>
                             </StackPanel>
-                           
-                            <Button Margin="5">Hello world</Button>
-                        </StackPanel>
-                       
-                    </Viewbox>
-                   
-                </StackPanel>
+                    </StackPanel>
+               </Viewbox>
             </TabItem>
+            
             <TabItem Header="Размеры ГОСТ 33259-2015">
                 
             </TabItem>
@@ -37,6 +39,7 @@
             <TabItem Header="Прочее">
                 
             </TabItem>
+            
         </TabControl>
     </Grid>
 </UserControl>

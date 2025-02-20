@@ -25,5 +25,10 @@ namespace Collar_flange_configurator
         {
             InitializeComponent();
         }
+
+        private void Image_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            MainTabImage.Height = MainTabImage.Width;
+        }
     }
 }
