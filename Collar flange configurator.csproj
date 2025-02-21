@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <Compile Remove="CollarFlangeMainWindow.xaml.cs" />
-    <Compile Remove="MainDialog.xaml.cs" />
+    <Compile Remove="CollarFlangeMaster.xaml.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,7 +20,7 @@
 
   <ItemGroup>
     <Page Remove="CollarFlangeMainWindow.xaml" />
-    <Page Remove="MainDialog.xaml" />
+    <Page Remove="CollarFlangeMaster.xaml" />
   </ItemGroup>
 
   <ItemGroup>
