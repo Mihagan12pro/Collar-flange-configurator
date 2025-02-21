@@ -14,7 +14,7 @@ namespace Collar_flange_configurator
 {
     internal class Command
     {
-        [CommandMethod("Collar_flange_master")]
+        [CommandMethod("Collar_flange")]
         public void CreateMainDialog()
         {
             MainDialog main = new MainDialog();
