@@ -5,42 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Collar_flange_configurator"
         mc:Ignorable="d"
-        Title="Мастер воротниковых фланцев" Height="600" Width="600" ResizeMode="NoResize">
+        Title="Мастер воротниковых фланцев" Height="600" Width="600" ResizeMode="NoResize" >
     <Grid>
-        <TabControl>
+        <TabControl Background="White" BorderBrush="White">
 
-        <TabItem Header="Главная" Name="MainTabItem">
+            <TabItem Header="Главная" Name="MainTabItem" BorderBrush="White" Background="#f0f0f0">
 
-            <StackPanel Orientation="Vertical" >
+                <StackPanel Orientation="Vertical" Background="#f0f0f0">
 
-                <Border BorderBrush="Black" BorderThickness="2" >
-                    <Image Name="MainTabImage" Height="400" Width="400"  Source="Images\Placeholders\MainTab Placeholder.bmp" ></Image>
-                </Border>
+                    <Border BorderBrush="Black" BorderThickness="2">
+                        <Image Name="MainTabImage" Stretch="Fill" Height="400" Width="587"  Source="Images\Placeholders\MainTab Placeholder.bmp" ></Image>
+                    </Border>
 
-                <StackPanel Orientation="Vertical" Margin="0 20">
-                    <GroupBox Header="Выбор способа создания">
-                        <StackPanel>
-                            <RadioButton Name="Config3DModelRadio">Конфигурация 3D модели</RadioButton>
-                            <RadioButton Name="AdaptingModelToAssembleRadio">Подгон модели под сборку</RadioButton>
-                        </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin="0 20">
+                        <GroupBox Header="Выбор способа создания">
+                            <StackPanel>
+                                <RadioButton Name="Config3DModelRadio">Конфигурация 3D модели</RadioButton>
+                                <RadioButton Name="AdaptingModelToAssembleRadio">Подгон модели под сборку</RadioButton>
+                            </StackPanel>
 
-                    </GroupBox>
-                    <Button Width="100" Content="Построить" HorizontalAlignment="Left" Margin="1 10"/>
+                        </GroupBox>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" VerticalAlignment="Bottom" Margin="0 10">
+                        <Button Width="62" Height="20" Content="Построить" IsEnabled="False"/>
+                        <Button Width="60" Height="20" Margin="3 0" Content="Отмена" IsCancel="True"/>
+                    </StackPanel>
                 </StackPanel>
-            </StackPanel>
 
-        </TabItem>
+            </TabItem>
 
-        <TabItem Header="Размеры ГОСТ 33259-2015">
+            <TabItem Header="Размеры ГОСТ 33259-2015">
 
-        </TabItem>
-        <TabItem Header="Второстепенные размеры">
+            </TabItem>
+            <TabItem Header="Второстепенные размеры">
 
-        </TabItem>
-        <TabItem Header="Прочее">
+            </TabItem>
+            <TabItem Header="Прочее" BorderBrush="White">
 
-        </TabItem>
+            </TabItem>
 
-    </TabControl>
+        </TabControl>
     </Grid>
 </Window>
