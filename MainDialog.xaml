@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Collar_flange_configurator"
         mc:Ignorable="d"
-        Title="Мастер воротниковых фланцев" Height="600" Width="600" ResizeMode="NoResize" >
+        Title="Мастер воротниковых фланцев" Height="600" Width="600" ResizeMode="NoResize" ShowInTaskbar="False" >
     <Window.Resources>
-        <ResourceDictionary Source="Styles/StackPanelsStyles.xaml" />
+        <ResourceDictionary Source="Styles/MainWindowStyles.xaml"></ResourceDictionary>
     </Window.Resources>
     <Grid>
-        <TabControl Background="White" BorderBrush="White">
+        <TabControl Background="#f0f0f0">
 
-            <TabItem Header="Главная" Name="MainTabItem" BorderBrush="White"  Background="#f0f0f0">
+            <TabItem  Header="Главная" Name="MainTabItem" Style="{StaticResource TabItemNCAD}">
 
                 <StackPanel Name="MainTabItemStackPanel"  Orientation="Vertical"  Style="{StaticResource MajorStackPanel}">
 
@@ -42,13 +42,13 @@
 
             </TabItem>
 
-            <TabItem Header="Размеры ГОСТ 33259-2015">
+            <TabItem Header="Размеры ГОСТ 33259-2015" Style="{StaticResource TabItemNCAD}">
 
             </TabItem>
-            <TabItem Header="Второстепенные размеры">
+            <TabItem Header="Второстепенные размеры" Style="{StaticResource TabItemNCAD}">
 
             </TabItem>
-            <TabItem Header="Прочее" BorderBrush="White">
+            <TabItem Header="Прочее" Style="{StaticResource TabItemNCAD}">
 
             </TabItem>
 
