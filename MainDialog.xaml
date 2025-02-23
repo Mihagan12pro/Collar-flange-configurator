@@ -27,10 +27,10 @@
                                 <RadioButton Name="AdaptingModelToAssembleRadio">Подгон модели под сборку</RadioButton>
                             </StackPanel>
                         </GroupBox>
-                        
-                        <GroupBox Header="Элементы сборки" Width="200" Name="AssembleElemsGroupBox" HorizontalAlignment="Left" >
-                            <StackPanel Name="ChooseAssembleDetails"  Orientation="Vertical" >
-                                <StackPanel Orientation="Horizontal" Name="TubeStakcPanel">
+
+                        <GroupBox Header="Элементы сборки" Width="200" Name="AssembleElemsGroupBox" HorizontalAlignment="Left"  Visibility="Hidden">
+                            <StackPanel Name="ChooseAssembleDetails"  Orientation="Vertical">
+                                <StackPanel Orientation="Horizontal" Name="TubeStakcPanel" >
                                     <Button>
                                         <Image Source="Images/Icons/cursor.png">
 
@@ -39,7 +39,7 @@
                                     <Label>Труба</Label>
                                 </StackPanel>
                                 
-                                <StackPanel Orientation="Horizontal" Margin="0 3" Name="BoltStackPanel">
+                                <StackPanel Orientation="Horizontal" Margin="0 3" Name="BoltStackPanel" >
                                     <Button IsEnabled="False">
                                         <Image Source="Images/Icons/cursor.png">
 
@@ -54,7 +54,7 @@
                          
                        
                     </StackPanel>
-                    <StackPanel  Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                    <StackPanel  Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 -35">
                         <Button Width="62" Height="20" Content="Ок" IsEnabled="False" />
                         <Button Width="60" Height="20" Margin="3 0" Content="Отмена" IsCancel="True"/>
                     </StackPanel>
