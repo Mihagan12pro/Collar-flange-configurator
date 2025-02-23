@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Images\Icons\cursor.png" />
     <None Remove="Images\Placeholders\MainTab Placeholder.bmp" />
   </ItemGroup>
 
@@ -63,6 +64,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\Icons\cursor.png" />
     <Resource Include="Images\Placeholders\MainTab Placeholder.bmp" />
   </ItemGroup>
 

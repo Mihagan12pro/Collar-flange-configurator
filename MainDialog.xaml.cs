@@ -26,7 +26,7 @@ namespace Collar_flange_configurator
         {
             InitializeComponent();
 
-
+           
             //Process currentProcess = Process.GetCurrentProcess();
 
             //this.Owner = currentProcess.MainWindowTitle.;
