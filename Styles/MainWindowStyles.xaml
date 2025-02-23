@@ -9,12 +9,10 @@
     <Style x:Key="TabItemNCAD" TargetType="TabItem">
         <Setter Property="Background" Value="White"/>
         <Setter Property="BorderBrush" Value="White"/>
+
         <Style.Triggers>
-            <Trigger Property="IsSelected" Value="true">
-                <Setter Property="Background" Value="#f0f0f0"/>
-            </Trigger>
-            <Trigger Property="IsSelected" Value="false">
-                <Setter Property="Background" Value="White"/>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="BorderBrush" Value="White"></Setter>
             </Trigger>
         </Style.Triggers>
     </Style>

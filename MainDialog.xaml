@@ -10,9 +10,9 @@
         <ResourceDictionary Source="Styles/MainWindowStyles.xaml"></ResourceDictionary>
     </Window.Resources>
     <Grid>
-        <TabControl Background="#f0f0f0">
-
+        <TabControl Background="#f0f0f0" BorderThickness="4" BorderBrush="White">
             <TabItem  Header="Главная" Name="MainTabItem" Style="{DynamicResource TabItemNCAD}">
+
 
                 <StackPanel Name="MainTabItemStackPanel"  Orientation="Vertical"  Style="{StaticResource MajorStackPanel}">
 
@@ -38,7 +38,7 @@
                                     </Button>
                                     <Label>Труба</Label>
                                 </StackPanel>
-                                
+
                                 <StackPanel Orientation="Horizontal" Margin="0 3" Name="BoltStackPanel" >
                                     <Button IsEnabled="False">
                                         <Image Source="Images/Icons/cursor.png">
@@ -50,16 +50,15 @@
                             </StackPanel>
                         </GroupBox>
 
-                  
-                         
-                       
+
+
+
                     </StackPanel>
-                    <StackPanel  Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 -35">
+                    <StackPanel  Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 -30">
                         <Button Width="62" Height="20" Content="Ок" IsEnabled="False" />
                         <Button Width="60" Height="20" Margin="3 0" Content="Отмена" IsCancel="True"/>
                     </StackPanel>
                 </StackPanel>
-
             </TabItem>
 
             <TabItem Header="Размеры ГОСТ 33259-2015" Style="{DynamicResource TabItemNCAD}">
