@@ -16,4 +16,23 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+
+
+    <Style x:Key="TableStyles" TargetType="DataGrid">
+        <Setter Property="CanUserAddRows" Value="False"></Setter>
+        <Setter Property="CanUserDeleteRows" Value="False"></Setter>
+        <Setter Property="CanUserSortColumns" Value="False"></Setter>
+        <Setter Property="CanUserResizeColumns" Value="False"></Setter>
+        <Setter Property="CanUserResizeRows" Value="False"></Setter>
+        <Setter Property="CanUserReorderColumns" Value="False"></Setter>
+        <Setter Property="BorderBrush" Value="Black"></Setter>
+        <Setter Property="BorderThickness" Value="2"></Setter>
+    </Style>
+    <Style x:Key="ColumnStyle" TargetType="DataGridColumnHeader">
+        <Setter Property="Width" Value="25"></Setter>
+        <Setter Property="FontSize" Value="10"></Setter>
+        <Setter Property="Background" Value="White"></Setter>
+        <Setter Property="BorderBrush" Value="Black"></Setter>
+        <Setter Property="BorderThickness" Value="1"></Setter>
+    </Style>
 </ResourceDictionary>

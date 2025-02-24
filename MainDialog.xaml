@@ -58,17 +58,32 @@
                     </StackPanel>
                 </StackPanel>
             </TabItem>
+            
+            <TabItem Name="SketchTabItem" Header="Чертеж" Style="{DynamicResource TabItemNCAD}">
+                <Border BorderBrush="Black" BorderThickness="2">
+                    <Image Margin="1" Stretch="Fill" Source="Images/Placeholders/collarFlange.png"></Image>
+                </Border>
+            </TabItem>
 
-            <TabItem Header="Размеры ГОСТ 33259-2015" Style="{DynamicResource TabItemNCAD}">
+            <TabItem Name="SizesTab"  Header="Размеры" Style="{DynamicResource TabItemNCAD}">
                 <StackPanel Orientation="Horizontal">
-                    <custom_ent:DoubleForm LabelText="D1" DoubleValue="233">
-                        
-                    </custom_ent:DoubleForm>
-                </StackPanel>
-            </TabItem>
-            <TabItem Header="Второстепенные размеры" Style="{DynamicResource TabItemNCAD}">
 
-            </TabItem>
+                    <DataGrid Name="GOST_33259_2015" Margin="30 5 0 0" Width="250" BorderBrush="#f0f0f0" Style="{StaticResource TableStyles}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Dm" HeaderStyle="{StaticResource ColumnStyle}" ></DataGridTextColumn>
+                            <DataGridTextColumn Header="Dn" HeaderStyle="{StaticResource ColumnStyle}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="d1" HeaderStyle="{StaticResource ColumnStyle}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="b"  HeaderStyle="{StaticResource ColumnStyle}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="H"  HeaderStyle="{StaticResource ColumnStyle}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="H1" HeaderStyle="{StaticResource ColumnStyle}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="D"  HeaderStyle="{StaticResource ColumnStyle}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="D1" HeaderStyle="{StaticResource ColumnStyle}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="d"  HeaderStyle="{StaticResource ColumnStyle}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="n"  HeaderStyle="{StaticResource ColumnStyle}"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+             </TabItem>
             <TabItem Header="Прочее" Style="{DynamicResource TabItemNCAD}">
                
             </TabItem>
