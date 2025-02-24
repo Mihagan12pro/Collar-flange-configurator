@@ -61,9 +61,9 @@
 
             <TabItem Header="Размеры ГОСТ 33259-2015" Style="{DynamicResource TabItemNCAD}">
                 <StackPanel Orientation="Horizontal">
-                    <custom_ent:IntegerForm LabelText="D1">
+                    <custom_ent:DoubleForm LabelText="D1" DoubleValue="233">
                         
-                    </custom_ent:IntegerForm>
+                    </custom_ent:DoubleForm>
                 </StackPanel>
             </TabItem>
             <TabItem Header="Второстепенные размеры" Style="{DynamicResource TabItemNCAD}">

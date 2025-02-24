@@ -22,8 +22,6 @@ namespace Collar_flange_configurator.WPF_Override.Custom_entries
     /// </summary>
     public abstract partial class ElementForm: UserControl
     {
-
-        public string TextBoxText;
         public string LabelText
         {
             get
