@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Collar_flange_configurator"
+        xmlns:custom_ent="clr-namespace:Collar_flange_configurator.WPF_Override.Custom_entries"
         mc:Ignorable="d"
         Title="Мастер воротниковых фланцев" Height="600" Width="600" ResizeMode="NoResize" ShowInTaskbar="False" >
     <Window.Resources>
@@ -12,8 +13,7 @@
     <Grid>
         <TabControl Background="#f0f0f0" BorderThickness="4" BorderBrush="White">
             <TabItem  Header="Главная" Name="MainTabItem" Style="{DynamicResource TabItemNCAD}">
-
-
+                
                 <StackPanel Name="MainTabItemStackPanel"  Orientation="Vertical"  Style="{StaticResource MajorStackPanel}">
 
                     <Border BorderBrush="Black" BorderThickness="2">
@@ -46,13 +46,11 @@
                                         </Image>
                                     </Button>
                                     <Label>Болт/шпилька</Label>
+                                
                                 </StackPanel>
                             </StackPanel>
                         </GroupBox>
-
-
-
-
+                        
                     </StackPanel>
                     <StackPanel  Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 -30">
                         <Button Width="62" Height="20" Content="Ок" IsEnabled="False" />
@@ -62,13 +60,17 @@
             </TabItem>
 
             <TabItem Header="Размеры ГОСТ 33259-2015" Style="{DynamicResource TabItemNCAD}">
-
+                <StackPanel Orientation="Horizontal">
+                    <custom_ent:IntegerForm LabelText="D1">
+                        
+                    </custom_ent:IntegerForm>
+                </StackPanel>
             </TabItem>
             <TabItem Header="Второстепенные размеры" Style="{DynamicResource TabItemNCAD}">
 
             </TabItem>
             <TabItem Header="Прочее" Style="{DynamicResource TabItemNCAD}">
-
+               
             </TabItem>
 
         </TabControl>
