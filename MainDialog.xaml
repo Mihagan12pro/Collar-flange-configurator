@@ -68,7 +68,7 @@
             <TabItem Name="SizesTab"  Header="Размеры" Style="{DynamicResource TabItemNCAD}">
                 <StackPanel Orientation="Horizontal">
 
-                    <DataGrid Name="GOST_33259_2015" Margin="30 5 0 0" Width="254"   BorderBrush="#f0f0f0" Style="{StaticResource TableStyles}" Height="420">
+                    <DataGrid Name="GOST_33259_2015" Margin="30 10"  VerticalAlignment="Top" Width="254"   BorderBrush="#f0f0f0" Style="{StaticResource TableStyles}" Height="420">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Dm" HeaderStyle="{StaticResource ColumnStyle}"></DataGridTextColumn>
                             <DataGridTextColumn Header="Dn" HeaderStyle="{StaticResource ColumnStyle}"></DataGridTextColumn>
@@ -83,7 +83,7 @@
                         </DataGrid.Columns>
                     </DataGrid>
 
-                    <StackPanel Orientation="Vertical"  Margin="50 10">
+                    <StackPanel Orientation="Vertical"  Margin="0 10">
                         <GroupBox  Header="ГОСТ 33259-2015" HorizontalAlignment="Center" VerticalAlignment="Top" Width="220" Height="250">
                             <StackPanel Margin="10 0">
                                 <custom_ent:DoubleForm LabelText="Dm" ></custom_ent:DoubleForm>
@@ -109,10 +109,6 @@
                     </StackPanel>
                 </StackPanel>
             </TabItem>
-            <TabItem Header="Прочее" Style="{DynamicResource TabItemNCAD}">
-
-            </TabItem>
-
         </TabControl>
     </Grid>
 </Window>
