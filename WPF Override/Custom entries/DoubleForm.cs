@@ -16,6 +16,7 @@ namespace Collar_flange_configurator.WPF_Override.Custom_entries
             textBox.FontFamily = new System.Windows.Media.FontFamily("GOST Type B");
             textBox.Width = 100;
             textBox.Height = 15;
+           
 
             ElementStackPanel.Children.Add(textBox);
         }
