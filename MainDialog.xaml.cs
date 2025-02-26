@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Multicad.Runtime;
-using System.Windows.Documents;
+using Collar_flange_configurator.ViewModel;
 using System.IO;
 using System.Diagnostics;
 namespace Collar_flange_configurator
@@ -26,10 +26,8 @@ namespace Collar_flange_configurator
         {
             InitializeComponent();
 
-           
-            //Process currentProcess = Process.GetCurrentProcess();
 
-            //this.Owner = currentProcess.MainWindowTitle.;
+            DataContext = new CollarFlangeViewModel();
         }
 
        

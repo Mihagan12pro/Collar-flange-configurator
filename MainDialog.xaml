@@ -23,12 +23,12 @@
                     <StackPanel Orientation="Vertical" Margin="0 5">
                         <GroupBox Header="Выбор способа создания">
                             <StackPanel>
-                                <RadioButton Name="Config3DModelRadio">Конфигурация 3D модели</RadioButton>
+                                <RadioButton Name="Config3DModelRadio" IsChecked = "{Binding IsConfig3DModel}">Конфигурация 3D модели</RadioButton>
                                 <RadioButton Name="AdaptingModelToAssembleRadio">Подгон модели под сборку</RadioButton>
                             </StackPanel>
                         </GroupBox>
 
-                        <GroupBox Header="Элементы сборки" Width="200" Name="AssembleElemsGroupBox" HorizontalAlignment="Left"  Visibility="Hidden">
+                        <GroupBox Header="Элементы сборки" Width="200" Name="AssembleElemsGroupBox" HorizontalAlignment="Left"  Visibility="{Binding AssembleVisibility}">
                             <StackPanel Name="ChooseAssembleDetails"  Orientation="Vertical">
                                 <StackPanel Orientation="Horizontal" Name="TubeStakcPanel" >
                                     <Button>
@@ -68,7 +68,7 @@
             <TabItem Name="SizesTab"  Header="Размеры" Style="{DynamicResource TabItemNCAD}">
                 <StackPanel Orientation="Horizontal">
 
-                    <DataGrid Name="GOST_33259_2015" Margin="30 10"  VerticalAlignment="Top" Width="254"   BorderBrush="#f0f0f0" Style="{StaticResource TableStyles}" Height="420">
+                    <DataGrid Name="GOST_33259_2015" Margin="30 10"  VerticalAlignment="Top" Width="254"   BorderBrush="#f0f0f0" Style="{StaticResource TableStyles}" Height="420" Visibility="{Binding TableVisibility}">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Dm" HeaderStyle="{StaticResource ColumnStyle}"></DataGridTextColumn>
                             <DataGridTextColumn Header="Dn" HeaderStyle="{StaticResource ColumnStyle}"></DataGridTextColumn>
