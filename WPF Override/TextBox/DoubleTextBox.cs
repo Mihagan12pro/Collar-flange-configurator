@@ -7,22 +7,42 @@ using System.Windows.Input;
 
 namespace Collar_flange_configurator.WPF_Override.TextBox
 {
-    internal class DoubleTextBox : IntegerTextBox
+    internal class DoubleTextBox : NumericTextBox
     {
-        protected override bool IsValideKeyDown(Key key)
+        public DoubleTextBox()
         {
-            if (base.IsValideKeyDown(key) || key == Key.OemComma)
+            KeyDown += DoubleTextBox_KeyDown;
+        }
+
+        private void DoubleTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.OemComma)
             {
-                if (key == Key.OemComma)
-                {
-                    if (Text.Contains(','))
-                    {
-                        return false;
-                    }
-                }
-                return true;
+                Text = Text.Replace(',','.');
             }
-            return false;
+        }
+        protected override bool IsValidText()
+        {
+            try
+            {
+                double a = Convert.ToDouble(Text);
+            }
+            catch
+            {
+                return false;
+            }
+
+            if (Convert.ToDouble(Text) <= 0)
+            {
+                return false;
+            }
+
+            if (Text.StartsWith('0') && Text.ToCharArray(0, Text.Length)[1] != '.')
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }

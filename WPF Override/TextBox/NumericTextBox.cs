@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using System.Windows.Media;
 namespace Collar_flange_configurator.WPF_Override
 {
     internal abstract class NumericTextBox : System.Windows.Controls.TextBox
@@ -11,33 +12,20 @@ namespace Collar_flange_configurator.WPF_Override
         protected Key[] numberKeys;
         public NumericTextBox()
         {
-            KeyDown += CustomTextBox_KeyDown;
-            LostFocus += CustomTextBox_LostFocus;
+            TextChanged += NumericTextBox_TextChanged;
         }
 
-        private void CustomTextBox_LostFocus(object sender, System.Windows.RoutedEventArgs e)
+        private void NumericTextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {
-            if (Text.Length == 0)
+            if (IsValidText())
             {
-                Text += "0";
+                Foreground = Brushes.Black;
+            }
+            else
+            {
+                Foreground = Brushes.Red;
             }
         }
-
-        private void CustomTextBox_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
-        {
-           if (!IsValideKeyDown(e.Key))
-           {
-                e.Handled = true;
-           }
-        }
-
-        protected virtual bool IsValideKeyDown(System.Windows.Input.Key key)
-        {
-            if ((key >= Key.D0 && key <= Key.D9) || (key >= Key.NumPad0 && key <= Key.NumPad9))
-            {
-                return false;
-            }
-            return true;
-        }
+        protected abstract bool IsValidText();
     }
 }

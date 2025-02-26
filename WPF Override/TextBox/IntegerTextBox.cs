@@ -7,19 +7,30 @@ using System.Windows.Input;
 
 namespace Collar_flange_configurator.WPF_Override.TextBox
 {
-    internal class IntegerTextBox : NumericTextBox
+    internal class IntegerTextBox : NumericTextBox 
     {
         public IntegerTextBox()
         {
          
         }
-        protected override bool IsValideKeyDown(Key key)
+
+        protected override bool IsValidText()
         {
-            if ((key >= Key.D0 && key <= Key.D9) || (key >= Key.NumPad0 && key <= Key.NumPad9))
+            try
             {
-                return true;
+                double a = Convert.ToInt32(Text);
             }
-            return false;
+            catch
+            {
+                return false;
+            }
+
+            if (Text.StartsWith('0'))
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }
