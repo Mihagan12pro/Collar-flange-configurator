@@ -85,7 +85,7 @@
 
                     <StackPanel Orientation="Vertical"  Margin="0 10">
                         <GroupBox  Header="ГОСТ 33259-2015" HorizontalAlignment="Center" VerticalAlignment="Top" Width="220" Height="250">
-                            <StackPanel Margin="10 0">
+                            <StackPanel>
                                 <custom_ent:DoubleForm LabelText="Dm" ></custom_ent:DoubleForm>
                                 <custom_ent:DoubleForm LabelText="Dn" ></custom_ent:DoubleForm>
                                 <custom_ent:DoubleForm LabelText="d1" ></custom_ent:DoubleForm>

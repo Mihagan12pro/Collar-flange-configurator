@@ -9,7 +9,6 @@
 *.user
 *.userosscache
 *.sln.docstates
-*.dwg
 
 *# User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -332,6 +331,8 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+*.dwg
+*.xlsx
 
 # OpenCover UI analysis results
 OpenCover/
