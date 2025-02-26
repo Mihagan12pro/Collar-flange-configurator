@@ -25,7 +25,7 @@ namespace Collar_flange_configurator.WPF_Override.TextBox
                 CaretIndex = Text.Length;
             }
         }
-        protected override bool IsValidText()
+        protected override bool TextValidation()
         {
             try
             {

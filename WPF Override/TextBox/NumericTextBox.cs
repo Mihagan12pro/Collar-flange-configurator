@@ -9,23 +9,37 @@ namespace Collar_flange_configurator.WPF_Override
 {
     internal abstract class NumericTextBox : System.Windows.Controls.TextBox
     {
-        protected Key[] numberKeys;
+        private bool isTextValid;
+        public bool IsTextValid
+        {
+            get
+            {
+                return isTextValid;
+            }
+            protected set
+            {
+                isTextValid = value;
+
+                if (value)
+                {
+                    Foreground = Brushes.Black;
+                }
+                else
+                {
+                    Foreground = Brushes.Red;
+                }
+            }
+        }
+
+
         public NumericTextBox()
         {
             TextChanged += NumericTextBox_TextChanged;
         }
-
         private void NumericTextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {
-            if (IsValidText())
-            {
-                Foreground = Brushes.Black;
-            }
-            else
-            {
-                Foreground = Brushes.Red;
-            }
+            IsTextValid = TextValidation();
         }
-        protected abstract bool IsValidText();
+        protected abstract bool TextValidation();
     }
 }
