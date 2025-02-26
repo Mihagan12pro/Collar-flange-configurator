@@ -18,14 +18,14 @@ namespace Collar_flange_configurator.WPF_Override.TextBox
         {
             try
             {
-                double a = Convert.ToInt32(Text);
+                int a = Convert.ToInt32(Text);
             }
             catch
             {
                 return false;
             }
 
-            if (Text.StartsWith('0'))
+            if (Text.StartsWith('0') || Convert.ToInt32(Text) <= 0)
             {
                 return false;
             }

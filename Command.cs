@@ -10,6 +10,7 @@ using HostMgd.Runtime;
 using HostMgd.ApplicationServices;
 using HostMgd.EditorInput;
 using HostMgd.Windows;
+using System.Globalization;
 namespace Collar_flange_configurator
 {
     internal class Command
@@ -17,6 +18,8 @@ namespace Collar_flange_configurator
         [CommandMethod("Collar_flange")]
         public void CreateMainDialog()
         {
+            CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
+
             MainDialog main = new MainDialog();
 
             HostMgd.ApplicationServices.Application.ShowModelessWindow(main);

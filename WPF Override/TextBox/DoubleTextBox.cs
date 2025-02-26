@@ -18,7 +18,11 @@ namespace Collar_flange_configurator.WPF_Override.TextBox
         {
             if (e.Key == Key.OemComma)
             {
-                Text = Text.Replace(',','.');
+                e.Handled = true;
+
+                Text += '.';
+
+                CaretIndex = Text.Length;
             }
         }
         protected override bool IsValidText()
