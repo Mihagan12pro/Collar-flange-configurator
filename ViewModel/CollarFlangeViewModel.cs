@@ -25,7 +25,7 @@ namespace Collar_flange_configurator.ViewModel
                 isConfig3DModel = value;
 
                 AssembleVisibility = Visibility.Visible;
-                TableVisibility = Visibility.Collapsed;
+                TableVisibility = Visibility.Hidden;
 
                 if (value)
                 {

@@ -34,6 +34,8 @@ namespace Collar_flange_configurator.WPF_Override.Custom_entries
             }
         }
 
+        public bool IsTextValid { get; }
+
         public ElementForm()
         {
             InitializeComponent();  

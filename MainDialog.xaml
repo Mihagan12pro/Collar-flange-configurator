@@ -68,19 +68,23 @@
             <TabItem Name="SizesTab"  Header="Размеры" Style="{DynamicResource TabItemNCAD}">
                 <StackPanel Orientation="Horizontal">
 
-                    <DataGrid Name="GOST_33259_2015" Margin="30 10"  VerticalAlignment="Top" Width="254"   BorderBrush="#f0f0f0" Style="{StaticResource TableStyles}" Height="420" Visibility="{Binding TableVisibility}">
+                    <DataGrid Name="GOST_33259_2015"  Margin="30 10"  VerticalAlignment="Top" Width="260"    Style="{StaticResource TableStyles}" Height="420" Visibility="{Binding TableVisibility}" GridLinesVisibility="All" HorizontalGridLinesBrush="Black">
+                        <DataGrid.CellStyle>
+                            <Style/>
+                        </DataGrid.CellStyle>
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Dm" HeaderStyle="{StaticResource ColumnStyle}"></DataGridTextColumn>
-                            <DataGridTextColumn Header="Dn" HeaderStyle="{StaticResource ColumnStyle}"></DataGridTextColumn>
-                            <DataGridTextColumn Header="d1" HeaderStyle="{StaticResource ColumnStyle}"></DataGridTextColumn>
-                            <DataGridTextColumn Header="b"  HeaderStyle="{StaticResource ColumnStyle}"></DataGridTextColumn>
-                            <DataGridTextColumn Header="H"  HeaderStyle="{StaticResource ColumnStyle}"></DataGridTextColumn>
-                            <DataGridTextColumn Header="H1" HeaderStyle="{StaticResource ColumnStyle}"></DataGridTextColumn>
-                            <DataGridTextColumn Header="D"  HeaderStyle="{StaticResource ColumnStyle}"></DataGridTextColumn>
-                            <DataGridTextColumn Header="D1" HeaderStyle="{StaticResource ColumnStyle}"></DataGridTextColumn>
-                            <DataGridTextColumn Header="d"  HeaderStyle="{StaticResource ColumnStyle}"></DataGridTextColumn>
-                            <DataGridTextColumn Header="n"  HeaderStyle="{StaticResource ColumnStyle}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Dm" HeaderStyle="{StaticResource HeaderStyle}"  CellStyle="{StaticResource CellStyle}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Dn" HeaderStyle="{StaticResource HeaderStyle}" CellStyle="{StaticResource CellStyle}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="d1" HeaderStyle="{StaticResource HeaderStyle}" CellStyle="{StaticResource CellStyle}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="b"  HeaderStyle="{StaticResource HeaderStyle}" CellStyle="{StaticResource CellStyle}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="H" HeaderStyle="{StaticResource HeaderStyle}" CellStyle="{StaticResource CellStyle}" ></DataGridTextColumn>
+                            <DataGridTextColumn Header="H1" HeaderStyle="{StaticResource HeaderStyle}" CellStyle="{StaticResource CellStyle}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="D"  HeaderStyle="{StaticResource HeaderStyle}" CellStyle="{StaticResource CellStyle}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="D1" HeaderStyle="{StaticResource HeaderStyle}" CellStyle="{StaticResource CellStyle}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="d"  HeaderStyle="{StaticResource HeaderStyle}" CellStyle="{StaticResource CellStyle}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="n"  HeaderStyle="{StaticResource HeaderStyle}" CellStyle="{StaticResource CellStyle}"></DataGridTextColumn>
                         </DataGrid.Columns>
+                        
                     </DataGrid>
 
                     <StackPanel Orientation="Vertical"  Margin="0 10">
@@ -98,7 +102,7 @@
                             </StackPanel>
                         </GroupBox>
 
-                        <GroupBox Header="Прочие размеры" Margin="0 10" Height="120">
+                        <GroupBox Header="Прочие размеры" Margin="0 50" Height="120">
                             <StackPanel>
                                 <custom_ent:DoubleForm LabelText="l"></custom_ent:DoubleForm>
                                 <custom_ent:DoubleForm LabelText="l1"></custom_ent:DoubleForm>
