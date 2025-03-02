@@ -7,7 +7,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 namespace Collar_flange_configurator.WPF_Override
 {
-    internal abstract class NumericTextBox : System.Windows.Controls.TextBox
+    public abstract class NumericTextBox : System.Windows.Controls.TextBox
     {
         private bool isTextValid;
         public bool IsTextValid

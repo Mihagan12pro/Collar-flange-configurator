@@ -6,16 +6,19 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace Collar_flange_configurator.WPF_Override.Custom_entries
 {
     public class IntegerForm : ElementForm
     {
-        private IntegerTextBox textBox;
+       
+      
+        
         public IntegerForm()
         {
             textBox = new IntegerTextBox();
-            textBox.FontFamily = new System.Windows.Media.FontFamily("GOST Type B");
             textBox.Width = 100;
             textBox.Height = 15;
 
@@ -26,22 +29,11 @@ namespace Collar_flange_configurator.WPF_Override.Custom_entries
         {
             get
             {
-                return textBox.Text;
+                return (textBox as IntegerTextBox).Text;
             }
             set
             {
-                textBox.Text = value;
-            }
-        }
-        public bool IsTextValid
-        {
-            get
-            {
-                return textBox.IsTextValid;
-            }
-            set
-            {
-                textBox.IsTextValid = value;
+                (textBox as IntegerTextBox).Text = value;
             }
         }
     }

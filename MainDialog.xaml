@@ -53,7 +53,7 @@
 
                     </StackPanel>
                     <StackPanel  Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 -30">
-                        <Button Width="62" Height="20" Content="Ок" IsEnabled="False" />
+                        <Button Width="62" Height="20" Content="Ок" IsEnabled="{Binding IsOkEnabled}" />
                         <Button Width="60" Height="20" Margin="3 0" Content="Отмена" IsCancel="True"/>
                     </StackPanel>
                 </StackPanel>
@@ -68,7 +68,7 @@
             <TabItem Name="SizesTab"  Header="Размеры" Style="{DynamicResource TabItemNCAD}">
                 <StackPanel Orientation="Horizontal" Style="{StaticResource MajorStackPanel}">
 
-                    <DataGrid Name="GOST_33259_2015"  Margin="30 10"  VerticalAlignment="Top" Width="260"    Style="{StaticResource TableStyles}" Height="420" Visibility="{Binding TableVisibility}" GridLinesVisibility="All" HorizontalGridLinesBrush="Black">
+                    <DataGrid Name="GOST_33259_2015"  Margin="30 10"  VerticalAlignment="Top" Width="260"    Style="{StaticResource TableStyles}" Height="445" Visibility="{Binding TableVisibility}" GridLinesVisibility="All" HorizontalGridLinesBrush="Black">
                         <DataGrid.CellStyle>
                             <Style/>
                         </DataGrid.CellStyle>
@@ -88,21 +88,22 @@
                     </DataGrid>
 
                     <StackPanel Orientation="Vertical"  >
-                        <GroupBox  Header="ГОСТ 33259-2015" HorizontalAlignment="Center" VerticalAlignment="Top" Width="220" Height="250">
+                        <GroupBox  Header="ГОСТ 33259-2015" HorizontalAlignment="Center" VerticalAlignment="Top" Width="220" Height="280">
                             <StackPanel>
-                                <custom_ent:DoubleForm LabelText="Dm" ></custom_ent:DoubleForm>
+                                <custom_ent:DoubleForm LabelText="Dm"></custom_ent:DoubleForm>
                                 <custom_ent:DoubleForm LabelText="Dn" ></custom_ent:DoubleForm>
                                 <custom_ent:DoubleForm LabelText="d1" ></custom_ent:DoubleForm>
                                 <custom_ent:DoubleForm LabelText="b" ></custom_ent:DoubleForm>
                                 <custom_ent:DoubleForm LabelText="H" ></custom_ent:DoubleForm>
                                 <custom_ent:DoubleForm LabelText="H1"></custom_ent:DoubleForm>
+                                <custom_ent:DoubleForm LabelText="D" IsTextValid="{Binding IsDSizeValid}"></custom_ent:DoubleForm>
                                 <custom_ent:DoubleForm LabelText="D1"></custom_ent:DoubleForm>
                                 <custom_ent:DoubleForm LabelText="b"></custom_ent:DoubleForm>
                                 <custom_ent:IntegerForm LabelText="n"></custom_ent:IntegerForm>
                             </StackPanel>
                         </GroupBox>
 
-                        <GroupBox Header="Прочие размеры"  Height="100" VerticalAlignment="Bottom" Margin="0 80">
+                        <GroupBox Header="Прочие размеры"  Height="100" VerticalAlignment="Bottom" Margin="0 76">
                             <StackPanel>
                                 <custom_ent:DoubleForm LabelText="l1"></custom_ent:DoubleForm>
                                 <custom_ent:DoubleForm LabelText="R1"></custom_ent:DoubleForm>

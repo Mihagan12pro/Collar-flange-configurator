@@ -26,7 +26,7 @@ namespace Collar_flange_configurator
         {
             InitializeComponent();
 
-
+           
             DataContext = new CollarFlangeViewModel();
         }
 

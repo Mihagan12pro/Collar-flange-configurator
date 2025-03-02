@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Collar_flange_configurator.WPF_Override.Custom_entries
 {
     public class DoubleForm: ElementForm
     {
-        private DoubleTextBox textBox;
         public DoubleForm()
         {
             textBox = new DoubleTextBox();
@@ -25,22 +25,11 @@ namespace Collar_flange_configurator.WPF_Override.Custom_entries
         {
             get
             {
-                return textBox.Text;
+                return (textBox as DoubleTextBox).Text;
             }
             set
             {
-                textBox.Text = value;
-            }
-        }
-        public bool IsTextValid
-        {
-            get
-            {
-                return textBox.IsTextValid;
-            }
-            set
-            {
-                textBox.IsTextValid = value;
+                (textBox as DoubleTextBox).Text = value;
             }
         }
     }

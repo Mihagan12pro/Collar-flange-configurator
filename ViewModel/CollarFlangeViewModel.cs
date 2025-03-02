@@ -64,6 +64,36 @@ namespace Collar_flange_configurator.ViewModel
             }
         }
 
+
+        private bool isOkEnabled;
+        public bool IsOkEnabled
+        {
+            get
+            {
+                return isOkEnabled;
+            }
+            private set
+            {
+                isOkEnabled = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private bool isSizeDValid;
+        public bool IsDSizeValid
+        {
+            get
+            {
+                return isSizeDValid;
+            }
+            set
+            {
+                isSizeDValid = value;
+                OnPropertyChanged();
+            }
+        }
+
+
         public event PropertyChangedEventHandler? PropertyChanged;
         public void OnPropertyChanged([CallerMemberName] string prop = "")
         {
@@ -75,6 +105,10 @@ namespace Collar_flange_configurator.ViewModel
         public CollarFlangeViewModel()
         {
             IsConfig3DModel = true;
+
+            IsOkEnabled = false;
+
+            IsDSizeValid = false;
         }
     }
 }
