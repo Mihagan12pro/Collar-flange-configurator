@@ -41,7 +41,7 @@ namespace Collar_flange_configurator.WPF_Override.TextBox
                 return false;
             }
 
-            if (Text.StartsWith('0') && Text.ToCharArray(0, Text.Length)[1] != '.')
+            if ((Text.StartsWith('0') && Text.ToCharArray(0, Text.Length)[1] != '.') || Text.Length < 1)
             {
                 return false;
             }

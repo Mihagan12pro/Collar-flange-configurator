@@ -1,15 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static Multicad.Constants.ObjectOverlays;
-using Teigha.Runtime;
-using Teigha.Geometry;
-using HostMgd.Runtime;
-using HostMgd.ApplicationServices;
-using HostMgd.EditorInput;
-using HostMgd.Windows;
+﻿using Teigha.Runtime;
 using System.Globalization;
 namespace Collar_flange_configurator
 {
@@ -17,7 +6,7 @@ namespace Collar_flange_configurator
     {
         [CommandMethod("Collar_flange")]
         public void CreateMainDialog()
-        {
+        { 
             CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
 
             MainDialog main = new MainDialog();

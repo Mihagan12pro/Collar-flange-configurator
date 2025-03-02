@@ -13,7 +13,7 @@ namespace Collar_flange_configurator.WPF_Override.TextBox
         {
          
         }
-
+      
         protected override bool TextValidation()
         {
             try
@@ -25,7 +25,7 @@ namespace Collar_flange_configurator.WPF_Override.TextBox
                 return false;
             }
 
-            if (Text.StartsWith('0') || Convert.ToInt32(Text) <= 0)
+            if (Text.StartsWith('0') || Convert.ToInt32(Text) <= 0 || Text.Length < 1)
             {
                 return false;
             }

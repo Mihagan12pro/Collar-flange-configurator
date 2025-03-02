@@ -16,7 +16,7 @@ namespace Collar_flange_configurator.WPF_Override
             {
                 return isTextValid;
             }
-            protected set
+            set
             {
                 isTextValid = value;
 
@@ -35,6 +35,7 @@ namespace Collar_flange_configurator.WPF_Override
         public NumericTextBox()
         {
             TextChanged += NumericTextBox_TextChanged;
+            FontFamily = new FontFamily("Calibry");
         }
         private void NumericTextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {

@@ -33,5 +33,16 @@ namespace Collar_flange_configurator.WPF_Override.Custom_entries
                 textBox.Text = value;
             }
         }
+        public bool IsTextValid
+        {
+            get
+            {
+                return textBox.IsTextValid;
+            }
+            set
+            {
+                textBox.IsTextValid = value;
+            }
+        }
     }
 }
