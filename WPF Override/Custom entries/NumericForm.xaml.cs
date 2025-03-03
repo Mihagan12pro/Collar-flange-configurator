@@ -22,22 +22,17 @@ namespace Collar_flange_configurator.WPF_Override.Custom_entries
     /// Логика взаимодействия для IntegerForm.xaml
     /// </summary>
 
-    public abstract partial class ElementForm: UserControl,INotifyPropertyChanged
+    public partial class ElementForm: UserControl,INotifyPropertyChanged
     {
         public static DependencyProperty IsTextValidProperty;
 
         protected NumericTextBox textBox;
+
+        private bool isTextValid;
         public bool IsTextValid
         {
-            get
-            {
-                return textBox.IsTextValid;
-            }
-            set
-            {
-                textBox.IsTextValid = value;
-                OnPropertyChanged();
-            }
+            get { return (bool)base.GetValue(IsTextValidProperty); }
+            set { base.SetValue(IsTextValidProperty, value); }
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;
@@ -59,21 +54,21 @@ namespace Collar_flange_configurator.WPF_Override.Custom_entries
             }
         }
 
-       
-
-        public ElementForm()
+        static ElementForm()
         {
-            InitializeComponent(); 
-            
-            if (IsTextValidProperty == null)
-            {
-                IsTextValidProperty = DependencyProperty.Register(
+            IsTextValidProperty = DependencyProperty.Register
+            (
                 "IsTextValid",
                 typeof(bool),
                 typeof(ElementForm)
             );
+        }
 
-            }
+        public ElementForm()
+        {
+            InitializeComponent();
+
+            IsTextValid = true;
         }
     }
 }
