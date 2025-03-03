@@ -16,6 +16,11 @@
     </Style>
 
 
+    
+    
+    
+    
+    
     <Style x:Key="TableStyles" TargetType="DataGrid">
         <Setter Property="CanUserAddRows" Value="False"></Setter>
         <Setter Property="CanUserDeleteRows" Value="False"></Setter>
@@ -36,5 +41,26 @@
         <Setter Property="FontSize" Value="14"></Setter>
         <Setter Property="Background" Value="White"></Setter>
         <Setter Property="Width" Value="26"></Setter>
+    </Style>
+
+
+
+
+
+
+    <Style x:Key="FieldSet" TargetType="StackPanel">
+        <Setter Property="Orientation" Value="Horizontal"></Setter>
+    </Style>
+    <Style x:Key="LabelFromFieldSet" TargetType="Label">
+        <Setter Property="Width" Value="25"></Setter>
+        <Setter Property="Height" Value="25"></Setter>
+        <Setter Property="Background" Value="#f0f0f0"></Setter>
+        <Setter Property="FontSize" Value="11"></Setter>
+        <Setter Property="FontFamily" Value="Calibri"></Setter>
+    </Style>
+    <Style x:Key="TextBoxFromFieldSet" TargetType="TextBox">
+        <Setter Property="Height" Value="15"></Setter>
+        <Setter Property="Width" Value="100"></Setter>
+        <Setter Property="Margin" Value="2 0"></Setter>
     </Style>
 </ResourceDictionary>

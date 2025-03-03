@@ -1,25 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 namespace Collar_flange_configurator.WPF_Override
 {
     public abstract class NumericTextBox : System.Windows.Controls.TextBox
     {
-        private bool isTextValid;
+        public static DependencyProperty IsTextValidProperty;
         public bool IsTextValid
         {
             get
             {
-                return isTextValid;
+                return (bool)GetValue(HeightProperty); ;
             }
             set
             {
-                isTextValid = value;
-
                 if (value)
                 {
                     Foreground = Brushes.Black;
@@ -28,9 +28,19 @@ namespace Collar_flange_configurator.WPF_Override
                 {
                     Foreground = Brushes.Red;
                 }
+                SetValue(IsTextValidProperty,value);
             }
         }
 
+        static NumericTextBox()
+        {
+            IsTextValidProperty = DependencyProperty.Register
+            (
+                "IsTextValid",
+                typeof(bool),
+                typeof(NumericTextBox)
+            );
+        }
 
         public NumericTextBox()
         {
