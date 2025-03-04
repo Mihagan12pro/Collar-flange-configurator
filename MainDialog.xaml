@@ -120,6 +120,7 @@
 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="H1"></Label>
+                                    <TextBox Style="{StaticResource TextBoxFromFieldSet}"></TextBox>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
