@@ -95,53 +95,53 @@
                                 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="Dm"></Label>
-                                    <textbox:DoubleTextBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsSizeDmValid}"></textbox:DoubleTextBox>
+                                    <textbox:DoubleTextBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid = "{Binding DataContext.IsSizeDmValid, UpdateSourceTrigger=PropertyChanged}"></textbox:DoubleTextBox>
                                 </StackPanel>
                                 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="Dn"></Label>
-                                    <textbox:DoubleTextBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsSizeDnValid}"></textbox:DoubleTextBox>
+                                    <textbox:DoubleTextBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding  DataContext.IsSizeDnValid}"></textbox:DoubleTextBox>
                                 </StackPanel>
                                 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="d1"></Label>
-                                    <textbox:DoubleTextBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsSized1Valid}"></textbox:DoubleTextBox>
+                                    <textbox:DoubleTextBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding DataContext.IsSized1Valid}"></textbox:DoubleTextBox>
                                 </StackPanel>
                                 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="b"></Label>
-                                    <textbox:DoubleTextBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsSizebValid}"></textbox:DoubleTextBox>
+                                    <textbox:DoubleTextBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding DataContext.IsSizebValid}"></textbox:DoubleTextBox>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="H"></Label>
-                                    <textbox:DoubleTextBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsSizeHValid}"
+                                    <textbox:DoubleTextBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding DataContext.IsSizeHValid}"
 ></textbox:DoubleTextBox>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="H1"></Label>
-                                    <textbox:DoubleTextBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsSizeH1Valid}"></textbox:DoubleTextBox>
+                                    <textbox:DoubleTextBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding DataContext.IsSizeH1Valid}"></textbox:DoubleTextBox>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="D"></Label>
-                                    <textbox:DoubleTextBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsSizeDValid}"></textbox:DoubleTextBox>
+                                    <textbox:DoubleTextBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding DataContext.IsSizeDValid}"></textbox:DoubleTextBox>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="D1"></Label>
-                                    <textbox:DoubleTextBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsSizeD1Valid}"></textbox:DoubleTextBox>
+                                    <textbox:DoubleTextBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding DataContext.IsSizeD1Valid}"></textbox:DoubleTextBox>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="d"></Label>
-                                    <textbox:DoubleTextBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsSizedValid}"></textbox:DoubleTextBox>
+                                    <textbox:DoubleTextBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding DataContext.IsSizedValid}"></textbox:DoubleTextBox>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="n"></Label>
-                                    <textbox:IntegerTextBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding  IsCountnValid}"></textbox:IntegerTextBox>
+                                    <textbox:IntegerTextBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding  DataContext.IsCountnValid}"></textbox:IntegerTextBox>
                                 </StackPanel>
                             </StackPanel>
                         </GroupBox>
@@ -151,17 +151,17 @@
 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="l1"></Label>
-                                    <textbox:DoubleTextBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsSizel1Valid}"></textbox:DoubleTextBox>
+                                    <textbox:DoubleTextBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding DataContext.IsSizel1Valid}"></textbox:DoubleTextBox>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="R1"></Label>
-                                    <textbox:DoubleTextBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsSizeR1Valid}"></textbox:DoubleTextBox>
+                                    <textbox:DoubleTextBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding DataContext.IsSizeR1Valid}"></textbox:DoubleTextBox>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="f"></Label>
-                                    <textbox:DoubleTextBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsSizefValid}"></textbox:DoubleTextBox>
+                                    <textbox:DoubleTextBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding DataContext.IsSizefValid}"></textbox:DoubleTextBox>
                                 </StackPanel>
                             </StackPanel>
                         </GroupBox>

@@ -91,7 +91,7 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 isSizeDmValid = value;
-                OnPropertyChanged("IsSizeDmValid");
+                OnPropertyChanged(nameof(IsSizeDmValid));
             }
         }
 
@@ -106,7 +106,7 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 isSizeDnValid = value;
-                OnPropertyChanged("IsSizeDnValid");
+                OnPropertyChanged();
             }
         }
 
@@ -121,7 +121,7 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 isSized1Valid = value;
-                OnPropertyChanged("IsSized1Valid");
+                OnPropertyChanged();
             }
         }
 
@@ -136,7 +136,7 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 isSizebValid = value;
-                OnPropertyChanged("IsSizebValid");
+                OnPropertyChanged();
             }
         }
 
@@ -151,7 +151,7 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 isSizeHValid = value;
-                OnPropertyChanged("IsSizeHValid");
+                OnPropertyChanged( );
             }
         }
 
@@ -166,7 +166,7 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 isSizeH1Valid = value;
-                OnPropertyChanged("IsSizeH1Valid");
+                OnPropertyChanged();
             }
         }
 
@@ -181,7 +181,7 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 isSizeDValid = value;
-                OnPropertyChanged("IsSizeDValid");
+                OnPropertyChanged();
             }
         }
 
@@ -196,7 +196,7 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 isSizeD1Valid = value;
-                OnPropertyChanged("IsSizeD1Valid");
+                OnPropertyChanged();
             }
         }
 
@@ -211,7 +211,7 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 isSizedValid = value;
-                OnPropertyChanged("IsSizedValid");
+                OnPropertyChanged();
             }
         }
 
@@ -226,7 +226,7 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 isSizeR1Valid = value;
-                OnPropertyChanged("IsSizeR1Valid");
+                OnPropertyChanged();
             }
         }
 
@@ -241,7 +241,7 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 isSizel1Valid = value;
-                OnPropertyChanged("isSizel1Valid");
+                OnPropertyChanged();
             }
         }
 
@@ -256,7 +256,7 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 isSizefValid = value;
-                OnPropertyChanged("IsSizefValid");
+                OnPropertyChanged();
             }
         }
 
@@ -271,49 +271,16 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 isCountnValid = value;
-                OnPropertyChanged("IsCountnValid");
+                OnPropertyChanged();
             }
         }
 
         
 
         public event PropertyChangedEventHandler? PropertyChanged;
-        public void OnPropertyChanged([CallerMemberName] string prop = "")
+        public void OnPropertyChanged(string prop = "")
         {
-            if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(prop));
-
-
-            IsOkEnabled =
-                (
-                    IsSizeDmValid
-                                    &&
-                    IsSizeDnValid
-                                    &&
-                    IsSized1Valid
-                                    &&
-                    IsSizebValid
-                                    &&
-                    IsSizeHValid
-                                    &&
-                    IsSizeH1Valid
-                                    &&
-                    IsSizeDValid
-                                    &&
-                    IsSizeD1Valid
-                                    &&
-                    IsSizedValid
-                                    &&
-                    IsSizeH1Valid
-                                    &&
-                    IsSizel1Valid
-                                    &&
-                    IsSizeR1Valid
-                                    &&
-                    IsSizefValid
-                                    &&
-                    IsCountnValid
-                );
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
         }
         public CollarFlangeViewModel()
         {
@@ -321,7 +288,7 @@ namespace Collar_flange_configurator.ViewModel
 
             IsOkEnabled = true;
 
-            //IsSizeDmValid = true;
+            IsSizeDmValid = true;
         }
     }
 }
