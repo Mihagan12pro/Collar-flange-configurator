@@ -95,52 +95,52 @@
                                 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="Dm"></Label>
-                                    <TextBox Style="{StaticResource TextBoxFromFieldSet}" Text="{Binding ValueDmSize, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                                    <TextBox Style="{StaticResource TextBoxFromFieldSet}" Foreground="{Binding FontColorOfDm}"></TextBox>
                                 </StackPanel>
                                 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="Dn"></Label>
-                                    <TextBox Style="{StaticResource TextBoxFromFieldSet}"></TextBox>
+                                    <TextBox Style="{StaticResource TextBoxFromFieldSet}" Foreground="{Binding FontColorOfDn}"></TextBox>
                                 </StackPanel>
                                 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="d1"></Label>
-                                    <TextBox Style="{StaticResource TextBoxFromFieldSet}"></TextBox>
+                                    <TextBox Style="{StaticResource TextBoxFromFieldSet}" Foreground="{Binding FontColorOfd1}"></TextBox>
                                 </StackPanel>
                                 
                                 <StackPanel Style="{StaticResource FieldSet}">
-                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="b"></Label>
+                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="b" Foreground="{Binding FontColorOfb}"></Label>
                                     <TextBox Style="{StaticResource TextBoxFromFieldSet}"></TextBox>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="H"></Label>
-                                    <TextBox Style="{StaticResource TextBoxFromFieldSet}"></TextBox>
+                                    <TextBox Style="{StaticResource TextBoxFromFieldSet}" Foreground="{Binding FontColorOfH}"></TextBox>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
-                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="H1"></Label>
+                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="H1" Foreground="{Binding FontColorOfH1}"></Label>
                                     <TextBox Style="{StaticResource TextBoxFromFieldSet}"></TextBox>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="D"></Label>
-                                    <TextBox Style="{StaticResource TextBoxFromFieldSet}"></TextBox>
+                                    <TextBox Style="{StaticResource TextBoxFromFieldSet}" Foreground="{Binding FontColorOfD}"></TextBox>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="D1"></Label>
-                                    <TextBox Style="{StaticResource TextBoxFromFieldSet}"></TextBox>
+                                    <TextBox Style="{StaticResource TextBoxFromFieldSet}" Foreground="{Binding FontColorOfD1}"></TextBox>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="d"></Label>
-                                    <TextBox Style="{StaticResource TextBoxFromFieldSet}"></TextBox>
+                                    <TextBox Style="{StaticResource TextBoxFromFieldSet}" Foreground="{Binding FontColorOfd}"></TextBox>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="n"></Label>
-                                    <TextBox Style="{StaticResource TextBoxFromFieldSet}"></TextBox>
+                                    <TextBox Style="{StaticResource TextBoxFromFieldSet}" Foreground="{Binding FontColorOfn}"></TextBox>
                                 </StackPanel>
                             </StackPanel>
                         </GroupBox>
@@ -150,17 +150,17 @@
 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="l1"></Label>
-                                    <TextBox Style="{StaticResource TextBoxFromFieldSet}" ></TextBox>
+                                    <TextBox Style="{StaticResource TextBoxFromFieldSet}" Foreground="{Binding FontColorOfl1}"></TextBox>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="R1"></Label>
-                                    <TextBox  Style="{StaticResource TextBoxFromFieldSet}"></TextBox>
+                                    <TextBox  Style="{StaticResource TextBoxFromFieldSet}" Foreground="{Binding FontColorOfR1}"></TextBox>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="f"></Label>
-                                    <TextBox  Style="{StaticResource TextBoxFromFieldSet}"></TextBox>
+                                    <TextBox  Style="{StaticResource TextBoxFromFieldSet}" Foreground="{Binding FontColorOff}"></TextBox>
                                 </StackPanel>
                             </StackPanel>
                         </GroupBox>
