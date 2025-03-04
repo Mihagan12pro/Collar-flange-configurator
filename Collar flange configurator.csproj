@@ -24,7 +24,6 @@
   <ItemGroup>
     <Page Remove="CollarFlangeMainWindow.xaml" />
     <Page Remove="CollarFlangeMaster.xaml" />
-    <Page Remove="WPF Override\Custom entries\NumericForm.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -71,7 +70,6 @@
 
   <ItemGroup>
     <Folder Include="database\files\" />
-    <Folder Include="WPF Override\Custom entries\" />
   </ItemGroup>
 
 </Project>

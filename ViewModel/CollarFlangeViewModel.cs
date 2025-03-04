@@ -91,7 +91,7 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 isSizeDmValid = value;
-                OnPropertyChanged(nameof(IsSizeDmValid));
+                OnPropertyChanged();
             }
         }
 
@@ -275,13 +275,31 @@ namespace Collar_flange_configurator.ViewModel
             }
         }
 
-        
 
-        public event PropertyChangedEventHandler? PropertyChanged;
-        public void OnPropertyChanged(string prop = "")
+
+        private double valueDmSize;
+        public double ValueDmSize
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
+            get
+            {
+                return valueDmSize;
+            }
+            set
+            {
+                valueDmSize = value;
+                OnPropertyChanged();
+            }
         }
+
+
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+
         public CollarFlangeViewModel()
         {
             IsConfig3DModel = true;
