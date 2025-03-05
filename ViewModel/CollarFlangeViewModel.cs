@@ -93,6 +93,7 @@ namespace Collar_flange_configurator.ViewModel
 
 
 
+
         private SolidColorBrush fontColorOfDm;
         public SolidColorBrush FontColorOfDm
         {
@@ -286,6 +287,204 @@ namespace Collar_flange_configurator.ViewModel
                 OnPropertyChanged();
             }
         }
+
+
+
+
+        private double valueOfDmSize;
+        public double ValueOfDmSize
+        {
+            get
+            {
+                return valueOfDmSize;
+            }
+            set
+            {
+                valueOfDmSize = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+        private double valueOfDnSize;
+        public double ValueOfDnSize
+        {
+            get
+            {
+                return valueOfDnSize;
+            }
+            set
+            {
+                valueOfDnSize = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+        private double valueOfd1Size;
+        public double ValueOfd1Size
+        {
+            get
+            {
+                return valueOfd1Size;
+            }
+            set
+            {
+                valueOfd1Size = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+        private double valueOfbSize;
+        public double ValueOfbSize
+        {
+            get
+            {
+                return valueOfbSize;
+            }
+            set
+            {
+                valueOfbSize = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+        private double valueOfHSize;
+        public double ValueOfHSize
+        {
+            get
+            {
+                return valueOfHSize;
+            }
+            set
+            {
+                valueOfHSize = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+        private double valueOfH1Size;
+        public double ValueOfH1Size
+        {
+            get
+            {
+                return valueOfH1Size;
+            }
+            set
+            {
+                valueOfH1Size = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+        private double valueOfDSize;
+        public double ValueOfDSize
+        {
+            get
+            {
+                return valueOfDSize;
+            }
+            set
+            {
+                valueOfDSize = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+        private double valueOfD1Size;
+        public double ValueOfD1Size
+        {
+            get
+            {
+                return valueOfD1Size;
+            }
+            set
+            {
+                valueOfD1Size = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+        private double valueOfdSize;
+        public double ValueOfdSize
+        {
+            get
+            {
+                return valueOfdSize;
+            }
+            set
+            {
+                valueOfdSize = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+        private double valueOfnSize;
+        public double ValueOfnSize
+        {
+            get
+            {
+                return valueOfnSize;
+            }
+            set
+            {
+                valueOfnSize = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+        private double valueOfl1Size;
+        public double ValueOfl1Size
+        {
+            get
+            {
+                return valueOfl1Size;
+            }
+            set
+            {
+                valueOfl1Size = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+        private double valueOfR1Size;
+        public double ValueOfR1Size
+        {
+            get
+            {
+                return valueOfR1Size;
+            }
+            set
+            {
+                valueOfR1Size = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+        private double valueOffSize;
+        public double ValueOffSize
+        {
+            get
+            {
+                return valueOffSize;
+            }
+            set
+            {
+                valueOffSize = value;
+                OnPropertyChanged();
+            }
+        }
+
 
 
         public event PropertyChangedEventHandler PropertyChanged;
