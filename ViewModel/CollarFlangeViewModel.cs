@@ -88,196 +88,196 @@ namespace Collar_flange_configurator.ViewModel
 
 
 
-        private SolidColorBrush fontColorOfDm;
-        public SolidColorBrush FontColorOfDm
+        private bool isDmValid;
+        public bool IsDmValid
         {
             get
             {
-                return fontColorOfDm;
+                return isDmValid;
             }
-            private set
+            set
             {
-                fontColorOfDm = value;
+                isDmValid = value;
                 OnPropertyChanged();
             }
         }
 
 
-        private SolidColorBrush fontColorOfDn;
-        public SolidColorBrush FontColorOfDn
+        private bool isDnValid;
+        public bool IsDnValid
         {
             get
             {
-                return fontColorOfDn;
+                return isDnValid;
             }
-            private set
+            set
             {
-                fontColorOfDn = value;
+                isDnValid = value;
                 OnPropertyChanged();
             }
         }
 
 
-        private SolidColorBrush fontColorOfd1;
-        public SolidColorBrush FontColorOfd1
+        private bool isd1Valid;
+        public bool Isd1Valid
         {
             get
             {
-                return fontColorOfd1;
+                return isd1Valid;
             }
-            private set
+            set
             {
-                fontColorOfd1 = value;
+                isd1Valid = value;
                 OnPropertyChanged();
             }
         }
 
 
-        private SolidColorBrush fontColorOfb;
-        public SolidColorBrush FontColorOfb
+        private bool isbValid;
+        public bool IsbValid
         {
             get
             {
-                return fontColorOfb;
+                return isbValid;
             }
-            private set
+            set
             {
-                fontColorOfb = value;
+                isbValid = value;
                 OnPropertyChanged();
             }
         }
 
 
-        private SolidColorBrush fontColorOfH;
-        public SolidColorBrush FontColorOfH
+        private bool isHValid;
+        public bool IsHValid
         {
             get
             {
-                return fontColorOfH;
+                return isHValid;
             }
-            private set
+            set
             {
-                fontColorOfH = value;
+                isHValid = value;
                 OnPropertyChanged();
             }
         }
 
 
-        private SolidColorBrush fontColorOfH1;
-        public SolidColorBrush FontColorOfH1
+        private bool isH1Valid;
+        public bool IsH1Valid
         {
             get
             {
-                return fontColorOfH1;
+                return isH1Valid;
             }
-            private set
+           set
             {
-                fontColorOfH1 = value;
+                isH1Valid = value;
                 OnPropertyChanged();
             }
         }
 
 
-        private SolidColorBrush fontColorOfD;
-        public SolidColorBrush FontColorOfD
+        private bool isDValid;
+        public bool IsDValid
         {
             get
             {
-                return fontColorOfD;
+                return isDValid;
             }
-            private set
+             set
             {
-                fontColorOfD = value;
+                isDValid = value;
                 OnPropertyChanged();
             }
         }
 
 
-        private SolidColorBrush fontColorOfD1;
-        public SolidColorBrush FontColorOfD1
+        private bool isD1Valid;
+        public bool IsD1Valid
         {
             get
             {
-                return fontColorOfD1;
+                return isD1Valid;
             }
-            private set
+           set
             {
-                fontColorOfD1 = value;
+                isD1Valid = value;
                 OnPropertyChanged();
             }
         }
 
 
-        private SolidColorBrush fontColorOfd;
-        public SolidColorBrush FontColorOfd
+        private bool isdValid;
+        public bool IsdValid
         {
             get
             {
-                return fontColorOfd;
+                return isdValid;
             }
-            private set
+            set
             {
-                fontColorOfd = value;
+                isdValid = value;
                 OnPropertyChanged();
             }
         }
 
 
-        private SolidColorBrush fontColorOfn;
-        public SolidColorBrush FontColorOfn
+        private bool isnValid;
+        public bool IsnValid
         {
             get
             {
-                return fontColorOfn;
+                return isnValid;
             }
-            private set
+            set
             {
-                fontColorOfn = value;
+                isnValid = value;
                 OnPropertyChanged();
             }
         }
 
 
-        private SolidColorBrush fontColorOfl1;
-        public SolidColorBrush FontColorOfl1
+        private bool isl1Valid;
+        public bool Isl1Valid
         {
             get
             {
-                return fontColorOfl1;
+                return isl1Valid;
             }
-            private set
+           set
             {
-                fontColorOfl1 = value;
+                isl1Valid = value;
                 OnPropertyChanged();
             }
         }
 
 
-        private SolidColorBrush fontColorOfR1;
-        public SolidColorBrush FontColorOfR1
+        private bool isR1Valid;
+        public bool IsR1Valid
         {
             get
             {
-                return fontColorOfR1;
+                return isR1Valid;
             }
-            private set
+            set
             {
-                fontColorOfR1 = value;
+                isR1Valid = value;
                 OnPropertyChanged();
             }
         }
 
 
-        private SolidColorBrush fontColorOff;
-        public SolidColorBrush FontColorOff
+        private bool isfValid;
+        public bool IsfValid
         {
             get
             {
-                return fontColorOff;
+                return isfValid;
             }
-            private set
+            set
             {
-                fontColorOff = value;
+                isfValid = value;
                 OnPropertyChanged();
             }
         }
@@ -494,10 +494,7 @@ namespace Collar_flange_configurator.ViewModel
 
             IsOkEnabled = true;
 
-
-            FontColorOfDm = Brushes.Red;
-
-            TextValid = false ;
+            IsR1Valid = true;
         }
     }
 }
