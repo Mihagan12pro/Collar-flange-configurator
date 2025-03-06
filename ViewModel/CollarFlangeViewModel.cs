@@ -14,8 +14,36 @@ namespace Collar_flange_configurator.ViewModel
 {
     internal class CollarFlangeViewModel : INotifyPropertyChanged
     {
-        private bool isSizeDmValid, isSizeDnValid, isSized1Valid, isSizebValid, isSizeHValid, isSizeH1Valid, isSizeDValid;
-        private bool isSizeD1Valid, isSizedValid, isSizeR1Valid, isSizel1Valid, isSizefValid,isCountnValid;
+
+
+        private bool textVal;
+        public bool TextValid
+        {
+            get
+            {
+                return textVal;
+            }
+            set
+            {
+                textVal = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+        private bool isOkEnabled;
+        public bool IsOkEnabled
+        {
+            get
+            {
+                return isOkEnabled;
+            }
+            private set
+            {
+                isOkEnabled = value;
+                OnPropertyChanged();
+            }
+        }
 
 
 
@@ -53,40 +81,6 @@ namespace Collar_flange_configurator.ViewModel
             private set
             {
                 assembleVisibility = value;
-                OnPropertyChanged();
-            }
-        }
-
-
-
-
-        private Visibility tableVisibility;
-        public Visibility TableVisibility
-        {
-            get
-            {
-                return tableVisibility;
-            }
-            private set
-            {
-                tableVisibility = value;
-                OnPropertyChanged();
-            }
-        }
-
-
-
-
-        private bool isOkEnabled;
-        public bool IsOkEnabled
-        {
-            get
-            {
-                return isOkEnabled;
-            }
-            private set
-            {
-                isOkEnabled = value;
                 OnPropertyChanged();
             }
         }
@@ -502,6 +496,8 @@ namespace Collar_flange_configurator.ViewModel
 
 
             FontColorOfDm = Brushes.Red;
+
+            TextValid = false ;
         }
     }
 }
