@@ -12,6 +12,18 @@
   <ItemGroup>
     <Compile Remove="CollarFlangeMainWindow.xaml.cs" />
     <Compile Remove="CollarFlangeMaster.xaml.cs" />
+    <Compile Remove="ViewModel\Validation classes\Double\ValidatorOfb.cs" />
+    <Compile Remove="ViewModel\Validation classes\Double\ValidatorOfD.cs" />
+    <Compile Remove="ViewModel\Validation classes\Double\ValidatorOfd1.cs" />
+    <Compile Remove="ViewModel\Validation classes\Double\ValidatorOfD1_.cs" />
+    <Compile Remove="ViewModel\Validation classes\Double\ValidatorOfDm.cs" />
+    <Compile Remove="ViewModel\Validation classes\Double\ValidatorOfDn.cs" />
+    <Compile Remove="ViewModel\Validation classes\Double\ValidatorOfd_1.cs" />
+    <Compile Remove="ViewModel\Validation classes\Double\ValidatorOff.cs" />
+    <Compile Remove="ViewModel\Validation classes\Double\ValidatorOfH.cs" />
+    <Compile Remove="ViewModel\Validation classes\Double\ValidatorOfH1.cs" />
+    <Compile Remove="ViewModel\Validation classes\Double\ValidatorOfl1.cs" />
+    <Compile Remove="ViewModel\Validation classes\Double\ValidatorOfR1.cs" />
   </ItemGroup>
 
   <ItemGroup>
