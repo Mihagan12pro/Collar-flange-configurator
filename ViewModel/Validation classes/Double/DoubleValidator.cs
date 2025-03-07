@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Collar_flange_configurator.ViewModel.Validation_classes
 {
-    public class DoubleValidator : ParamValidator
+    public class DoubleValidator : ParamValidator<double>
     {
         public List<DoubleValidator> DominantsList = new List<DoubleValidator>();
         public List<DoubleValidator> OppressedList = new List<DoubleValidator>();
 
-        public double Value{get; private set;}
+        
         public override bool CheckValidation(object param)
         {
             if (!double.TryParse(Convert.ToString(param), out double d))
@@ -20,19 +20,25 @@ namespace Collar_flange_configurator.ViewModel.Validation_classes
             }
             Value = d;
 
-            foreach(DoubleValidator dominant in DominantsList)
-            {
-                if (dominant.Value <= Value)
+            if (DominantsList.Count > 0)
+            { 
+                foreach (DoubleValidator dominant in DominantsList)
                 {
-                    return false;
+                    if (dominant.Value <= Value)
+                    {
+                        return false;
+                    }
                 }
             }
 
-            foreach(DoubleValidator oppressed in OppressedList)
+            if (OppressedList.Count > 0)
             {
-                if (oppressed.Value >= Value)
+                foreach (DoubleValidator oppressed in OppressedList)
                 {
-                    return false;
+                    if (oppressed.Value >= Value)
+                    {
+                        return false;
+                    }
                 }
             }
 

@@ -1,19 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Collar_flange_configurator.ViewModel.Validation_classes;
 using System.ComponentModel;
-using System.IO;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 
 namespace Collar_flange_configurator.ViewModel
 {
     internal class CollarFlangeViewModel : INotifyPropertyChanged
     {
+        private readonly DoubleValidator Dm = new DoubleValidator();
+        private readonly DoubleValidator Dn = new DoubleValidator();
+        private readonly DoubleValidator d = new DoubleValidator();
+        private readonly DoubleValidator b = new DoubleValidator();
+        private readonly DoubleValidator l1 = new DoubleValidator();
+        private readonly AngleValidator f = new AngleValidator(0,90);
+        private readonly DoubleValidator d1 = new DoubleValidator();
+        private readonly DoubleValidator D = new DoubleValidator();
+        private readonly DoubleValidator D1 = new DoubleValidator();
+        private readonly DoubleValidator D2 = new DoubleValidator();
+        private readonly DoubleValidator R1 = new DoubleValidator();
+        private readonly DoubleValidator H = new DoubleValidator();
+        private readonly DoubleValidator H1 = new DoubleValidator();
 
 
         private bool textVal;
@@ -493,6 +499,7 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 valueOffSize = value;
+                IsfValid = f.CheckValidation(valueOffSize);
                 OnPropertyChanged();
             }
         }
@@ -563,7 +570,7 @@ namespace Collar_flange_configurator.ViewModel
             IsConfig3DModel = true;
 
             IsDmValid = true;
-                           
+
             IsDnValid = true;
 
             Isd1Valid = true;
@@ -588,7 +595,18 @@ namespace Collar_flange_configurator.ViewModel
 
             IsfValid = true;
 
-            IsH2Valid = true;
+            IsH2Valid = false;
+
+
+
+            //Dm.DominantsList = new List<DoubleValidator>{D,D1 };
+            //Dm.OppressedList = new List<DoubleValidator> {d1,d };
+
+            //Dn.DominantsList = new List<DoubleValidator> { Dm,D1,D};
+            //Dn.OppressedList = new List<DoubleValidator> { d1,d};
+
+            //d1.DominantsList = new List<DoubleValidator> { Dn};
+
         }
     }
 }

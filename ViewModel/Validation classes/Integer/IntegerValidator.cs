@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Collar_flange_configurator.ViewModel.Validation_classes
 {
-    public abstract class IntegerValidator : ParamValidator
+    public abstract class IntegerValidator : ParamValidator<int>
     {
         public override bool CheckValidation(object param)
         {
