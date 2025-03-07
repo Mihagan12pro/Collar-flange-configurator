@@ -282,6 +282,20 @@ namespace Collar_flange_configurator.ViewModel
             }
         }
 
+        private bool isH2Valid;
+        public bool IsH2Valid
+        {
+            get
+            {
+                return isH2Valid;
+            }
+            set
+            {
+                isH2Valid = value;
+                OnValidationPropertyChanged();
+            }
+        }
+
 
 
 
@@ -482,8 +496,22 @@ namespace Collar_flange_configurator.ViewModel
                 OnPropertyChanged();
             }
         }
+        //IsH2Valid
 
 
+        private string valueOfH2Size;
+        public string ValueOfH2Size
+        {
+            get
+            {
+                return valueOfH2Size;
+            }
+            set
+            {
+                valueOfH2Size = value;
+                OnPropertyChanged();
+            }
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
@@ -524,6 +552,8 @@ namespace Collar_flange_configurator.ViewModel
                 IsR1Valid
                             &&
                 IsfValid
+                            &&
+                IsH2Valid
             );
         }
 
@@ -548,7 +578,7 @@ namespace Collar_flange_configurator.ViewModel
 
             IsD1Valid = true;
 
-            IsdValid = false;
+            IsdValid = true;
 
             IsnValid = true;
 
@@ -557,6 +587,8 @@ namespace Collar_flange_configurator.ViewModel
             IsR1Valid = true;
 
             IsfValid = true;
+
+            IsH2Valid = true;
         }
     }
 }

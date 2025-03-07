@@ -146,7 +146,7 @@
                             </StackPanel>
                         </GroupBox>
 
-                        <GroupBox Header="Прочие размеры"  Height="100" VerticalAlignment="Bottom" Margin="0 76">
+                        <GroupBox Header="Прочие размеры"  Height="120" VerticalAlignment="Bottom" Margin="0 55">
                             <StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
@@ -162,6 +162,10 @@
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="f"></Label>
                                     <overrideWPF:NumericBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsfValid}" Text="{Binding ValueOffSize}"></overrideWPF:NumericBox>
+                                </StackPanel>
+                                <StackPanel Style="{StaticResource FieldSet}">
+                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="H2"></Label>
+                                    <overrideWPF:NumericBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsH2Valid}" Text="{Binding ValueOfH2Size}"></overrideWPF:NumericBox>
                                 </StackPanel>
                             </StackPanel>
                         </GroupBox>

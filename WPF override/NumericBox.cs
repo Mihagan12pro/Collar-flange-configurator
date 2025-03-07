@@ -35,5 +35,23 @@ namespace Collar_flange_configurator.WPF_override
                 typeof(NumericBox),
                 new FrameworkPropertyMetadata(true, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, new PropertyChangedCallback(IsTextValidChanged))
         );
+
+        private void NumericBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+             if (Text.Contains(','))
+             {
+                Text = Text.Replace(",",".");
+                CaretIndex = Text.Length;
+             }
+        }
+        
+        
+        
+        public NumericBox()
+        {
+            TextChanged += NumericBox_TextChanged;
+        }
+
+        
     }
 }
