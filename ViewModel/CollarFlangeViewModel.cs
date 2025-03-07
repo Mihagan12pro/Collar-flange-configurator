@@ -285,8 +285,12 @@ namespace Collar_flange_configurator.ViewModel
 
 
 
-        private double valueOfDmSize;
-        public double ValueOfDmSize
+
+
+
+
+        private string valueOfDmSize;
+        public string ValueOfDmSize
         {
             get
             {
@@ -300,8 +304,8 @@ namespace Collar_flange_configurator.ViewModel
         }
 
 
-        private double valueOfDnSize;
-        public double ValueOfDnSize
+        private string valueOfDnSize;
+        public string ValueOfDnSize
         {
             get
             {
@@ -315,8 +319,8 @@ namespace Collar_flange_configurator.ViewModel
         }
 
 
-        private double valueOfd1Size;
-        public double ValueOfd1Size
+        private string valueOfd1Size;
+        public string ValueOfd1Size
         {
             get
             {
@@ -330,8 +334,8 @@ namespace Collar_flange_configurator.ViewModel
         }
 
 
-        private double valueOfbSize;
-        public double ValueOfbSize
+        private string valueOfbSize;
+        public string ValueOfbSize
         {
             get
             {
@@ -345,8 +349,8 @@ namespace Collar_flange_configurator.ViewModel
         }
 
 
-        private double valueOfHSize;
-        public double ValueOfHSize
+        private string valueOfHSize;
+        public string ValueOfHSize
         {
             get
             {
@@ -360,8 +364,8 @@ namespace Collar_flange_configurator.ViewModel
         }
 
 
-        private double valueOfH1Size;
-        public double ValueOfH1Size
+        private string valueOfH1Size;
+        public string ValueOfH1Size
         {
             get
             {
@@ -375,8 +379,8 @@ namespace Collar_flange_configurator.ViewModel
         }
 
 
-        private double valueOfDSize;
-        public double ValueOfDSize
+        private string valueOfDSize;
+        public string ValueOfDSize
         {
             get
             {
@@ -390,8 +394,8 @@ namespace Collar_flange_configurator.ViewModel
         }
 
 
-        private double valueOfD1Size;
-        public double ValueOfD1Size
+        private string valueOfD1Size;
+        public string ValueOfD1Size
         {
             get
             {
@@ -405,8 +409,8 @@ namespace Collar_flange_configurator.ViewModel
         }
 
 
-        private double valueOfdSize;
-        public double ValueOfdSize
+        private string valueOfdSize;
+        public string ValueOfdSize
         {
             get
             {
@@ -420,8 +424,8 @@ namespace Collar_flange_configurator.ViewModel
         }
 
 
-        private double valueOfnSize;
-        public double ValueOfnSize
+        private string valueOfnSize;
+        public string ValueOfnSize
         {
             get
             {
@@ -435,8 +439,8 @@ namespace Collar_flange_configurator.ViewModel
         }
 
 
-        private double valueOfl1Size;
-        public double ValueOfl1Size
+        private string valueOfl1Size;
+        public string ValueOfl1Size
         {
             get
             {
@@ -450,8 +454,8 @@ namespace Collar_flange_configurator.ViewModel
         }
 
 
-        private double valueOfR1Size;
-        public double ValueOfR1Size
+        private string valueOfR1Size;
+        public string ValueOfR1Size
         {
             get
             {
@@ -465,8 +469,8 @@ namespace Collar_flange_configurator.ViewModel
         }
 
 
-        private double valueOffSize;
-        public double ValueOffSize
+        private string valueOffSize;
+        public string ValueOffSize
         {
             get
             {
