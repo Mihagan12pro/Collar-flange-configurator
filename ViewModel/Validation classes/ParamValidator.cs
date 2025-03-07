@@ -9,8 +9,6 @@ namespace Collar_flange_configurator.ViewModel.Validation_classes
 {
     public abstract class ParamValidator
     {
-        public abstract bool CheckValidation();
-
-       // public SolidColorBrush FontColor
+        public abstract bool CheckValidation(object param);
     }
 }
