@@ -288,16 +288,16 @@ namespace Collar_flange_configurator.ViewModel
             }
         }
 
-        private bool isH2Valid;
-        public bool IsH2Valid
+        private bool isD2Valid;
+        public bool IsD2Valid
         {
             get
             {
-                return isH2Valid;
+                return isD2Valid;
             }
             set
             {
-                isH2Valid = value;
+                isD2Valid = value;
                 OnPropertyChanged();
             }
         }
@@ -503,19 +503,19 @@ namespace Collar_flange_configurator.ViewModel
                 OnPropertyChanged();
             }
         }
-        //IsH2Valid
+        
 
 
-        private string valueOfH2Size;
-        public string ValueOfH2Size
+        private string valueOfD2Size;
+        public string ValueOfD2Size
         {
             get
             {
-                return valueOfH2Size;
+                return valueOfD2Size;
             }
             set
             {
-                valueOfH2Size = value;
+                valueOfD2Size = value;
                 OnPropertyChanged();
             }
         }
@@ -556,7 +556,7 @@ namespace Collar_flange_configurator.ViewModel
                                &&
                    IsfValid
                                &&
-                   IsH2Valid
+                   IsD2Valid
                );
             }
         }
@@ -567,51 +567,55 @@ namespace Collar_flange_configurator.ViewModel
 
         public CollarFlangeViewModel()
         {
-            IsDmValid = true;
-                          
-               IsDnValid
+            //IsDmValid = true;
 
-                = true;
+            //   IsDnValid
 
-            IsbValid = true;
+            //    = true;
 
-            IsHValid = true;
+            //IsbValid = true;
 
-            Isd1Valid = true;
+            //IsHValid = true;
 
-
-            IsH1Valid = true;
-
-            IsDValid = true;
+            //Isd1Valid = true;
 
 
-            IsD1Valid = true;
+            //IsH1Valid = true;
 
-            IsdValid = true;
-
-
-            IsnValid = true;
-
-            Isl1Valid = true;
+            //IsDValid = true;
 
 
-            IsR1Valid = true;
+            //IsD1Valid = true;
+
+            //IsdValid = true;
 
 
+            //IsnValid = true;
 
-            IsH2Valid = true;
+            //Isl1Valid = true;
+
+
+            //IsR1Valid = true;
 
 
 
+            //IsH2Valid = true;
 
-            //Dm.DominantsList = new List<DoubleValidator>{D,D1 };
-            //Dm.OppressedList = new List<DoubleValidator> {d1,d };
 
-            //Dn.DominantsList = new List<DoubleValidator> { Dm,D1,D};
-            //Dn.OppressedList = new List<DoubleValidator> { d1,d};
-
-            //d1.DominantsList = new List<DoubleValidator> { Dn};
-
+            ValueOfDmSize = "660";
+            ValueOfDnSize = "636";
+            ValueOfd1Size = "602";
+            ValueOfD1Size = "770";
+            ValueOfDSize = "840";
+            ValueOfHSize = "90";
+            ValueOfH1Size = "14";
+            ValueOfbSize = "41";
+            ValueOfdSize = "20";
+            ValueOfnSize = "20";
+            ValueOfR1Size = "5";
+            ValueOffSize = "45";
+            ValueOfl1Size = "5";
+            ValueOfD2Size = "690";
         }
     }
 }

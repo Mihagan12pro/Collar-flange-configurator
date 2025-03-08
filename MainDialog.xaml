@@ -18,7 +18,7 @@
                 <StackPanel Name="MainTabItemStackPanel"  Orientation="Vertical"  Style="{StaticResource MajorStackPanel}">
 
                     <Border BorderBrush="Black" BorderThickness="2">
-                        <Image Name="MainTabImage" Stretch="Fill" Height="350" Width="587"   ></Image>
+                        <Image Name="MainTabImage" Source="Images/Other/Intro(config).png" Stretch="Fill" Height="350" Width="587"   ></Image>
                     </Border>
 
                     <StackPanel Orientation="Vertical" Margin="0 5">
@@ -164,8 +164,8 @@
                                     <overrideWPF:NumericBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsfValid}" Text="{Binding ValueOffSize,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:NumericBox>
                                 </StackPanel>
                                 <StackPanel Style="{StaticResource FieldSet}">
-                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="H2"></Label>
-                                    <overrideWPF:NumericBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsH2Valid}" Text="{Binding ValueOfH2Size,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:NumericBox>
+                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="D2"></Label>
+                                    <overrideWPF:NumericBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsD2Valid}" Text="{Binding ValueOfD2Size,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:NumericBox>
                                 </StackPanel>
                             </StackPanel>
                         </GroupBox>

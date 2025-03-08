@@ -28,6 +28,7 @@
 
   <ItemGroup>
     <None Remove="Images\Icons\cursor.png" />
+    <None Remove="Images\Other\Intro%28config%29.png" />
     <None Remove="Images\Sketches\collarFlange.png" />
   </ItemGroup>
 
@@ -73,6 +74,7 @@
 
   <ItemGroup>
     <Resource Include="Images\Icons\cursor.png" />
+    <Resource Include="Images\Other\Intro(config).png" />
     <Resource Include="Images\Sketches\collarFlange.png" />
   </ItemGroup>
 
