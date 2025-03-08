@@ -28,8 +28,6 @@
 
   <ItemGroup>
     <None Remove="Images\Icons\cursor.png" />
-    <None Remove="Images\Placeholders\collarFlange.png" />
-    <None Remove="Images\Placeholders\MainTab Placeholder.bmp" />
     <None Remove="Images\Sketches\collarFlange.png" />
   </ItemGroup>
 
@@ -75,13 +73,12 @@
 
   <ItemGroup>
     <Resource Include="Images\Icons\cursor.png" />
-    <Resource Include="Images\Placeholders\collarFlange.png" />
-    <Resource Include="Images\Placeholders\MainTab Placeholder.bmp" />
     <Resource Include="Images\Sketches\collarFlange.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="database\files\" />
+    <Folder Include="Images\Placeholders\" />
   </ItemGroup>
 
 </Project>

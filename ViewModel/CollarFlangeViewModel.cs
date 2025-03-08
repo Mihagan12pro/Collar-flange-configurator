@@ -595,7 +595,7 @@ namespace Collar_flange_configurator.ViewModel
 
             IsfValid = true;
 
-            IsH2Valid = false;
+            IsH2Valid = true;
 
 
 

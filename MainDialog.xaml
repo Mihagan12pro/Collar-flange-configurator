@@ -96,52 +96,52 @@
                                 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="Dm"></Label>
-                                    <overrideWPF:NumericBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsDmValid}" Text="{Binding ValueOfDmSize}"></overrideWPF:NumericBox>
+                                    <overrideWPF:NumericBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsDmValid}" Text="{Binding ValueOfDmSize,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:NumericBox>
                                 </StackPanel>
                                 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="Dn"></Label>
-                                    <overrideWPF:NumericBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsDnValid}" Text="{Binding ValueOfDnSize}"></overrideWPF:NumericBox>
+                                    <overrideWPF:NumericBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsDnValid}" Text="{Binding ValueOfDnSize,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:NumericBox>
                                 </StackPanel>
                                 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="d1"></Label>
-                                    <overrideWPF:NumericBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding Isd1Valid}" Text="{Binding ValueOfd1Size}"></overrideWPF:NumericBox>
+                                    <overrideWPF:NumericBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding Isd1Valid}" Text="{Binding ValueOfd1Size,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:NumericBox>
                                 </StackPanel>
                                 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="b"></Label>
-                                    <overrideWPF:NumericBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsbValid}" Text="{Binding ValueOfbSize}"></overrideWPF:NumericBox>
+                                    <overrideWPF:NumericBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsbValid}" Text="{Binding ValueOfbSize,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:NumericBox>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="H"></Label>
-                                    <overrideWPF:NumericBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsHValid}" Text="{Binding ValueOfHSize}"></overrideWPF:NumericBox>
+                                    <overrideWPF:NumericBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsHValid}" Text="{Binding ValueOfHSize,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:NumericBox>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="H1"></Label>
-                                    <overrideWPF:NumericBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsH1Valid}" Text="{Binding ValueOfH1Size}"></overrideWPF:NumericBox>
+                                    <overrideWPF:NumericBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsH1Valid}" Text="{Binding ValueOfH1Size,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:NumericBox>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="D"></Label>
-                                    <overrideWPF:NumericBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsDValid}" Text="{Binding ValueOfDSize}"></overrideWPF:NumericBox>
+                                    <overrideWPF:NumericBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsDValid}" Text="{Binding ValueOfDSize,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:NumericBox>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="D1"></Label>
-                                    <overrideWPF:NumericBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsD1Valid}" Text="{Binding ValueOfD1Size}"></overrideWPF:NumericBox>
+                                    <overrideWPF:NumericBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsD1Valid}" Text="{Binding ValueOfD1Size,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:NumericBox>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="d"></Label>
-                                    <overrideWPF:NumericBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsdValid}" Text="{Binding ValueOfdSize}"></overrideWPF:NumericBox>
+                                    <overrideWPF:NumericBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsdValid}" Text="{Binding ValueOfdSize,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:NumericBox>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="n"></Label>
-                                    <overrideWPF:NumericBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsnValid}" Text="{Binding ValueOfnSize}"></overrideWPF:NumericBox>
+                                    <overrideWPF:NumericBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsnValid}" Text="{Binding ValueOfnSize,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:NumericBox>
                                 </StackPanel>
                             </StackPanel>
                         </GroupBox>
@@ -151,21 +151,21 @@
 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="l1"></Label>
-                                    <overrideWPF:NumericBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding Isl1Valid}" Text="{Binding ValueOfl1Size}"></overrideWPF:NumericBox>
+                                    <overrideWPF:NumericBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding Isl1Valid}" Text="{Binding ValueOfl1Size,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:NumericBox>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="R1"></Label>
-                                    <overrideWPF:NumericBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsR1Valid}" Text="{Binding ValueOfR1Size}"></overrideWPF:NumericBox>
+                                    <overrideWPF:NumericBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsR1Valid}" Text="{Binding ValueOfR1Size,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:NumericBox>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="f"></Label>
-                                    <overrideWPF:NumericBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsfValid}" Text="{Binding ValueOffSize}"></overrideWPF:NumericBox>
+                                    <overrideWPF:NumericBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsfValid}" Text="{Binding ValueOffSize,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:NumericBox>
                                 </StackPanel>
                                 <StackPanel Style="{StaticResource FieldSet}">
                                     <Label Style="{StaticResource LabelFromFieldSet}" Content="H2"></Label>
-                                    <overrideWPF:NumericBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsH2Valid}" Text="{Binding ValueOfH2Size}"></overrideWPF:NumericBox>
+                                    <overrideWPF:NumericBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsH2Valid}" Text="{Binding ValueOfH2Size,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:NumericBox>
                                 </StackPanel>
                             </StackPanel>
                         </GroupBox>
