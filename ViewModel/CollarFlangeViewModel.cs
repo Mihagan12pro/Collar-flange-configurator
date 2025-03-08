@@ -104,7 +104,7 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 isDmValid = value;
-                OnValidationPropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -119,7 +119,7 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 isDnValid = value;
-                OnValidationPropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -134,7 +134,7 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 isd1Valid = value;
-                OnValidationPropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -149,7 +149,7 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 isbValid = value;
-                OnValidationPropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -164,7 +164,7 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 isHValid = value;
-                OnValidationPropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -179,7 +179,7 @@ namespace Collar_flange_configurator.ViewModel
            set
             {
                 isH1Valid = value;
-                OnValidationPropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -194,7 +194,7 @@ namespace Collar_flange_configurator.ViewModel
              set
             {
                 isDValid = value;
-                OnValidationPropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -209,7 +209,7 @@ namespace Collar_flange_configurator.ViewModel
            set
             {
                 isD1Valid = value;
-                OnValidationPropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -224,7 +224,7 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 isdValid = value;
-                OnValidationPropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -239,7 +239,7 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 isnValid = value;
-                OnValidationPropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -254,7 +254,7 @@ namespace Collar_flange_configurator.ViewModel
            set
             {
                 isl1Valid = value;
-                OnValidationPropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -269,7 +269,7 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 isR1Valid = value;
-                OnValidationPropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -284,7 +284,7 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 isfValid = value;
-                OnValidationPropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -298,7 +298,7 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 isH2Valid = value;
-                OnValidationPropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -524,78 +524,83 @@ namespace Collar_flange_configurator.ViewModel
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+
+
+            if (nameof(IsOkEnabled) != propertyName)
+            {
+               IsOkEnabled =
+               (
+                   IsDmValid
+                               &&
+                   IsDnValid
+                               &&
+                   Isd1Valid
+                               &&
+                   IsbValid
+                               &&
+                   IsHValid
+                               &&
+                   IsH1Valid
+                               &&
+                   IsDValid
+                               &&
+                   IsD1Valid
+                               &&
+                   IsdValid
+                               &&
+                   IsnValid
+                               &&
+                   Isl1Valid
+                               &&
+                   IsR1Valid
+                               &&
+                   IsfValid
+                               &&
+                   IsH2Valid
+               );
+            }
         }
 
 
-        public event PropertyChangedEventHandler ValidationPropertyChanged;
-        protected void OnValidationPropertyChanged([CallerMemberName] string paramName = null)
-        {
-            ValidationPropertyChanged?.Invoke(this, new PropertyChangedEventArgs(paramName));
 
-            IsOkEnabled =
-            (
-                IsDmValid
-                            &&
-                IsDnValid
-                            &&
-                Isd1Valid
-                            &&
-                IsbValid
-                            &&
-                IsHValid
-                            &&
-                IsH1Valid
-                            &&
-                IsDValid
-                            &&
-                IsD1Valid
-                            &&
-                IsdValid
-                            &&
-                IsnValid
-                            &&
-                Isl1Valid
-                            &&
-                IsR1Valid
-                            &&
-                IsfValid
-                            &&
-                IsH2Valid
-            );
-        }
 
 
         public CollarFlangeViewModel()
         {
-            IsConfig3DModel = true;
-
             IsDmValid = true;
+                          
+               IsDnValid
 
-            IsDnValid = true;
-
-            Isd1Valid = true;
+                = true;
 
             IsbValid = true;
 
             IsHValid = true;
 
+            Isd1Valid = true;
+
+
             IsH1Valid = true;
 
             IsDValid = true;
+
 
             IsD1Valid = true;
 
             IsdValid = true;
 
+
             IsnValid = true;
 
             Isl1Valid = true;
 
+
             IsR1Valid = true;
 
-            IsfValid = true;
+
 
             IsH2Valid = true;
+
 
 
 
