@@ -1,4 +1,5 @@
 ﻿using Collar_flange_configurator.ViewModel.Validation_classes;
+using Collar_flange_configurator.ViewModel.Validation_classes.Double;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
@@ -7,19 +8,19 @@ namespace Collar_flange_configurator.ViewModel
 {
     internal class CollarFlangeViewModel : INotifyPropertyChanged
     {
-        private readonly DoubleValidator Dm = new DoubleValidator();
-        private readonly DoubleValidator Dn = new DoubleValidator();
-        private readonly DoubleValidator d = new DoubleValidator();
-        private readonly DoubleValidator b = new DoubleValidator();
-        private readonly DoubleValidator l1 = new DoubleValidator();
+        private readonly DoubleValidator Dm = new DoubleValidator(1,1);
+        private readonly DoubleValidator Dn = new DoubleValidator(1,0);
+        private readonly DoubleValidator d = new DoubleValidator(1,0);
+        private readonly DoubleValidator b = new DoubleValidator(1,1);
+        private readonly DoubleValidator l1 = new DoubleValidator(1,0);
         private readonly AngleValidator f = new AngleValidator(0,90);
-        private readonly DoubleValidator d1 = new DoubleValidator();
-        private readonly DoubleValidator D = new DoubleValidator();
-        private readonly DoubleValidator D1 = new DoubleValidator();
-        private readonly DoubleValidator D2 = new DoubleValidator();
-        private readonly DoubleValidator R1 = new DoubleValidator();
-        private readonly DoubleValidator H = new DoubleValidator();
-        private readonly DoubleValidator H1 = new DoubleValidator();
+        private readonly DoubleValidator d1 = new DoubleValidator(1,0);
+        private readonly DoubleValidator D = new DoubleValidator(0,1);
+        private readonly DoubleValidator D1 = new DoubleValidator(1,1);
+        private readonly DoubleValidator D2 = new DoubleValidator(1,1);
+        private readonly DoubleValidator R1 = new DoubleValidator(1,0);
+        private readonly MajorDoubleValidator H = new MajorDoubleValidator(0,2,2);
+        private readonly DoubleValidator H1 = new DoubleValidator(1,0);
 
 
         private bool textVal;
@@ -364,6 +365,7 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 valueOfbSize = value;
+                IsbValid = b.CheckValidation(value);
                 OnPropertyChanged();
             }
         }
@@ -379,6 +381,7 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 valueOfHSize = value;
+                IsHValid = H.CheckValidation(value);
                 OnPropertyChanged();
             }
         }
@@ -394,6 +397,9 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 valueOfH1Size = value;
+
+                IsH1Valid = H1.CheckValidation(value);
+
                 OnPropertyChanged();
             }
         }
@@ -469,6 +475,7 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 valueOfl1Size = value;
+                Isl1Valid = l1.CheckValidation(value);
                 OnPropertyChanged();
             }
         }
@@ -567,40 +574,18 @@ namespace Collar_flange_configurator.ViewModel
 
         public CollarFlangeViewModel()
         {
-            //IsDmValid = true;
+            H.Children[0] = H1;
+            H.Children[1] = b;
 
-            //   IsDnValid
+            H.Oppressed[0] = H1;
+            H.Oppressed[1] = b;
 
-            //    = true;
+            H1.Dominants[0] = H;
 
-            //IsbValid = true;
+            b.Dominants[0] = H;
+            b.Oppressed[0] = l1;
 
-            //IsHValid = true;
-
-            //Isd1Valid = true;
-
-
-            //IsH1Valid = true;
-
-            //IsDValid = true;
-
-
-            //IsD1Valid = true;
-
-            //IsdValid = true;
-
-
-            //IsnValid = true;
-
-            //Isl1Valid = true;
-
-
-            //IsR1Valid = true;
-
-
-
-            //IsH2Valid = true;
-
+            l1.Dominants[0] = b;
 
             ValueOfDmSize = "660";
             ValueOfDnSize = "636";
@@ -616,6 +601,9 @@ namespace Collar_flange_configurator.ViewModel
             ValueOffSize = "45";
             ValueOfl1Size = "5";
             ValueOfD2Size = "690";
+
+
+
         }
     }
 }
