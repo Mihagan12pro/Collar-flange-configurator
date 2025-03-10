@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Collar_flange_configurator.ViewModel.Validation_classes.Double
 {
-    class MajorDoubleValidator : DoubleValidator
+    unsafe class MajorDoubleValidator : DoubleValidator
     {
         public DoubleValidator[] Children;
         public MajorDoubleValidator(int dominatsCount, int oppressedCount,int childrenCount) : base(dominatsCount, oppressedCount)
@@ -20,11 +20,11 @@ namespace Collar_flange_configurator.ViewModel.Validation_classes.Double
                 return false;
             }
 
-            double value2 = Value;
+            double value2 = ValidedValue;
 
             foreach(var child in Children)
             {
-                value2 -= child.Value;
+                value2 -= child.ValidedValue;
             }
 
          

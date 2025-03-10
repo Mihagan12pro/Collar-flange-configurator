@@ -6,9 +6,10 @@ using System.Windows;
 
 namespace Collar_flange_configurator.ViewModel
 {
-    internal class CollarFlangeViewModel : INotifyPropertyChanged
+    internal unsafe class CollarFlangeViewModel : INotifyPropertyChanged
     {
-        private readonly DoubleValidator Dm = new DoubleValidator(1,1);
+       
+        private DoubleValidator Dm = new DoubleValidator(1, 1);
         private readonly DoubleValidator Dn = new DoubleValidator(1,0);
         private readonly DoubleValidator d = new DoubleValidator(1,0);
         private readonly DoubleValidator b = new DoubleValidator(1,1);
@@ -567,8 +568,8 @@ namespace Collar_flange_configurator.ViewModel
                );
             }
         }
-
-
+       // bool a = true;
+       
 
 
 
@@ -576,9 +577,15 @@ namespace Collar_flange_configurator.ViewModel
         {
             H.Children[0] = H1;
             H.Children[1] = b;
-
             H.Oppressed[0] = H1;
             H.Oppressed[1] = b;
+
+            bool a = true;
+            //H.SetIsValid(&*IsHValid);
+
+
+
+
 
             H1.Dominants[0] = H;
 
@@ -601,9 +608,6 @@ namespace Collar_flange_configurator.ViewModel
             ValueOffSize = "45";
             ValueOfl1Size = "5";
             ValueOfD2Size = "690";
-
-
-
         }
     }
 }

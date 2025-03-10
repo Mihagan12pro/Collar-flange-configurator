@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Collar_flange_configurator.ViewModel.Validation_classes
 {
-    public abstract class IntegerValidator : ParamValidator<int>
+    public unsafe abstract class IntegerValidator : ParamValidator<int>
     {
+        protected IntegerValidator()
+        {
+        }
+
         public override bool CheckValidation(object param)
         {
             if (!int.TryParse(Convert.ToString(param),out int i))

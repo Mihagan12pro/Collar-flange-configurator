@@ -15,9 +15,9 @@ namespace Collar_flange_configurator.ViewModel.Validation_classes
             {
                 return false;
             }
-            Value = d;
+            ValidedValue = d;
 
-            if (!(Value < Max && Value > Min))
+            if (!(ValidedValue < Max && ValidedValue > Min))
             {
                 return false;
             }

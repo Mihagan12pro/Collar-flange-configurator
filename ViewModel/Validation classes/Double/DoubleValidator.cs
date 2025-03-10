@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Collar_flange_configurator.ViewModel.Validation_classes
 {
-    public class DoubleValidator : ParamValidator<double>
+    public unsafe class DoubleValidator : ParamValidator<double>
     {
         public readonly DoubleValidator[] Dominants;
         public readonly DoubleValidator[] Oppressed;
@@ -14,13 +14,14 @@ namespace Collar_flange_configurator.ViewModel.Validation_classes
         
         public override bool CheckValidation(object param)
         {
-            if (!double.TryParse(Convert.ToString(param), out double d))
+            UnValidedValue = param;
+            if (!double.TryParse(Convert.ToString(UnValidedValue), out double d))
             {
                 return false;
             }
-            Value = d;
+            ValidedValue = d;
 
-            if (Value <= 0)
+            if (ValidedValue <= 0)
             {
                 return false;
             }
@@ -31,7 +32,7 @@ namespace Collar_flange_configurator.ViewModel.Validation_classes
                 {
                     if (dominant != null)
                     {
-                        if (dominant.Value <= Value)
+                        if (dominant.ValidedValue <= ValidedValue)
                         {
                             return false;
                         }
@@ -45,7 +46,7 @@ namespace Collar_flange_configurator.ViewModel.Validation_classes
                 {
                     if (oppressed != null)
                     {
-                        if (oppressed.Value >= Value)
+                        if (oppressed.ValidedValue >= ValidedValue)
                         {
                             return false;
                         }
