@@ -6,18 +6,21 @@ using System.Threading.Tasks;
 
 namespace Collar_flange_configurator.ViewModel.Validation_classes
 {
-    class AngleValidator : ParamValidator<double>
+    class AngleValidator : ParamValidator
     {
         public readonly double Max, Min;
-        public override bool CheckValidation(object param)
+
+        public object Angle { get; set; }
+
+        public override bool CheckValidation()
         {
-            if (!double.TryParse(Convert.ToString(param), out double d))
+            if (!double.TryParse(Convert.ToString(Angle), out double d))
             {
                 return false;
             }
-            ValidedValue = d;
+           
 
-            if (!(ValidedValue < Max && ValidedValue > Min))
+            if (!(d < Max && d > Min))
             {
                 return false;
             }

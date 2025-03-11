@@ -1,5 +1,4 @@
 ﻿using Collar_flange_configurator.ViewModel.Validation_classes;
-using Collar_flange_configurator.ViewModel.Validation_classes.Double;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
@@ -10,6 +9,7 @@ namespace Collar_flange_configurator.ViewModel
     {
        
         private readonly AngleValidator f = new AngleValidator(0,90);
+        private readonly HeightsValidator heights = new HeightsValidator();
      
 
         private bool textVal;
@@ -81,6 +81,13 @@ namespace Collar_flange_configurator.ViewModel
             }
         }
 
+
+
+
+
+
+
+
         private bool areFlangeDiametersValid;
         public bool AreFlangeDiametersValid
         {
@@ -94,6 +101,7 @@ namespace Collar_flange_configurator.ViewModel
                 OnPropertyChanged();
             }
         }
+
 
         private bool areFlangeHeightsValid;
         public bool AreFlangeHeightsValid
@@ -109,6 +117,7 @@ namespace Collar_flange_configurator.ViewModel
             }
         }
 
+
         private bool isfValid;
         public bool IsfValid
         {
@@ -122,8 +131,6 @@ namespace Collar_flange_configurator.ViewModel
                 OnPropertyChanged();
             }
         }
-
-      
 
 
 
@@ -187,6 +194,10 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 valueOfbSize = value;
+
+                heights.b = value;
+                AreFlangeHeightsValid = heights.CheckValidation();
+
                 OnPropertyChanged();
             }
         }
@@ -202,6 +213,10 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 valueOfHSize = value;
+
+                heights.H = value;
+                AreFlangeHeightsValid =  heights.CheckValidation();
+
                 OnPropertyChanged();
             }
         }
@@ -217,6 +232,10 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 valueOfH1Size = value;
+
+                heights.H1 = value;
+                AreFlangeHeightsValid = heights.CheckValidation();
+
                 OnPropertyChanged();
             }
         }
@@ -292,6 +311,10 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 valueOfl1Size = value;
+
+                heights.l1 = value;
+                AreFlangeHeightsValid = heights.CheckValidation();
+
                 OnPropertyChanged();
             }
         }
@@ -307,6 +330,9 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 valueOfR1Size = value;
+
+
+
                 OnPropertyChanged();
             }
         }
@@ -322,12 +348,14 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 valueOffSize = value;
-                IsfValid = f.CheckValidation(valueOffSize);
+
+                f.Angle = value;
+                IsfValid = f.CheckValidation();
+
                 OnPropertyChanged();
             }
         }
         
-
 
         private string valueOfD2Size;
         public string ValueOfD2Size
@@ -378,9 +406,6 @@ namespace Collar_flange_configurator.ViewModel
             ValueOffSize = "45";
             ValueOfl1Size = "5";
             ValueOfD2Size = "690";
-
-            AreFlangeDiametersValid = true;
-            AreFlangeHeightsValid = false;
         }
     }
 }

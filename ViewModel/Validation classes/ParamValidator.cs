@@ -7,22 +7,8 @@ using System.Windows.Media;
 
 namespace Collar_flange_configurator.ViewModel.Validation_classes
 {
-    public unsafe abstract class ParamValidator<T>
+    public abstract class ParamValidator
     {
-        public abstract bool CheckValidation(object param);
-        public T ValidedValue { get; protected set; }
-
-        public object UnValidedValue { get; protected set; }
-
-        public bool *IsValid { protected get; set;}
-        public void SetIsValid(bool* isValid)
-        {
-            IsValid = isValid;
-        }
-
-        public ParamValidator()
-        {
-           
-        }
+        public abstract bool CheckValidation();
     }
 }
