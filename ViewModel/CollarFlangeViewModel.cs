@@ -9,20 +9,8 @@ namespace Collar_flange_configurator.ViewModel
     internal unsafe class CollarFlangeViewModel : INotifyPropertyChanged
     {
        
-        private DoubleValidator Dm = new DoubleValidator(1, 1);
-        private readonly DoubleValidator Dn = new DoubleValidator(1,0);
-        private readonly DoubleValidator d = new DoubleValidator(1,0);
-        private readonly DoubleValidator b = new DoubleValidator(1,1);
-        private readonly DoubleValidator l1 = new DoubleValidator(1,0);
         private readonly AngleValidator f = new AngleValidator(0,90);
-        private readonly DoubleValidator d1 = new DoubleValidator(1,0);
-        private readonly DoubleValidator D = new DoubleValidator(0,1);
-        private readonly DoubleValidator D1 = new DoubleValidator(1,1);
-        private readonly DoubleValidator D2 = new DoubleValidator(1,1);
-        private readonly DoubleValidator R1 = new DoubleValidator(1,0);
-        private readonly MajorDoubleValidator H = new MajorDoubleValidator(0,2,2);
-        private readonly DoubleValidator H1 = new DoubleValidator(1,0);
-
+     
 
         private bool textVal;
         public bool TextValid
@@ -93,188 +81,33 @@ namespace Collar_flange_configurator.ViewModel
             }
         }
 
-
-
-
-        private bool isDmValid;
-        public bool IsDmValid
+        private bool areFlangeDiametersValid;
+        public bool AreFlangeDiametersValid
         {
             get
             {
-                return isDmValid;
+                return areFlangeDiametersValid;
             }
             set
             {
-                isDmValid = value;
+                areFlangeDiametersValid = value;
                 OnPropertyChanged();
             }
         }
 
-
-        private bool isDnValid;
-        public bool IsDnValid
+        private bool areFlangeHeightsValid;
+        public bool AreFlangeHeightsValid
         {
             get
             {
-                return isDnValid;
+                return areFlangeHeightsValid;
             }
             set
             {
-                isDnValid = value;
+                areFlangeHeightsValid = value;
                 OnPropertyChanged();
             }
         }
-
-
-        private bool isd1Valid;
-        public bool Isd1Valid
-        {
-            get
-            {
-                return isd1Valid;
-            }
-            set
-            {
-                isd1Valid = value;
-                OnPropertyChanged();
-            }
-        }
-
-
-        private bool isbValid;
-        public bool IsbValid
-        {
-            get
-            {
-                return isbValid;
-            }
-            set
-            {
-                isbValid = value;
-                OnPropertyChanged();
-            }
-        }
-
-
-        private bool isHValid;
-        public bool IsHValid
-        {
-            get
-            {
-                return isHValid;
-            }
-            set
-            {
-                isHValid = value;
-                OnPropertyChanged();
-            }
-        }
-
-
-        private bool isH1Valid;
-        public bool IsH1Valid
-        {
-            get
-            {
-                return isH1Valid;
-            }
-           set
-            {
-                isH1Valid = value;
-                OnPropertyChanged();
-            }
-        }
-
-
-        private bool isDValid;
-        public bool IsDValid
-        {
-            get
-            {
-                return isDValid;
-            }
-             set
-            {
-                isDValid = value;
-                OnPropertyChanged();
-            }
-        }
-
-
-        private bool isD1Valid;
-        public bool IsD1Valid
-        {
-            get
-            {
-                return isD1Valid;
-            }
-           set
-            {
-                isD1Valid = value;
-                OnPropertyChanged();
-            }
-        }
-
-
-        private bool isdValid;
-        public bool IsdValid
-        {
-            get
-            {
-                return isdValid;
-            }
-            set
-            {
-                isdValid = value;
-                OnPropertyChanged();
-            }
-        }
-
-
-        private bool isnValid;
-        public bool IsnValid
-        {
-            get
-            {
-                return isnValid;
-            }
-            set
-            {
-                isnValid = value;
-                OnPropertyChanged();
-            }
-        }
-
-
-        private bool isl1Valid;
-        public bool Isl1Valid
-        {
-            get
-            {
-                return isl1Valid;
-            }
-           set
-            {
-                isl1Valid = value;
-                OnPropertyChanged();
-            }
-        }
-
-
-        private bool isR1Valid;
-        public bool IsR1Valid
-        {
-            get
-            {
-                return isR1Valid;
-            }
-            set
-            {
-                isR1Valid = value;
-                OnPropertyChanged();
-            }
-        }
-
 
         private bool isfValid;
         public bool IsfValid
@@ -290,19 +123,7 @@ namespace Collar_flange_configurator.ViewModel
             }
         }
 
-        private bool isD2Valid;
-        public bool IsD2Valid
-        {
-            get
-            {
-                return isD2Valid;
-            }
-            set
-            {
-                isD2Valid = value;
-                OnPropertyChanged();
-            }
-        }
+      
 
 
 
@@ -366,7 +187,6 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 valueOfbSize = value;
-                IsbValid = b.CheckValidation(value);
                 OnPropertyChanged();
             }
         }
@@ -382,7 +202,6 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 valueOfHSize = value;
-                IsHValid = H.CheckValidation(value);
                 OnPropertyChanged();
             }
         }
@@ -398,9 +217,6 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 valueOfH1Size = value;
-
-                IsH1Valid = H1.CheckValidation(value);
-
                 OnPropertyChanged();
             }
         }
@@ -476,7 +292,6 @@ namespace Collar_flange_configurator.ViewModel
             set
             {
                 valueOfl1Size = value;
-                Isl1Valid = l1.CheckValidation(value);
                 OnPropertyChanged();
             }
         }
@@ -538,33 +353,7 @@ namespace Collar_flange_configurator.ViewModel
             {
                IsOkEnabled =
                (
-                   IsDmValid
-                               &&
-                   IsDnValid
-                               &&
-                   Isd1Valid
-                               &&
-                   IsbValid
-                               &&
-                   IsHValid
-                               &&
-                   IsH1Valid
-                               &&
-                   IsDValid
-                               &&
-                   IsD1Valid
-                               &&
-                   IsdValid
-                               &&
-                   IsnValid
-                               &&
-                   Isl1Valid
-                               &&
-                   IsR1Valid
-                               &&
-                   IsfValid
-                               &&
-                   IsD2Valid
+                   IsfValid && AreFlangeDiametersValid && AreFlangeHeightsValid
                );
             }
         }
@@ -575,25 +364,6 @@ namespace Collar_flange_configurator.ViewModel
 
         public CollarFlangeViewModel()
         {
-            H.Children[0] = H1;
-            H.Children[1] = b;
-            H.Oppressed[0] = H1;
-            H.Oppressed[1] = b;
-
-            bool a = true;
-            //H.SetIsValid(&*IsHValid);
-
-
-
-
-
-            H1.Dominants[0] = H;
-
-            b.Dominants[0] = H;
-            b.Oppressed[0] = l1;
-
-            l1.Dominants[0] = b;
-
             ValueOfDmSize = "660";
             ValueOfDnSize = "636";
             ValueOfd1Size = "602";
@@ -608,6 +378,9 @@ namespace Collar_flange_configurator.ViewModel
             ValueOffSize = "45";
             ValueOfl1Size = "5";
             ValueOfD2Size = "690";
+
+            AreFlangeDiametersValid = true;
+            AreFlangeHeightsValid = false;
         }
     }
 }
