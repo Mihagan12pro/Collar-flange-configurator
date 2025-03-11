@@ -8,33 +8,40 @@ namespace Collar_flange_configurator.ViewModel.Validation_classes
 {
     class HeightsValidator : ParamValidator
     {
-        public string b { get; set; }
-        public string H { get; set; }
-        public string H1 { get; set; }
-        public string l1 { get; set; }
+        public string Sizeb { get; set; }
+        public string SizeH { get; set; }
+        public string SizeH1 { get; set; }
+        public string Sizel1 { get; set; }
 
         public override bool CheckValidation()
         {
-            if (H1 == null || H == null || l1 == null || b == null)
+            if (SizeH1 == null || SizeH == null || Sizel1 == null || Sizeb == null)
                 return false;
 
-            if (H1.Length == 0 || H.Length == 0 || l1.Length == 0 || b.Length == 0)
+            if (SizeH1.Length == 0 || SizeH.Length == 0 || Sizel1.Length == 0 || Sizeb.Length == 0)
                 return false;
-            if (double.TryParse(b,out double _b) && double.TryParse(H, out double _H) && double.TryParse(H1,out double _H1) &&double.TryParse(l1,out double _l1))
-            {
-                if (new double[4]{ _b,_H,_H1,_l1}.Max() != _H)
+
+
+            double b = Convert.ToDouble(Sizeb);
+            double H = Convert.ToDouble(SizeH);
+            double H1 = Convert.ToDouble(SizeH1);
+            double l1 = Convert.ToDouble(Sizel1);
+
+
+            
+                if (new double[4]{ b,H,H1,l1}.Max() != H)
+                {
+                   return false;
+                }
+                if (b <= l1)
                 {
                     return false;
                 }
-                if (_b <= _l1)
+                if (H - (b+H1)  <= 0)
                 {
                     return false;
                 }
-                if (_H - (_b+_H1)  <= 0)
-                {
-                    return false;
-                }
-            }
+            //}
             return true;
         }
     }
