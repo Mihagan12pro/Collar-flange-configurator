@@ -169,6 +169,11 @@
                                 </StackPanel>
                             </StackPanel>
                         </GroupBox>
+
+                        <StackPanel Margin="0 -45">
+                            <Button HorizontalAlignment="Left" Command="{Binding  StandartSizesCommand}" Content="Размеры по умолчанию" Width="140" Height="20"></Button>
+                        </StackPanel>
+                        
                     </StackPanel>
                 </StackPanel>
             </TabItem>

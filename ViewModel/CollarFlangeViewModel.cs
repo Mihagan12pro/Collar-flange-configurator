@@ -1,4 +1,6 @@
-﻿using Collar_flange_configurator.ViewModel.Validation_classes;
+﻿using Collar_flange_configurator.database.logic.sizes;
+using Collar_flange_configurator.ViewModel.Validation_classes;
+using Collar_flange_configurator.WPF_override.Command;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
@@ -427,29 +429,71 @@ namespace Collar_flange_configurator.ViewModel
                );
             }
         }
-       
-       
+
+
+
+
+
+        public WpfCommand StandartSizesCommand
+        {
+            get
+            {
+                return new WpfCommand((obj) =>
+                {
+                    SetStandartSizes();
+                });
+            }
+        }
+
+
+
+
+
+        private void SetStandartSizes()
+        {
+           string[] standartSizes =  new SizesDatabase().SelectFromStandartSizes();
+           
+           ValueOfDmSize = standartSizes[0];
+           ValueOfDnSize = standartSizes[1];
+           ValueOfd1Size = standartSizes[2];
+            ValueOfbSize = standartSizes[3];
+            ValueOfHSize = standartSizes[4];
+            ValueOfH1Size = standartSizes[5];
+            ValueOfDSize = standartSizes[6];
+            ValueOfD1Size = standartSizes[7];
+            ValueOfdSize = standartSizes[8];
+            ValueOfnSize = standartSizes[9];
+            ValueOfl1Size = standartSizes[10];
+            ValueOfR1Size = standartSizes[11];
+            ValueOffSize = standartSizes[12];
+            ValueOfD2Size = standartSizes[13];
+        }
+
 
 
 
         public CollarFlangeViewModel()
         {
-            ValueOfDmSize = "660";
-            ValueOfDnSize = "636";
-            ValueOfd1Size = "602";
-            ValueOfD1Size = "770";
-            ValueOfDSize = "840";
-            ValueOfHSize = "90";
-            ValueOfH1Size = "14";
-            ValueOfbSize = "41";
-            ValueOfdSize = "20";
-            ValueOfnSize = "20";
-            ValueOfR1Size = "5";
-            ValueOffSize = "45";
-            ValueOfl1Size = "5";
-            ValueOfD2Size = "690";
+            //ValueOfDmSize = "660";
+            //ValueOfDnSize = "636";
+            //ValueOfd1Size = "602";
+            //ValueOfD1Size = "770";
+            //ValueOfDSize = "840";
+            //ValueOfHSize = "90";
+            //ValueOfH1Size = "14";
+            //ValueOfbSize = "41";
+            //ValueOfdSize = "20";
+            //ValueOfnSize = "20";
+            //ValueOfR1Size = "5";
+            //ValueOffSize = "45";
+            //ValueOfl1Size = "5";
+            //ValueOfD2Size = "690";
+
+            StandartSizesCommand.Execute(SetStandartSizes);
 
             IsConfig3DModel = true;
+
+ 
         }
     }
 }

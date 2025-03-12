@@ -27,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="database\files\sizes.db" />
     <None Remove="Images\Icons\cursor.png" />
     <None Remove="Images\Other\Intro%28config%29.png" />
     <None Remove="Images\Sketches\collarFlange.png" />
@@ -35,6 +36,10 @@
   <ItemGroup>
     <Page Remove="CollarFlangeMainWindow.xaml" />
     <Page Remove="CollarFlangeMaster.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="database\files\sizes.db" />
   </ItemGroup>
 
   <ItemGroup>
@@ -79,7 +84,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="database\files\" />
     <Folder Include="Images\Placeholders\" />
   </ItemGroup>
 
