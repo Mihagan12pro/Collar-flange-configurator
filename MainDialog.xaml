@@ -71,7 +71,7 @@
             <TabItem Name="SizesTab"  Header="Размеры" Style="{DynamicResource TabItemNCAD}">
                 <StackPanel Orientation="Horizontal" Style="{StaticResource MajorStackPanel}">
 
-                    <DataGrid Name="GOST_33259_2015"  Margin="30 10"  VerticalAlignment="Top" Width="260"    Style="{StaticResource TableStyles}" Height="445" Visibility="{Binding TableVisibility}" GridLinesVisibility="All" HorizontalGridLinesBrush="Black">
+                    <DataGrid Name="GOST_33259_2015"  Margin="20 10"  VerticalAlignment="Top" Width="310"    Style="{StaticResource TableStyles}" Height="445" Visibility="{Binding TableVisibility}" GridLinesVisibility="All" HorizontalGridLinesBrush="Black">
                         <DataGrid.CellStyle>
                             <Style/>
                         </DataGrid.CellStyle>

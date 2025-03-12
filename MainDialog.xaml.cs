@@ -1,5 +1,7 @@
 ﻿using System.Windows;
 using Collar_flange_configurator.ViewModel;
+
+using System.Data.SQLite;
 namespace Collar_flange_configurator
 {
     /// <summary>
@@ -11,7 +13,8 @@ namespace Collar_flange_configurator
         {
             InitializeComponent();
 
-           
+            
+
             DataContext = new CollarFlangeViewModel();
         }
 

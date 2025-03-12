@@ -87,8 +87,6 @@ namespace Collar_flange_configurator.ViewModel.Validation_classes
 
 
                 return (IsDBiggest && IsD2Valid && IsDmDnAnddValid && AreCountOfHolesOptimal && AreAllBiggerThanZero && IsR1Valid);
-            
-            return false;
         }
     }
 }
