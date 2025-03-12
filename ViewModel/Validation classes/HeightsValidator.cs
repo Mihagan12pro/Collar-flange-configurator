@@ -28,20 +28,20 @@ namespace Collar_flange_configurator.ViewModel.Validation_classes
             double l1 = Convert.ToDouble(Sizel1);
 
 
-            
-                if (new double[4]{ b,H,H1,l1}.Max() != H)
-                {
-                   return false;
-                }
-                if (b <= l1)
-                {
-                    return false;
-                }
-                if (H - (b+H1)  <= 0)
-                {
-                    return false;
-                }
-            //}
+            if (new double[4]{ b,H,H1,l1}.Max() != H)
+            {
+               return false;
+            }
+
+            if (b <= l1)
+            {
+               return false;
+            }
+
+            if (H - (b+H1)  <= 0)
+            {
+                return false;
+            }
             return true;
         }
     }

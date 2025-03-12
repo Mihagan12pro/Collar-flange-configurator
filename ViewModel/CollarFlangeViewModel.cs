@@ -322,7 +322,7 @@ namespace Collar_flange_configurator.ViewModel
             {
                 valueOfnSize = value;
 
-                diametersValidation.Sizen = value;
+                diametersValidation.CountOfn = value;
                 AreFlangeDiametersValid = diametersValidation.CheckValidation();
 
                 OnPropertyChanged();
@@ -448,6 +448,8 @@ namespace Collar_flange_configurator.ViewModel
             ValueOffSize = "45";
             ValueOfl1Size = "5";
             ValueOfD2Size = "690";
+
+            IsConfig3DModel = true;
         }
     }
 }
