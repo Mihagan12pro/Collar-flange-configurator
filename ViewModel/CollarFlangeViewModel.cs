@@ -451,22 +451,22 @@ namespace Collar_flange_configurator.ViewModel
 
         private void SetStandartSizes()
         {
-           string[] standartSizes =  new SizesDatabase().SelectFromStandartSizes();
+           //string[] standartSizes =  new SizesDatabase().SelectFromStandartSizes();
            
-           ValueOfDmSize = standartSizes[0];
-           ValueOfDnSize = standartSizes[1];
-           ValueOfd1Size = standartSizes[2];
-            ValueOfbSize = standartSizes[3];
-            ValueOfHSize = standartSizes[4];
-            ValueOfH1Size = standartSizes[5];
-            ValueOfDSize = standartSizes[6];
-            ValueOfD1Size = standartSizes[7];
-            ValueOfdSize = standartSizes[8];
-            ValueOfnSize = standartSizes[9];
-            ValueOfl1Size = standartSizes[10];
-            ValueOfR1Size = standartSizes[11];
-            ValueOffSize = standartSizes[12];
-            ValueOfD2Size = standartSizes[13];
+           //ValueOfDmSize = standartSizes[0];
+           //ValueOfDnSize = standartSizes[1];
+           //ValueOfd1Size = standartSizes[2];
+           // ValueOfbSize = standartSizes[3];
+           // ValueOfHSize = standartSizes[4];
+           // ValueOfH1Size = standartSizes[5];
+           // ValueOfDSize = standartSizes[6];
+           // ValueOfD1Size = standartSizes[7];
+           // ValueOfdSize = standartSizes[8];
+           // ValueOfnSize = standartSizes[9];
+           // ValueOfl1Size = standartSizes[10];
+           // ValueOfR1Size = standartSizes[11];
+           // ValueOffSize = standartSizes[12];
+           // ValueOfD2Size = standartSizes[13];
         }
 
 

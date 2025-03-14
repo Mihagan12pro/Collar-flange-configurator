@@ -76,7 +76,7 @@
                             <Style/>
                         </DataGrid.CellStyle>
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Dm" HeaderStyle="{StaticResource HeaderStyle}"  CellStyle="{StaticResource CellStyle}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Dm" HeaderStyle="{StaticResource HeaderStyle}"  CellStyle="{StaticResource CellStyle}" ></DataGridTextColumn>
                             <DataGridTextColumn Header="Dn" HeaderStyle="{StaticResource HeaderStyle}" CellStyle="{StaticResource CellStyle}"></DataGridTextColumn>
                             <DataGridTextColumn Header="d1" HeaderStyle="{StaticResource HeaderStyle}" CellStyle="{StaticResource CellStyle}"></DataGridTextColumn>
                             <DataGridTextColumn Header="b"  HeaderStyle="{StaticResource HeaderStyle}" CellStyle="{StaticResource CellStyle}"></DataGridTextColumn>
@@ -146,7 +146,7 @@
                             </StackPanel>
                         </GroupBox>
 
-                        <GroupBox Header="Прочие размеры"  Height="120" VerticalAlignment="Bottom" Margin="0 55">
+                        <GroupBox Header="Прочие размеры"  Height="120" VerticalAlignment="Bottom" Margin="0 30">
                             <StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
@@ -170,7 +170,7 @@
                             </StackPanel>
                         </GroupBox>
 
-                        <StackPanel Margin="0 -45">
+                        <StackPanel Margin="0 -25">
                             <Button HorizontalAlignment="Left" Command="{Binding  StandartSizesCommand}" Content="Размеры по умолчанию" Width="140" Height="20"></Button>
                         </StackPanel>
                         

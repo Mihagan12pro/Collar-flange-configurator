@@ -9,16 +9,7 @@ namespace Collar_flange_configurator.database.logic
 {
     abstract class AbstractDatabase
     {
-        protected string databaseName;
-
-        protected SQLiteConnection connection;
-
-        protected SQLiteCommand command;
-        
-        protected SQLiteDataReader reader;
-
-        protected string commandText;
-
+        public string DatabaseName { get; protected set; }
         public AbstractDatabase()
         {
                 
