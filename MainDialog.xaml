@@ -71,12 +71,12 @@
             <TabItem Name="SizesTab"  Header="Размеры" Style="{DynamicResource TabItemNCAD}">
                 <StackPanel Orientation="Horizontal" Style="{StaticResource MajorStackPanel}">
 
-                    <DataGrid x:Name="GOST_33259_2015" Width="310"    Style="{StaticResource TableStyles}" Height="445" Visibility="{Binding TableVisibility}" GridLinesVisibility="All" HorizontalGridLinesBrush="Black" ItemsSource="{Binding  GOSTSizesRecords}">
+                    <DataGrid x:Name="GOST_33259_2015" Width="310" Margin="10 9"  VerticalAlignment="Top"   Style="{StaticResource TableStyles}" Height="435" Visibility="{Binding TableVisibility}" GridLinesVisibility="All" HorizontalGridLinesBrush="Black" ItemsSource="{Binding  GOSTSizesRecords}">
                        
                     </DataGrid>
 
-                    <StackPanel Orientation="Vertical"  >
-                        <GroupBox  Header="ГОСТ 33259-2015" HorizontalAlignment="Center" VerticalAlignment="Top" Width="220" Height="280">
+                    <StackPanel Orientation="Vertical"  Margin="10 0">
+                        <GroupBox  Header="ГОСТ 33259-2015" HorizontalAlignment="Center"  VerticalAlignment="Top" Width="220" Height="280">
                             <StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
@@ -131,7 +131,7 @@
                             </StackPanel>
                         </GroupBox>
 
-                        <GroupBox Header="Прочие размеры"  Height="120" VerticalAlignment="Bottom" Margin="0 30">
+                        <GroupBox Header="Прочие размеры"  Height="120" VerticalAlignment="Bottom" Margin="0 20">
                             <StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
@@ -155,7 +155,7 @@
                             </StackPanel>
                         </GroupBox>
 
-                        <StackPanel Margin="0 -25">
+                        <StackPanel Margin="0 -15">
                             <Button HorizontalAlignment="Left" Command="{Binding StandartSizesCommand}" Content="Размеры по умолчанию" Width="140" Height="20"/>
                         </StackPanel>
 
