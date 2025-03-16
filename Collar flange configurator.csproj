@@ -24,6 +24,7 @@
   <ItemGroup>
     <Compile Remove="CollarFlangeMainWindow.xaml.cs" />
     <Compile Remove="CollarFlangeMaster.xaml.cs" />
+    <Compile Remove="database\logic\sizes\records\AbstractSizesRecord.cs" />
   </ItemGroup>
 
   <ItemGroup>

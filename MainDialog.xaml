@@ -53,12 +53,12 @@
                         </GroupBox>
 
                     </StackPanel>
-                    
+
                     <StackPanel  Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 -30">
                         <Button Width="62" Height="20" Content="Ок" IsEnabled="{Binding IsOkEnabled}" />
                         <Button Width="60" Height="20" Margin="3 0" Content="Отмена" IsCancel="True"/>
                     </StackPanel>
-                    
+
                 </StackPanel>
             </TabItem>
 
@@ -71,77 +71,62 @@
             <TabItem Name="SizesTab"  Header="Размеры" Style="{DynamicResource TabItemNCAD}">
                 <StackPanel Orientation="Horizontal" Style="{StaticResource MajorStackPanel}">
 
-                    <DataGrid Name="GOST_33259_2015"  Margin="20 10"  VerticalAlignment="Top" Width="310"    Style="{StaticResource TableStyles}" Height="445" Visibility="{Binding TableVisibility}" GridLinesVisibility="All" HorizontalGridLinesBrush="Black">
-                        <DataGrid.CellStyle>
-                            <Style/>
-                        </DataGrid.CellStyle>
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header="Dm" HeaderStyle="{StaticResource HeaderStyle}"  CellStyle="{StaticResource CellStyle}" ></DataGridTextColumn>
-                            <DataGridTextColumn Header="Dn" HeaderStyle="{StaticResource HeaderStyle}" CellStyle="{StaticResource CellStyle}"></DataGridTextColumn>
-                            <DataGridTextColumn Header="d1" HeaderStyle="{StaticResource HeaderStyle}" CellStyle="{StaticResource CellStyle}"></DataGridTextColumn>
-                            <DataGridTextColumn Header="b"  HeaderStyle="{StaticResource HeaderStyle}" CellStyle="{StaticResource CellStyle}"></DataGridTextColumn>
-                            <DataGridTextColumn Header="H" HeaderStyle="{StaticResource HeaderStyle}" CellStyle="{StaticResource CellStyle}" ></DataGridTextColumn>
-                            <DataGridTextColumn Header="H1" HeaderStyle="{StaticResource HeaderStyle}" CellStyle="{StaticResource CellStyle}"></DataGridTextColumn>
-                            <DataGridTextColumn Header="D"  HeaderStyle="{StaticResource HeaderStyle}" CellStyle="{StaticResource CellStyle}"></DataGridTextColumn>
-                            <DataGridTextColumn Header="D1" HeaderStyle="{StaticResource HeaderStyle}" CellStyle="{StaticResource CellStyle}"></DataGridTextColumn>
-                            <DataGridTextColumn Header="d"  HeaderStyle="{StaticResource HeaderStyle}" CellStyle="{StaticResource CellStyle}"></DataGridTextColumn>
-                            <DataGridTextColumn Header="n"  HeaderStyle="{StaticResource HeaderStyle}" CellStyle="{StaticResource CellStyle}"></DataGridTextColumn>
-                        </DataGrid.Columns>
-                        
+                    <DataGrid x:Name="GOST_33259_2015" Width="310"    Style="{StaticResource TableStyles}" Height="445" Visibility="{Binding TableVisibility}" GridLinesVisibility="All" HorizontalGridLinesBrush="Black" ItemsSource="{Binding  GOSTSizesRecords}">
+                       
                     </DataGrid>
 
                     <StackPanel Orientation="Vertical"  >
                         <GroupBox  Header="ГОСТ 33259-2015" HorizontalAlignment="Center" VerticalAlignment="Top" Width="220" Height="280">
                             <StackPanel>
-                                
+
                                 <StackPanel Style="{StaticResource FieldSet}">
-                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="Dm"></Label>
-                                    <overrideWPF:DoubleBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding AreFlangeDiametersValid}" Text="{Binding ValueOfDmSize,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:DoubleBox>
-                                </StackPanel>
-                                
-                                <StackPanel Style="{StaticResource FieldSet}">
-                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="Dn"></Label>
-                                    <overrideWPF:DoubleBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding AreFlangeDiametersValid}" Text="{Binding ValueOfDnSize,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:DoubleBox>
-                                </StackPanel>
-                                
-                                <StackPanel Style="{StaticResource FieldSet}">
-                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="d1"></Label>
-                                    <overrideWPF:DoubleBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding AreFlangeDiametersValid}" Text="{Binding ValueOfd1Size,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:DoubleBox>
-                                </StackPanel>
-                                
-                                <StackPanel Style="{StaticResource FieldSet}">
-                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="b"></Label>
-                                    <overrideWPF:DoubleBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding AreFlangeHeightsValid}" Text="{Binding ValueOfbSize,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:DoubleBox>
+                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="Dm"/>
+                                    <overrideWPF:DoubleBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding AreFlangeDiametersValid}" Text="{Binding ValueOfDmSize, UpdateSourceTrigger=PropertyChanged}"/>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
-                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="H"></Label>
-                                    <overrideWPF:DoubleBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding AreFlangeHeightsValid}" Text="{Binding ValueOfHSize,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:DoubleBox>
+                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="Dn"/>
+                                    <overrideWPF:DoubleBox Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding AreFlangeDiametersValid}" Text="{Binding ValueOfDnSize, UpdateSourceTrigger=PropertyChanged}"/>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
-                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="H1"></Label>
-                                    <overrideWPF:DoubleBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding AreFlangeHeightsValid}" Text="{Binding ValueOfH1Size,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:DoubleBox>
+                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="d1"/>
+                                    <overrideWPF:DoubleBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding AreFlangeDiametersValid}" Text="{Binding ValueOfd1Size, UpdateSourceTrigger=PropertyChanged}"/>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
-                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="D"></Label>
-                                    <overrideWPF:DoubleBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding AreFlangeDiametersValid}" Text="{Binding ValueOfDSize,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:DoubleBox>
+                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="b"/>
+                                    <overrideWPF:DoubleBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding AreFlangeHeightsValid}" Text="{Binding ValueOfbSize, UpdateSourceTrigger=PropertyChanged}"/>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
-                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="D1"></Label>
-                                    <overrideWPF:DoubleBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding AreFlangeDiametersValid}" Text="{Binding ValueOfD1Size,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:DoubleBox>
+                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="H"/>
+                                    <overrideWPF:DoubleBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding AreFlangeHeightsValid}" Text="{Binding ValueOfHSize, UpdateSourceTrigger=PropertyChanged}"/>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
-                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="d"></Label>
-                                    <overrideWPF:DoubleBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding AreFlangeDiametersValid}" Text="{Binding ValueOfdSize,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:DoubleBox>
+                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="H1"/>
+                                    <overrideWPF:DoubleBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding AreFlangeHeightsValid}" Text="{Binding ValueOfH1Size, UpdateSourceTrigger=PropertyChanged}"/>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
-                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="n"></Label>
-                                    <overrideWPF:IntegerBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding AreFlangeDiametersValid}" Text="{Binding ValueOfnSize,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:IntegerBox>
+                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="D"/>
+                                    <overrideWPF:DoubleBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding AreFlangeDiametersValid}" Text="{Binding ValueOfDSize, UpdateSourceTrigger=PropertyChanged}"/>
+                                </StackPanel>
+
+                                <StackPanel Style="{StaticResource FieldSet}">
+                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="D1"/>
+                                    <overrideWPF:DoubleBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding AreFlangeDiametersValid}" Text="{Binding ValueOfD1Size, UpdateSourceTrigger=PropertyChanged}"/>
+                                </StackPanel>
+
+                                <StackPanel Style="{StaticResource FieldSet}">
+                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="d"/>
+                                    <overrideWPF:DoubleBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding AreFlangeDiametersValid}" Text="{Binding ValueOfdSize, UpdateSourceTrigger=PropertyChanged}"/>
+                                </StackPanel>
+
+                                <StackPanel Style="{StaticResource FieldSet}">
+                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="n"/>
+                                    <overrideWPF:IntegerBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding AreFlangeDiametersValid}" Text="{Binding ValueOfnSize, UpdateSourceTrigger=PropertyChanged}"/>
                                 </StackPanel>
                             </StackPanel>
                         </GroupBox>
@@ -150,30 +135,30 @@
                             <StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
-                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="l1"></Label>
-                                    <overrideWPF:DoubleBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding AreFlangeHeightsValid}" Text="{Binding ValueOfl1Size,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:DoubleBox>
+                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="l1"/>
+                                    <overrideWPF:DoubleBox  Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding AreFlangeHeightsValid}" Text="{Binding ValueOfl1Size, UpdateSourceTrigger=PropertyChanged}"/>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
-                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="R1"></Label>
-                                    <overrideWPF:DoubleBox   Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding AreFlangeDiametersValid}" Text="{Binding ValueOfR1Size,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:DoubleBox>
+                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="R1"/>
+                                    <overrideWPF:DoubleBox   Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding AreFlangeDiametersValid}" Text="{Binding ValueOfR1Size, UpdateSourceTrigger=PropertyChanged}"/>
                                 </StackPanel>
 
                                 <StackPanel Style="{StaticResource FieldSet}">
-                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="f"></Label>
-                                    <overrideWPF:DoubleBox   Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsfValid}" Text="{Binding ValueOffSize,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:DoubleBox>
+                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="f"/>
+                                    <overrideWPF:DoubleBox   Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding IsfValid}" Text="{Binding ValueOffSize, UpdateSourceTrigger=PropertyChanged}"/>
                                 </StackPanel>
                                 <StackPanel Style="{StaticResource FieldSet}">
-                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="D2"></Label>
-                                    <overrideWPF:DoubleBox   Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding AreFlangeDiametersValid}" Text="{Binding ValueOfD2Size,UpdateSourceTrigger=PropertyChanged}"></overrideWPF:DoubleBox>
+                                    <Label Style="{StaticResource LabelFromFieldSet}" Content="D2"/>
+                                    <overrideWPF:DoubleBox   Style="{StaticResource TextBoxFromFieldSet}" IsTextValid="{Binding AreFlangeDiametersValid}" Text="{Binding ValueOfD2Size, UpdateSourceTrigger=PropertyChanged}"/>
                                 </StackPanel>
                             </StackPanel>
                         </GroupBox>
 
                         <StackPanel Margin="0 -25">
-                            <Button HorizontalAlignment="Left" Command="{Binding  StandartSizesCommand}" Content="Размеры по умолчанию" Width="140" Height="20"></Button>
+                            <Button HorizontalAlignment="Left" Command="{Binding StandartSizesCommand}" Content="Размеры по умолчанию" Width="140" Height="20"/>
                         </StackPanel>
-                        
+
                     </StackPanel>
                 </StackPanel>
             </TabItem>

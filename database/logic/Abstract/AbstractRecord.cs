@@ -11,19 +11,15 @@ namespace Collar_flange_configurator.database.logic.Abstract
 {
     abstract class AbstractRecord
     {
+        protected AbstractTable table;
         public AbstractRecord(AbstractTable table,int numberOfRecord)
         {
+
             
 
-            if (table.CountOfRecords >= numberOfRecord || numberOfRecord >= 1)
-            {
-                GetInfofromRecord();
-            }
-            else
-            {
-                UndefinedRecordError();
-            }
         }
+
+
         protected abstract void GetInfofromRecord();
 
 
@@ -34,6 +30,7 @@ namespace Collar_flange_configurator.database.logic.Abstract
         {
             MessageBox.Show("Запись не найдена!","Ошибка",MessageBoxButton.OK,MessageBoxImage.Error);
         }
+
 
         public static void CurruptedRecordError()
         {

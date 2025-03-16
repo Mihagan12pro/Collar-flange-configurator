@@ -1,6 +1,9 @@
 ﻿using Collar_flange_configurator.database.logic.sizes;
+using Collar_flange_configurator.database.logic.sizes.records;
+using Collar_flange_configurator.database.logic.sizes.tables;
 using Collar_flange_configurator.ViewModel.Validation_classes;
 using Collar_flange_configurator.WPF_override.Command;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
@@ -14,13 +17,27 @@ namespace Collar_flange_configurator.ViewModel
         private readonly HeightsValidator heightsValidation = new HeightsValidator();
 
         private readonly DiametersValidation diametersValidation = new DiametersValidation();
-       
 
 
 
+        public readonly SizesDatabase SizesDB = new SizesDatabase();
 
 
 
+        private ObservableCollection<GOSTSizesRecord> gostTableLines;
+        public ObservableCollection<GOSTSizesRecord> GOSTSizesRecords
+        {
+            get
+            {
+                return gostTableLines;
+            }
+            set
+            {
+                gostTableLines = value;
+                OnPropertyChanged();
+            }
+        }
+        
 
         private bool isOkEnabled;
         public bool IsOkEnabled
@@ -32,6 +49,7 @@ namespace Collar_flange_configurator.ViewModel
             private set
             {
                 isOkEnabled = value;
+              
                 OnPropertyChanged();
             }
         }
@@ -440,7 +458,7 @@ namespace Collar_flange_configurator.ViewModel
             {
                 return new WpfCommand((obj) =>
                 {
-                    SetStandartSizes();
+                    //SetStandartSizes();
                 });
             }
         }
@@ -474,26 +492,13 @@ namespace Collar_flange_configurator.ViewModel
 
         public CollarFlangeViewModel()
         {
-            //ValueOfDmSize = "660";
-            //ValueOfDnSize = "636";
-            //ValueOfd1Size = "602";
-            //ValueOfD1Size = "770";
-            //ValueOfDSize = "840";
-            //ValueOfHSize = "90";
-            //ValueOfH1Size = "14";
-            //ValueOfbSize = "41";
-            //ValueOfdSize = "20";
-            //ValueOfnSize = "20";
-            //ValueOfR1Size = "5";
-            //ValueOffSize = "45";
-            //ValueOfl1Size = "5";
-            //ValueOfD2Size = "690";
+ 
 
-            StandartSizesCommand.Execute(SetStandartSizes);
+            //StandartSizesCommand.Execute(SetStandartSizes);
 
             IsConfig3DModel = true;
 
- 
+            GOSTSizesRecords = SizesDB.GOSTTable.GOSTSizesRecords;
         }
     }
 }
