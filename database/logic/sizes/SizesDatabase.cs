@@ -14,6 +14,7 @@ namespace Collar_flange_configurator.database.logic.sizes
     {
         public readonly GOSTSizesTable GOSTTable;
 
+        public readonly StandartSizesTable StandartTable;
     
         public SizesDatabase()
         {
@@ -21,6 +22,9 @@ namespace Collar_flange_configurator.database.logic.sizes
 
 
             GOSTTable = new GOSTSizesTable(this);
+
+
+            StandartTable = new StandartSizesTable(this);
         }
     }
 }

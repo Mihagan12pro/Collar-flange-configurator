@@ -7,10 +7,7 @@ namespace Collar_flange_configurator.database.logic.sizes.records
     class GOSTSizesRecord : SizesRecord
     {
 
-
         private GOSTSizesTable gostSizesTable;
-
-      
 
         private const int DmId = 0;
         private const int DnId = 1;
@@ -22,6 +19,8 @@ namespace Collar_flange_configurator.database.logic.sizes.records
         private const int D1Id = 7;
         private const int dId = 8;
         private const int nId = 9;
+
+
         private string SelectJoinFromGost(int size,object executedValue)
         {
             string tableName = "";

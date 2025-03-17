@@ -458,7 +458,33 @@ namespace Collar_flange_configurator.ViewModel
             {
                 return new WpfCommand((obj) =>
                 {
-                    //SetStandartSizes();
+                    ValueOfDmSize = SizesDB.StandartTable.GetStandartSizesRecord.Dm;
+
+                    ValueOfDnSize = SizesDB.StandartTable.GetStandartSizesRecord.Dn;
+
+                    ValueOfd1Size = SizesDB.StandartTable.GetStandartSizesRecord.d1;
+
+                    ValueOfbSize = SizesDB.StandartTable.GetStandartSizesRecord.b;
+
+                    ValueOfHSize = SizesDB.StandartTable.GetStandartSizesRecord.H;
+
+                    ValueOfH1Size = SizesDB.StandartTable.GetStandartSizesRecord.H1;
+
+                    ValueOfDSize = SizesDB.StandartTable.GetStandartSizesRecord.D;
+
+                    ValueOfD1Size = SizesDB.StandartTable.GetStandartSizesRecord.D1;
+
+                    ValueOfdSize = SizesDB.StandartTable.GetStandartSizesRecord.d;
+
+                    ValueOfnSize = SizesDB.StandartTable.GetStandartSizesRecord.n;
+
+                    ValueOfl1Size = SizesDB.StandartTable.GetStandartSizesRecord.l1;
+
+                    ValueOfR1Size = SizesDB.StandartTable.GetStandartSizesRecord.R1;
+
+                    ValueOfD2Size = SizesDB.StandartTable.GetStandartSizesRecord.D2;
+
+                    ValueOffSize = SizesDB.StandartTable.GetStandartSizesRecord.f;
                 });
             }
         }
@@ -467,26 +493,7 @@ namespace Collar_flange_configurator.ViewModel
 
 
 
-        private void SetStandartSizes()
-        {
-           //string[] standartSizes =  new SizesDatabase().SelectFromStandartSizes();
-           
-           //ValueOfDmSize = standartSizes[0];
-           //ValueOfDnSize = standartSizes[1];
-           //ValueOfd1Size = standartSizes[2];
-           // ValueOfbSize = standartSizes[3];
-           // ValueOfHSize = standartSizes[4];
-           // ValueOfH1Size = standartSizes[5];
-           // ValueOfDSize = standartSizes[6];
-           // ValueOfD1Size = standartSizes[7];
-           // ValueOfdSize = standartSizes[8];
-           // ValueOfnSize = standartSizes[9];
-           // ValueOfl1Size = standartSizes[10];
-           // ValueOfR1Size = standartSizes[11];
-           // ValueOffSize = standartSizes[12];
-           // ValueOfD2Size = standartSizes[13];
-        }
-
+        
 
 
 

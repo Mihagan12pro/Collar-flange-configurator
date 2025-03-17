@@ -11,12 +11,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Images\Placeholders\**" />
     <Compile Remove="ViewModel\Validation classes\Double\**" />
     <Compile Remove="ViewModel\Validation classes\Integer\**" />
+    <EmbeddedResource Remove="Images\Placeholders\**" />
     <EmbeddedResource Remove="ViewModel\Validation classes\Double\**" />
     <EmbeddedResource Remove="ViewModel\Validation classes\Integer\**" />
+    <None Remove="Images\Placeholders\**" />
     <None Remove="ViewModel\Validation classes\Double\**" />
     <None Remove="ViewModel\Validation classes\Integer\**" />
+    <Page Remove="Images\Placeholders\**" />
     <Page Remove="ViewModel\Validation classes\Double\**" />
     <Page Remove="ViewModel\Validation classes\Integer\**" />
   </ItemGroup>
@@ -82,10 +86,6 @@
     <Resource Include="Images\Icons\cursor.png" />
     <Resource Include="Images\Other\Intro(config).png" />
     <Resource Include="Images\Sketches\collarFlange.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Images\Placeholders\" />
   </ItemGroup>
 
   <ItemGroup>

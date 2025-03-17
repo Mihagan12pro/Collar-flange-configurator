@@ -10,10 +10,7 @@ namespace Collar_flange_configurator.database.logic.sizes.tables
 {
     class StandartSizesTable : AbstractTable
     {
-        public readonly SizesDatabase Database;
-
-
-        public StandartSizesRecord DefaultSizesRecord { get; private set; }
+        public StandartSizesRecord GetStandartSizesRecord { get; private set; }
 
 
         public StandartSizesTable(SizesDatabase database) : base(database)
@@ -22,7 +19,9 @@ namespace Collar_flange_configurator.database.logic.sizes.tables
 
             Database = database;
 
-            DefaultSizesRecord = new StandartSizesRecord(this, 0);
+            GetCountOfRecords();
+
+            GetStandartSizesRecord = new StandartSizesRecord(this, 1);
         }
     }
 }

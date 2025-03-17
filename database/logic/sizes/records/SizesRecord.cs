@@ -32,6 +32,7 @@ namespace Collar_flange_configurator.database.logic.sizes.records
 
 
 
+
         protected override bool IsRecordValid(object value)
         {
             string str;
