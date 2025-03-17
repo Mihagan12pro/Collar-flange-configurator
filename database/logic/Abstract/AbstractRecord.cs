@@ -12,11 +12,15 @@ namespace Collar_flange_configurator.database.logic.Abstract
     abstract class AbstractRecord
     {
         protected AbstractTable table;
+
+        protected readonly int numberOfRecord;
+
+        protected readonly bool IsRecordExists;
         public AbstractRecord(AbstractTable table,int numberOfRecord)
         {
+            this.numberOfRecord = numberOfRecord;
 
-            
-
+           IsRecordExists = (table.CountOfRecords >= numberOfRecord && numberOfRecord > 0);
         }
 
 

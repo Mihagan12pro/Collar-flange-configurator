@@ -13,29 +13,12 @@ using Teigha.GraphicsInterface;
 
 namespace Collar_flange_configurator.database.logic.sizes.tables
 {
-    class GOSTSizesTable : AbstractTable, INotifyPropertyChanged
+    class GOSTSizesTable : AbstractTable
     {
         public readonly SizesDatabase Database;
         
 
-        public event PropertyChangedEventHandler? PropertyChanged;
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-
-        private ObservableCollection<GOSTSizesRecord> gostSizesRecords;
-        public ObservableCollection<GOSTSizesRecord> GOSTSizesRecords
-        {
-            get => gostSizesRecords;
-            private set
-            {
-                gostSizesRecords = value;
-
-                OnPropertyChanged();
-            }
-        }
+        public readonly ObservableCollection<GOSTSizesRecord> GOSTSizesRecords;
 
 
         public GOSTSizesTable(SizesDatabase database) : base(database)
@@ -63,9 +46,7 @@ namespace Collar_flange_configurator.database.logic.sizes.tables
                     {
                         while(reader.Read())
                         {
-                            CountOfRecords =Convert.ToInt32( reader.GetValue(0));
-
-                            var a = CountOfRecords;
+                            CountOfRecords = Convert.ToInt32( reader.GetValue(0));
                         }
                     }
                 }

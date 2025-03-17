@@ -4,34 +4,13 @@ using System.Data.SQLite;
 
 namespace Collar_flange_configurator.database.logic.sizes.records
 {
-    class GOSTSizesRecord : AbstractRecord
+    class GOSTSizesRecord : SizesRecord
     {
-        public string Dm { get; protected set; }
-        
-        public string Dn { get; protected set; }
 
-        public string d1 { get;protected set; }
-
-        public string b { get; protected set; }
-
-        public string H { get; protected set; }
-
-        public string H1 { get; protected set; }
-
-        public string D { get; protected set; }
-
-        public string D1 { get; protected set; }
-
-        public string d { get; protected set; }
-
-        public string n { get; protected set; }
 
         private GOSTSizesTable gostSizesTable;
 
-        protected readonly int numberOfRecord;
-
-
-
+      
 
         private const int DmId = 0;
         private const int DnId = 1;
@@ -192,25 +171,7 @@ namespace Collar_flange_configurator.database.logic.sizes.records
         }
 
 
-        protected override bool IsRecordValid(object value)
-        {
-            string str;
-
-            try
-            {
-                str = Convert.ToString(value);
-
-                if (!double.TryParse(str, out double real))
-                {
-                    return false;
-                }
-                return (real > 0);
-            }
-            catch
-            {
-                return false;
-            }
-        }
+        
 
 
 
@@ -218,16 +179,14 @@ namespace Collar_flange_configurator.database.logic.sizes.records
         public GOSTSizesRecord(GOSTSizesTable table, int numberOfRecord) : base(table, numberOfRecord)
         {
             gostSizesTable = table;
-            this.numberOfRecord = numberOfRecord;
 
-            if (table.CountOfRecords >= numberOfRecord || numberOfRecord >= 1)
-            {
+
+            if (IsRecordExists)
                 GetInfofromRecord();
-            }
             else
-            {
                 UndefinedRecordError();
-            }
+
+
         }
     }
 }
