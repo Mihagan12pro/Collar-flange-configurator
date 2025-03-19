@@ -44,7 +44,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="database\files\sizes.db" />
+    <Content Include="database\files\sizes.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>

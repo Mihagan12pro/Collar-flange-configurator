@@ -499,10 +499,6 @@ namespace Collar_flange_configurator.ViewModel
 
         public CollarFlangeViewModel()
         {
- 
-
-            //StandartSizesCommand.Execute(SetStandartSizes);
-
             IsConfig3DModel = true;
 
             GOSTSizesRecords = SizesDB.GOSTTable.GOSTSizesRecords;
