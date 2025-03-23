@@ -40,6 +40,7 @@
                 </Style>
             </Setter.Value>
         </Setter>
+     
     </Style>
     
     <Style x:Key="HeaderStyle" TargetType="DataGridColumnHeader">

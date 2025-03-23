@@ -24,6 +24,34 @@ namespace Collar_flange_configurator.ViewModel
 
 
 
+
+        private int selectedGOST_33259_2015;
+        public int SelectedGOST_33259_2015
+        {
+            get
+            {
+                return selectedGOST_33259_2015;
+            }
+            set
+            {
+             
+                selectedGOST_33259_2015 = value;
+
+                if (value >= 0)
+                {
+
+                }
+
+
+                OnPropertyChanged();
+                
+            }
+        }
+
+
+
+
+
         private ObservableCollection<GOSTSizesRecord> gostTableLines;
         public ObservableCollection<GOSTSizesRecord> GOSTSizesRecords
         {
@@ -49,6 +77,8 @@ namespace Collar_flange_configurator.ViewModel
             private set
             {
                 isOkEnabled = value;
+
+                
               
                 OnPropertyChanged();
             }
@@ -72,11 +102,15 @@ namespace Collar_flange_configurator.ViewModel
             {
                 isConfig3DModel = value;
 
-                AssembleVisibility = Visibility.Visible;
-                if (value)
+                
+                AssembleVisibility = Visibility.Hidden;
+
+                if (!value)
                 {
-                    AssembleVisibility = Visibility.Hidden;
+                    SelectedGOST_33259_2015 = -1;
+                    AssembleVisibility = Visibility.Visible;
                 }
+
                 OnPropertyChanged();
             }
         }
@@ -502,6 +536,9 @@ namespace Collar_flange_configurator.ViewModel
             IsConfig3DModel = true;
 
             GOSTSizesRecords = SizesDB.GOSTTable.GOSTSizesRecords;
+
+
+            SelectedGOST_33259_2015 = -1;
         }
     }
 }
