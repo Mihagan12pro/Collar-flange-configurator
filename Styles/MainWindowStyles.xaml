@@ -22,6 +22,7 @@
     
     
     <Style x:Key="TableStyles" TargetType="DataGrid">
+        
         <Setter Property="CanUserAddRows" Value="False"></Setter>
         <Setter Property="CanUserDeleteRows" Value="False"></Setter>
         <Setter Property="CanUserSortColumns" Value="False"></Setter>
@@ -30,10 +31,17 @@
         <Setter Property="CanUserResizeColumns" Value="False"></Setter>
         <Setter Property="HorizontalGridLinesBrush" Value="Black"></Setter>
         <Setter Property="VerticalGridLinesBrush" Value="Black"></Setter>
+
+        <Setter Property="CellStyle">
+            <Setter.Value>
+                <Style TargetType="DataGridCell">
+                    <Setter Property="FontSize" Value="10"></Setter>
+                    <Setter Property="BorderThickness" Value="0"></Setter>
+                </Style>
+            </Setter.Value>
+        </Setter>
     </Style>
-    <Style x:Key="CellStyle" TargetType="DataGridCell">
-        <Setter Property="FontSize" Value="10"></Setter>
-    </Style>
+    
     <Style x:Key="HeaderStyle" TargetType="DataGridColumnHeader">
         <Setter Property="FontSize" Value="14"></Setter>
        

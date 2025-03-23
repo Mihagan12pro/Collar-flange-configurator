@@ -71,7 +71,7 @@
             <TabItem Name="SizesTab"  Header="Размеры" Style="{DynamicResource TabItemNCAD}">
                 <StackPanel Orientation="Horizontal" Style="{StaticResource MajorStackPanel}">
 
-                    <DataGrid x:Name="GOST_33259_2015" Width="310" Margin="10 9"  VerticalAlignment="Top"   Style="{StaticResource TableStyles}" Height="435" Visibility="{Binding TableVisibility}" GridLinesVisibility="All" HorizontalGridLinesBrush="Black" ItemsSource="{Binding  GOSTSizesRecords}">
+                    <DataGrid x:Name="GOST_33259_2015" Width="310" Margin="10 9"  VerticalAlignment="Top"   Style="{StaticResource TableStyles}" Height="435" Visibility="{Binding TableVisibility}" GridLinesVisibility="All" HorizontalGridLinesBrush="Black" SelectionMode="Single" ItemsSource="{Binding  GOSTSizesRecords}">
                        
                     </DataGrid>
 
