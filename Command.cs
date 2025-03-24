@@ -17,12 +17,22 @@ namespace Collar_flange_configurator
         [CommandMethod("Collar_flange")]
         public void CreateMainDialog()
         {
-
             CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
 
-            MainDialog main = new MainDialog();
+            if (MainDialog.Dialog == null)
+            {
+                MainDialog main = new MainDialog();
 
-            HostMgd.ApplicationServices.Application.ShowModelessWindow(main);
+                HostMgd.ApplicationServices.Application.ShowModelessWindow(main);
+
+                return;
+            }
+            HostMgd.ApplicationServices.Document doc =
+               HostMgd.ApplicationServices.Application.DocumentManager.MdiActiveDocument;
+
+            HostMgd.EditorInput.Editor ed = doc.Editor;
+
+            ed.WriteMessage("Приложение 'Мастер воротниковых фланцев' уже запущено!");
         }
     }
 }

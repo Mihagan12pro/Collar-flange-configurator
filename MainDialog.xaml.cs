@@ -9,15 +9,22 @@ namespace Collar_flange_configurator
     /// </summary>
     public partial class MainDialog : Window
     {
+        public static MainDialog Dialog { get; private set; }
         public MainDialog()
         {
             InitializeComponent();
 
-            
+            Closing += MainDialog_Closing;
 
+            
+            Dialog = this; 
             DataContext = new CollarFlangeViewModel();
+            
         }
 
-       
+        private void MainDialog_Closing(object? sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Dialog = null;
+        }
     }
 }
