@@ -1,6 +1,7 @@
 ﻿using Collar_flange_configurator.database.logic.sizes;
 using Collar_flange_configurator.database.logic.sizes.records;
 using Collar_flange_configurator.database.logic.sizes.tables;
+using Collar_flange_configurator.Extensions;
 using Collar_flange_configurator.ViewModel.Validation_classes;
 using Collar_flange_configurator.WPF_override.Command;
 using System.Collections.ObjectModel;
@@ -39,7 +40,22 @@ namespace Collar_flange_configurator.ViewModel
 
                 if (value >= 0)
                 {
+                    ValueOfDmSize = GOSTSizesRecords[value].Dm;
+                    ValueOfDnSize = GOSTSizesRecords[value].Dn;
+                    ValueOfd1Size = GOSTSizesRecords[value].d1;
+                    ValueOfbSize = GOSTSizesRecords[value].b;
+                    ValueOfHSize = GOSTSizesRecords[value].H;
+                    ValueOfH1Size = GOSTSizesRecords[value].H1;
+                    ValueOfDSize = GOSTSizesRecords[value].D;
+                    ValueOfD1Size = GOSTSizesRecords[value].D1;
+                    ValueOfdSize = GOSTSizesRecords[value].d;
+                    ValueOfnSize = GOSTSizesRecords[value].n;
 
+                    if (!AreFlangeDiametersValid)
+                    {
+                        ValueOfD2Size = Math.Round((ValueOfD1Size.ToDouble() - ValueOfdSize.ToDouble())/ 1.09,3).ToString();
+                        ValueOfR1Size = Math.Round(ValueOfDmSize.ToDouble() * 0.5, 3).ToString();
+                    }
                 }
 
 
