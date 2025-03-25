@@ -76,7 +76,7 @@
             <TabItem Name="SizesTab"  Header="Размеры" Style="{DynamicResource TabItemNCAD}">
                 <StackPanel Orientation="Horizontal" Style="{StaticResource MajorStackPanel}">
 
-                    <DataGrid x:Name="GOST_33259_2015" Width="310" Margin="10 9"  VerticalAlignment="Top"   Style="{StaticResource TableStyles}" Height="435" Visibility="{Binding TableVisibility}" GridLinesVisibility="All" HorizontalGridLinesBrush="Black" SelectionMode="Single" ItemsSource="{Binding  GOSTSizesRecords}" IsEnabled="{Binding IsConfig3DModel}"  SelectedIndex="{Binding SelectedGOST_33259_2015}" HeadersVisibility="Column">
+                    <DataGrid x:Name="GOST_33259_2015" Width="310" Margin="10 9"  VerticalAlignment="Top"   Style="{StaticResource TableStyles}" Height="435" Visibility="{Binding TableVisibility}" GridLinesVisibility="All" HorizontalGridLinesBrush="Black" SelectionMode="Single" ItemsSource="{Binding  GOSTSizesRecords}" IsEnabled="{Binding IsConfig3DModel}"  SelectedIndex="{Binding SelectedGOST_33259_2015}" HeadersVisibility="Column" ColumnWidth="*">
                        
                     </DataGrid>
 
@@ -173,5 +173,9 @@
         <behav:EventTrigger EventName="Loaded">
             <behav:InvokeCommandAction Command="{Binding StandartSizesCommand}"/>
         </behav:EventTrigger>
+        <behav:EventTrigger EventName="MouseLeftButtonDown">
+            <behav:InvokeCommandAction Command="{Binding LostSelectedIndexOfDataGrid}"/>
+        </behav:EventTrigger>
     </behav:Interaction.Triggers>
+    
 </Window>

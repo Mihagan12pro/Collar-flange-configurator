@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using Collar_flange_configurator.ViewModel;
 using System.Data.SQLite;
+using System.Windows.Controls;
 namespace Collar_flange_configurator
 {
     /// <summary>
@@ -17,7 +18,7 @@ namespace Collar_flange_configurator
 
             Closing += MainDialog_Closing;
 
-            
+
             Dialog = this;  
         }
 
@@ -26,6 +27,13 @@ namespace Collar_flange_configurator
             Dialog = null;
         }
 
-  
+        private void My_Event(object sender, RoutedEventArgs e)
+        {
+         
+
+            
+            MessageBox.Show("Сообщение");
+        }
+
     }
 }

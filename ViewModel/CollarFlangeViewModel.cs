@@ -68,16 +68,19 @@ namespace Collar_flange_configurator.ViewModel
 
 
 
-        private ObservableCollection<GOSTSizesRecord> gostTableLines;
+        private ObservableCollection<GOSTSizesRecord> gostTableRecords;
         public ObservableCollection<GOSTSizesRecord> GOSTSizesRecords
         {
             get
             {
-                return gostTableLines;
+                return gostTableRecords;
             }
             set
             {
-                gostTableLines = value;
+                gostTableRecords = value;
+
+                
+
                 OnPropertyChanged();
             }
         }
@@ -123,7 +126,8 @@ namespace Collar_flange_configurator.ViewModel
 
                 if (!value)
                 {
-                    SelectedGOST_33259_2015 = -1;
+                    LostSelectedIndexOfDataGrid.Execute("");
+                    //SelectedGOST_33259_2015 = -1;
                     AssembleVisibility = Visibility.Visible;
                 }
 
@@ -499,10 +503,7 @@ namespace Collar_flange_configurator.ViewModel
         }
 
 
-        public void MainDialog_Loaded(object sender, RoutedEventArgs e)
-        {
-            var a = 1; 
-        }
+        
 
 
 
@@ -546,6 +547,16 @@ namespace Collar_flange_configurator.ViewModel
 
 
 
+        public WpfCommand LostSelectedIndexOfDataGrid
+        {
+            get
+            {
+                return new WpfCommand((obj) =>
+                {
+                    SelectedGOST_33259_2015 = -1;
+                });
+            }
+        }
 
         
 
@@ -558,7 +569,7 @@ namespace Collar_flange_configurator.ViewModel
             GOSTSizesRecords = SizesDB.GOSTTable.GOSTSizesRecords;
 
 
-            SelectedGOST_33259_2015 = -1;
+            LostSelectedIndexOfDataGrid.Execute("");
         }
     }
 }
