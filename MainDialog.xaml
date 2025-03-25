@@ -169,5 +169,9 @@
             </TabItem>
         </TabControl>
     </Grid>
-  
+    <behav:Interaction.Triggers>
+        <behav:EventTrigger EventName="Loaded">
+            <behav:InvokeCommandAction Command="{Binding StandartSizesCommand}"/>
+        </behav:EventTrigger>
+    </behav:Interaction.Triggers>
 </Window>
