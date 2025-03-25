@@ -499,6 +499,10 @@ namespace Collar_flange_configurator.ViewModel
         }
 
 
+        public void MainDialog_Loaded(object sender, RoutedEventArgs e)
+        {
+            var a = 1; 
+        }
 
 
 

@@ -1,6 +1,5 @@
 ﻿using System.Windows;
 using Collar_flange_configurator.ViewModel;
-
 using System.Data.SQLite;
 namespace Collar_flange_configurator
 {
@@ -12,19 +11,21 @@ namespace Collar_flange_configurator
         public static MainDialog Dialog { get; private set; }
         public MainDialog()
         {
+            DataContext = new CollarFlangeViewModel();
+
             InitializeComponent();
 
             Closing += MainDialog_Closing;
 
             
-            Dialog = this; 
-            DataContext = new CollarFlangeViewModel();
-            
+            Dialog = this;  
         }
 
         private void MainDialog_Closing(object? sender, System.ComponentModel.CancelEventArgs e)
         {
             Dialog = null;
         }
+
+  
     }
 }

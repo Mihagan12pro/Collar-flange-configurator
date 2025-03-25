@@ -6,12 +6,17 @@
         xmlns:local="clr-namespace:Collar_flange_configurator" 
         xmlns:viewmodel="clr-namespace:Collar_flange_configurator.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:CollarFlangeViewModel}"
         xmlns:overrideWPF="clr-namespace:Collar_flange_configurator.WPF_override.TextBoxOverride"
+        xmlns:behav="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
-        Title="Мастер воротниковых фланцев" Height="600" Width="600" ResizeMode="NoResize" ShowInTaskbar="False" >
+        Title="Мастер воротниковых фланцев" Height="600" Width="600" ResizeMode="NoResize" ShowInTaskbar="False">
+
     <Window.Resources>
         <ResourceDictionary Source="Styles/MainWindowStyles.xaml"></ResourceDictionary>
     </Window.Resources>
-    <Grid>
+
+
+<Grid>
+        
         <TabControl Style="{StaticResource TabControlNCAD}">
             <TabItem  Header="Главная" Name="MainTabItem" Style="{DynamicResource TabItemNCAD}">
 
@@ -164,4 +169,5 @@
             </TabItem>
         </TabControl>
     </Grid>
+  
 </Window>
