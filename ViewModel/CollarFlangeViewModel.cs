@@ -503,7 +503,19 @@ namespace Collar_flange_configurator.ViewModel
         }
 
 
-        
+        public WpfCommand OkCommand
+        {
+            get
+            {
+                return new WpfCommand
+                (
+                   (obj) =>
+                   {
+                        
+                   }
+                );
+            }
+        }
 
 
 

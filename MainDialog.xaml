@@ -60,7 +60,7 @@
                     </StackPanel>
 
                     <StackPanel  Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 -30">
-                        <Button Width="62" Height="20" Content="Ок" IsEnabled="{Binding IsOkEnabled}" />
+                        <Button Width="62" Height="20" Content="Ок" IsEnabled="{Binding IsOkEnabled}" Command="{Binding OkCommand}"/>
                         <Button Width="60" Height="20" Margin="3 0" Content="Отмена" IsCancel="True"/>
                     </StackPanel>
 
