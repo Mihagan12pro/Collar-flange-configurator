@@ -12,5 +12,9 @@ namespace Collar_flange_configurator.Extensions
         {
             return Convert.ToDouble(str);
         }
+        public static int ToInt32(this string str)
+        {
+            return Convert.ToInt32(str);
+        }
     }
 }

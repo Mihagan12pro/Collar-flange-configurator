@@ -2,6 +2,7 @@
 using Collar_flange_configurator.database.logic.sizes.records;
 using Collar_flange_configurator.database.logic.sizes.tables;
 using Collar_flange_configurator.Extensions;
+using Collar_flange_configurator.Model;
 using Collar_flange_configurator.ViewModel.Validation_classes;
 using Collar_flange_configurator.WPF_override.Command;
 using System.Collections.ObjectModel;
@@ -511,7 +512,28 @@ namespace Collar_flange_configurator.ViewModel
                 (
                    (obj) =>
                    {
-                        
+                      if (IsConfig3DModel)
+                      {
+                           CollarFlangeConfig3D config3D = new CollarFlangeConfig3D
+                           (
+                               ValueOfDmSize,
+                               valueOfDnSize,
+                               ValueOfd1Size,
+                               ValueOfbSize,
+                               ValueOfHSize,
+                               ValueOfH1Size,
+                               ValueOfDSize,
+                               ValueOfD1Size,
+                               ValueOfdSize,
+                               ValueOfnSize,
+                               ValueOfl1Size,
+                               ValueOfR1Size,
+                               ValueOffSize,
+                               ValueOfD2Size
+                           );
+
+                           config3D.Build();
+                      }
                    }
                 );
             }
