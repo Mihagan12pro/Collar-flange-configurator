@@ -51,13 +51,7 @@ namespace Collar_flange_configurator.Model
 
             _activeSheet = McDocumentsManager.GetActiveSheet();
             _solid = new Mc3dSolid();
-
-            //bool addSolidResult = McObjectManager.Add2Document(_detail3D.DbEntity,_activeSheet);
-
-            //_detail3D.DbEntity.AddToCurrentDocument();
         }
-
-
 
 
 
@@ -114,7 +108,7 @@ namespace Collar_flange_configurator.Model
                 axis.DbEntity.AddToCurrentDocument();
 
 
-                McGeomParam axi_y = new McGeomParam() { ID = axis.ID };
+                axi_y = new McGeomParam() { ID = axis.ID };
                 _sketch1.AddObject(axi_y.ID);
 
 
@@ -149,7 +143,6 @@ namespace Collar_flange_configurator.Model
 
             Plane3d xoz = new Plane3d(Plane3d.ZXPlane);
 
-            //_sketch2.DbEntity.AddToCurrentDocument();
 
             DbCircle dbCircle = new DbCircle()
             {
@@ -174,7 +167,7 @@ namespace Collar_flange_configurator.Model
             _extrude1 = _solid.AddExtrudeFeature(_sketchProfile2.ID, b, 0, FeatureExtentDirection.Positive);
             _extrude1.PartOperation = PartFeatureOperation.Cut;
 
-            _circularArray = _solid.AddCircularPatternFeature(new McObjectId[] { _extrude1.ID }, axi_y, n, Math.PI / 2);
+            _circularArray = _solid.AddCircularPatternFeature(new McObjectId[] { _extrude1.ID }, axi_y, n, 360 * Math.PI / 180 / n);//360 * Math.PI / 180 / n_hole
             _circularArray.DbEntity.AddToCurrentDocument();
 
             McObjectManager.UpdateAll();
