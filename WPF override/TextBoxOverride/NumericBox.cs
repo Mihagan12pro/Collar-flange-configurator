@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mapinet.GUI.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Media;
@@ -56,14 +57,25 @@ namespace Collar_flange_configurator.WPF_override.TextBoxOverride
            }
         }
 
+
         protected abstract bool IsKeyLegal(Key key);
         
         public NumericBox()
         {
             KeyDown += NumericBox_KeyDown;
-           // TextChanged += NumericBox_TextChanged;
+
+            AllowDrop = false;
+
+            ContextMenu = null;
+
+            GiveFeedback += NumericBox_GiveFeedback;
+
+            CommandBindings.Add(new CommandBinding(ApplicationCommands.Paste, (sender, e) => { }));
         }
 
-        
+        private void NumericBox_GiveFeedback(object sender, GiveFeedbackEventArgs e)
+        {
+            var a = 1;
+        }
     }
 }
