@@ -15,34 +15,27 @@ namespace Collar_flange_configurator.ViewModel.Validation_classes
 
         public override bool CheckValidation()
         {
-            if (SizeH1 == null || SizeH == null || Sizel1 == null || Sizeb == null)
-                return false;
-
-            if (SizeH1.Length == 0 || SizeH.Length == 0 || Sizel1.Length == 0 || Sizeb.Length == 0)
-                return false;
-
-
-            double b = Convert.ToDouble(Sizeb);
-            double H = Convert.ToDouble(SizeH);
-            double H1 = Convert.ToDouble(SizeH1);
-            double l1 = Convert.ToDouble(Sizel1);
-
-
-            if (new double[4]{ b,H,H1,l1}.Max() != H)
+            try
             {
-               return false;
-            }
 
-            if (b <= l1)
-            {
-               return false;
-            }
 
-            if (H - (b+H1)  <= 0)
+                double b = Convert.ToDouble(Sizeb);
+                double H = Convert.ToDouble(SizeH);
+                double H1 = Convert.ToDouble(SizeH1);
+                double l1 = Convert.ToDouble(Sizel1);
+
+
+                bool IsHDominant = ((new double[] { b, H, H1, l1 }.Max() == H) && (H - (b + H1) > 0));
+                bool IsbBiggerThenl1 = (b > l1);
+                
+
+
+                return (IsHDominant && IsbBiggerThenl1);
+            }
+            catch
             {
                 return false;
             }
-            return true;
         }
     }
 }

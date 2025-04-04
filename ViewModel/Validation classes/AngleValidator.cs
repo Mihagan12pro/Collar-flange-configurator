@@ -14,17 +14,17 @@ namespace Collar_flange_configurator.ViewModel.Validation_classes
 
         public override bool CheckValidation()
         {
-            if (!double.TryParse(Convert.ToString(Angle), out double d))
+            try
             {
-                return false;
-            }
-           
+                double angle = Convert.ToDouble(Angle);
 
-            if (!(d < Max && d > Min))
+                return (angle < Max && angle > Min);
+            }
+
+            catch
             {
                 return false;
             }
-            return true;
         }
 
         public AngleValidator(double min,double max)

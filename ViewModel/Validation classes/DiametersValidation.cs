@@ -29,14 +29,9 @@ namespace Collar_flange_configurator.ViewModel.Validation_classes
 
         public override bool CheckValidation()
         {
-            if (SizeD == null || SizeD1 == null || SizeD2 == null || Sized1 == null || SizeDm == null || SizeDn == null || SizeR1 == null || CountOfn == null || Sized == null)
+            try
             {
-                return false;
-            }
-            if (SizeD.Length == 0  || SizeD1.Length == 0 || SizeD2.Length == 0 || Sized1.Length == 0 && SizeDm.Length == 0 || SizeDn.Length == 0 || SizeR1.Length == 0 || CountOfn.Length == 0  || Sized.Length == 0)
-            {
-                return false;
-            }
+
                 double D = Convert.ToDouble(SizeD);
 
                 double D1 = Convert.ToDouble(SizeD1);
@@ -56,23 +51,13 @@ namespace Collar_flange_configurator.ViewModel.Validation_classes
                 double d = Convert.ToDouble(Sized);
 
 
-                double []parametres = new double[8] { D, D1, D2, d1, Dm, Dn, R1, d };
-                Array.Sort(parametres);
+                bool IsDBiggest = (new double[] { D, D1, D2, d1, Dm, Dn, R1, d }.Max() == D);
 
+                bool IsD2Valid = (0.5 * (D1 - d) >= 0.5 * D2 && 0.5 * D2 > d1 * 0.5);
 
-                if ((parametres.Reverse().ToArray())[0] != D || 0.5*(D1 - d)<0.5*D2)
-                {
-                    return false;
-                }
-
-
-                bool IsDBiggest = ((parametres.Reverse().ToArray())[0] == D);
-            
-                bool IsD2Valid = (0.5 * (D1 - d) >= 0.5 * D2 && 0.5*D2 > d1*0.5);
-
-                bool IsDmDnAnddValid = 
+                bool IsDmDnAnddValid =
                 (
-                        new double[3] {Dm,Dn,d1}.Max() == Dm 
+                        new double[3] { Dm, Dn, d1 }.Max() == Dm
                         &&
                         new double[3] { Dm, Dn, d1 }.Min() == d1
                         &&
@@ -83,10 +68,15 @@ namespace Collar_flange_configurator.ViewModel.Validation_classes
 
                 bool AreAllBiggerThanZero = (D > 0 && D1 > 0 && D2 > 0 && d1 > 0 && Dm > 0 && Dn > 0 && R1 > 0 && n > 0 && d > 0);
 
-                bool IsR1Valid = (R1 <= Dm*0.5);
+                bool IsR1Valid = (R1 <= Dm * 0.5);
 
 
                 return (IsDBiggest && IsD2Valid && IsDmDnAnddValid && AreCountOfHolesOptimal && AreAllBiggerThanZero && IsR1Valid);
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }
