@@ -68,14 +68,9 @@ namespace Collar_flange_configurator.WPF_override.TextBoxOverride
 
             ContextMenu = null;
 
-            GiveFeedback += NumericBox_GiveFeedback;
-
             CommandBindings.Add(new CommandBinding(ApplicationCommands.Paste, (sender, e) => { }));
         }
 
-        private void NumericBox_GiveFeedback(object sender, GiveFeedbackEventArgs e)
-        {
-            var a = 1;
-        }
+       
     }
 }

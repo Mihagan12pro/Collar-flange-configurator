@@ -1,4 +1,4 @@
-﻿using Teigha.Runtime;
+﻿//using Teigha.Runtime;
 using System.Globalization;
 using System.Reflection.Metadata;
 using HostMgd.ApplicationServices;
@@ -8,13 +8,14 @@ using System.Windows;
 using System.IO;
 using System.Data.SQLite;
 using System.Reflection;
+using Multicad.Runtime;
 namespace Collar_flange_configurator
 {
     internal class Command
     {
         public static readonly string AssembleLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
-        [CommandMethod("Collar_flange")]
+        [CommandMethod("Collar_flange", CommandFlags.NoCheck | CommandFlags.NoPrefix)]
         public void CreateMainDialog()
         {
             CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo("en-US");

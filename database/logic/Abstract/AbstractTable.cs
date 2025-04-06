@@ -7,7 +7,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-using Teigha.DatabaseServices;
+//using Teigha.DatabaseServices;
 
 namespace Collar_flange_configurator.database.logic.Abstract
 {

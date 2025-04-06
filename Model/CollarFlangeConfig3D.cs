@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Teigha.DatabaseServices;
+//using Teigha.DatabaseServices;
 
 namespace Collar_flange_configurator.Model
 {
@@ -30,7 +30,7 @@ namespace Collar_flange_configurator.Model
 
         protected CircularPatternFeature _circularArray;
 
-
+        protected ChamferFeature _chamfer1;
 
         public CollarFlangeConfig3D(string Dm, string Dn, string d1, string b, string H, string H1, string D, string D1, string d, string n, string l1, string R1, string f, string D2)
         {
@@ -69,28 +69,36 @@ namespace Collar_flange_configurator.Model
 
                 _sketch1 = _solid.AddPlanarSketch();
 
-                Plane3d xoy = new Plane3d(Plane3d.XYPlane); 
+                Plane3d xoy = new Plane3d(Plane3d.XYPlane);
+
+                //Polyline3d baseCircuit = new Teigha.DatabaseServices.Polyline3d();                
+
+                Polyline3d baseCircuit = new Polyline3d
+                (
+                    new List<Point3d>
+                    {
+                         new Point3d(d1 / 2, 0, 0),//0
+                         new Point3d(D2 / 2, 0, 0),//1
+                         new Point3d(D2 / 2, l1, 0),//2   
+                         new Point3d(D / 2, l1, 0),//3   
+                         new Point3d(D / 2, b,0),//4
+                         new Point3d(Dm / 2, b,0),//5   
+                         new Point3d(Dn / 2,H - H1,0),//6    
+                         new Point3d(Dn / 2, H,0),//7    
+                         new Point3d(d1 / 2,H,0),//8    
+                         new Point3d(-1 + d1 / 2,H,0),//9    
+                         new Point3d(-1 + d1 / 2,0,0),//10    
+                         new Point3d(d1 / 2, 0, 0)//11       
+                    }
+                );
+
+                double l = 0.5 * (Dn - d1);
+
+                baseCircuit.MakeChamferAtVertex(7,l,30);
 
                 DbPolyline dbBaseCircuit = new DbPolyline()
                 {
-                    Polyline = new Multicad.Geometry.Polyline3d
-                    (
-                        new List<Point3d>
-                        {
-                            new Point3d(d1 / 2, 0, 0),
-                            new Point3d(D2 / 2, 0, 0),
-                            new Point3d(D2 / 2, l1, 0),
-                            new Point3d(D / 2, l1, 0),
-                            new Point3d(D / 2, b,0),
-                            new Point3d(Dm / 2, b,0),
-                            new Point3d(Dn / 2,H - H1,0),
-                            new Point3d(Dn / 2, H,0),
-                            new Point3d(d1 / 2,H,0),
-                            new Point3d(-1 + d1 / 2,H,0),
-                            new Point3d(-1 + d1 / 2,0,0),
-                            new Point3d(d1 / 2, 0, 0)
-                        }
-                    )
+                    Polyline = baseCircuit
                 };
 
                 dbBaseCircuit.DbEntity.AddToCurrentDocument();
@@ -125,6 +133,21 @@ namespace Collar_flange_configurator.Model
                 McObjectManager.UpdateAll();
 
                 _sketch1.DbEntity.AddToCurrentDocument();
+
+
+                
+
+                //McObjectId id = _solid.GetPartContents(true)[3];
+
+
+                //_solid.AddChamferFeature(new List<McObjectId> { id },ChamferType.DistanceAndAngle,ChamferSetbackType.Flat,1,1, 0.785398);
+                //_chamfer1 = new ChamferFeature()
+                //{
+                //    Angle = f,
+                //    Distance = l1,
+                //    ChamferType = ChamferType.DistanceAndAngle,
+                    
+                //};
             }
         }
 

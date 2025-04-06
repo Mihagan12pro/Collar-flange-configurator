@@ -9,7 +9,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-using Teigha.GraphicsInterface;
+//using Teigha.GraphicsInterface;
 
 namespace Collar_flange_configurator.database.logic.sizes.tables
 {
