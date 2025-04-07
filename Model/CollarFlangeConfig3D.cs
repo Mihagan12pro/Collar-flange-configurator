@@ -75,7 +75,7 @@ namespace Collar_flange_configurator.Model
                 Plane3d xoy = new Plane3d(Plane3d.XYPlane);
 
                 //Polyline3d baseCircuit = new Teigha.DatabaseServices.Polyline3d();                
-
+                
                 Polyline3d baseCircuit = new Polyline3d
                 (
                     new List<Point3d>
@@ -98,6 +98,8 @@ namespace Collar_flange_configurator.Model
                 double l = 0.5 * (Dn - d1);
 
                 baseCircuit.MakeChamferAtVertex(7,l,30);
+                baseCircuit.MakeChamferAtVertex(2,l1,f);
+                
 
                 //baseCircuit.Vertices.MakeChamferAtVertex(2,l1);
 
@@ -140,33 +142,7 @@ namespace Collar_flange_configurator.Model
                 _sketch1.DbEntity.AddToCurrentDocument();
 
 
-                List<McObjectId> ids = new List<McObjectId>();
-                ids.Add(_revolve1.GetFEV(EntityGeomType.kVertex)[2]);
-                //for(int i = 0; i < _revolve1.GetFEV(EntityGeomType.kVertex).Count;i++)
-                //{
-                //    McObjectId id = _revolve1
-                //    ids.Add(i);
-                //}
-
-                _solid.AddFilletFeature(ids,R1);
-
-                //List<McObjectId> ids = _revolve1.GetFEV(EntityGeomType.kVertex);
-                //_solid.AddChamferFeature(ids, 5);
-
-
-                //_solid.AddChamferFeature();
-
-                //McObjectId id = _solid.GetPartContents(true)[3];
-
-
-                //_solid.AddChamferFeature(new List<McObjectId> { id },ChamferType.DistanceAndAngle,ChamferSetbackType.Flat,1,1, 0.785398);
-                //_chamfer1 = new ChamferFeature()
-                //{
-                //    Angle = f,
-                //    Distance = l1,
-                //    ChamferType = ChamferType.DistanceAndAngle,
-
-                //};
+                _solid.AddFilletFeature(new List<McObjectId> { _revolve1.GetFEV(EntityGeomType.kVertex)[2] },R1);
             }
         }
 
