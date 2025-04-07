@@ -4,11 +4,13 @@ using Multicad.DatabaseServices;
 using Multicad.DatabaseServices.StandardObjects;
 using Multicad.Geometry;
 using Multicad.Mc3D;
+using Multicad.Wpf.Controls.Primitives;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Automation.Text;
 //using Teigha.DatabaseServices;
 
 namespace Collar_flange_configurator.Model
@@ -31,6 +33,7 @@ namespace Collar_flange_configurator.Model
         protected CircularPatternFeature _circularArray;
 
         protected ChamferFeature _chamfer1;
+
 
         public CollarFlangeConfig3D(string Dm, string Dn, string d1, string b, string H, string H1, string D, string D1, string d, string n, string l1, string R1, string f, string D2)
         {
@@ -96,6 +99,8 @@ namespace Collar_flange_configurator.Model
 
                 baseCircuit.MakeChamferAtVertex(7,l,30);
 
+                //baseCircuit.Vertices.MakeChamferAtVertex(2,l1);
+
                 DbPolyline dbBaseCircuit = new DbPolyline()
                 {
                     Polyline = baseCircuit
@@ -135,7 +140,21 @@ namespace Collar_flange_configurator.Model
                 _sketch1.DbEntity.AddToCurrentDocument();
 
 
-                
+                List<McObjectId> ids = new List<McObjectId>();
+                ids.Add(_revolve1.GetFEV(EntityGeomType.kVertex)[2]);
+                //for(int i = 0; i < _revolve1.GetFEV(EntityGeomType.kVertex).Count;i++)
+                //{
+                //    McObjectId id = _revolve1
+                //    ids.Add(i);
+                //}
+
+                _solid.AddFilletFeature(ids,R1);
+
+                //List<McObjectId> ids = _revolve1.GetFEV(EntityGeomType.kVertex);
+                //_solid.AddChamferFeature(ids, 5);
+
+
+                //_solid.AddChamferFeature();
 
                 //McObjectId id = _solid.GetPartContents(true)[3];
 
@@ -146,7 +165,7 @@ namespace Collar_flange_configurator.Model
                 //    Angle = f,
                 //    Distance = l1,
                 //    ChamferType = ChamferType.DistanceAndAngle,
-                    
+
                 //};
             }
         }

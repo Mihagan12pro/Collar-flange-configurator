@@ -2,6 +2,7 @@
 using Collar_flange_configurator.ViewModel;
 using System.Data.SQLite;
 using System.Windows.Controls;
+using Multicad.Wpf;
 namespace Collar_flange_configurator
 {
     /// <summary>
@@ -10,6 +11,7 @@ namespace Collar_flange_configurator
     public partial class MainDialog : Window
     {
         public static MainDialog Dialog { get; private set; }
+      
         public MainDialog()
         {
             DataContext = new CollarFlangeViewModel();
@@ -18,6 +20,7 @@ namespace Collar_flange_configurator
 
             Closing += MainDialog_Closing;
 
+           
 
             Dialog = this;  
         }

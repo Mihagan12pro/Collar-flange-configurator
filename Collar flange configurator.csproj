@@ -50,10 +50,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="hostdbmgd">
-      <HintPath>dependencies\hostdbmgd.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="hostmgd">
       <HintPath>dependencies\hostmgd.dll</HintPath>
       <Private>False</Private>
@@ -70,18 +66,9 @@
       <HintPath>..\..\Program Files\Nanosoft\nanoCAD x64 25.0\bin_nPlat\mapimgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="dependencies\imapimgd.dll">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </None>
-    <None Update="dependencies\mapibasetypes.dll">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </None>
-    <None Update="dependencies\mapimgd.dll">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </None>
+    <Reference Include="mapiwpf">
+      <HintPath>dependencies\mapiwpf.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>
