@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Collar_flange_configurator.ViewModel.Validation_classes
 {
-    class AngleValidator : ParamValidator
+    class AngleValidator : ParameterValidator
     {
         public readonly double Max, Min;
 

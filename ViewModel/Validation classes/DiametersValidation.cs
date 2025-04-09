@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Collar_flange_configurator.ViewModel.Validation_classes
 {
-    class DiametersValidation : ParamValidator
+    class DiametersValidation : ParameterValidator
     {
         public string SizeD { get; set; }
 

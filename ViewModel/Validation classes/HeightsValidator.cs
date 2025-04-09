@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Collar_flange_configurator.ViewModel.Validation_classes.Parameters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,36 +7,54 @@ using System.Threading.Tasks;
 
 namespace Collar_flange_configurator.ViewModel.Validation_classes
 {
-    class HeightsValidator : ParamValidator
+    class HeightsValidator : ParameterValidator
     {
-        public string Sizeb { get; set; }
-        public string SizeH { get; set; }
-        public string SizeH1 { get; set; }
-        public string Sizel1 { get; set; }
+        //public string Sizeb { get; set; }
+        //public string SizeH { get; set; }
+        //public string SizeH1 { get; set; }
+        //public string Sizel1 { get; set; }
+
+
+
+
+        public MajorLinearParameter ParameterH = new MajorLinearParameter("H");
+
+        public LinearParameter Parameter_b = new LinearParameter("b");
+        
+        public LinearParameter ParameterH1 = new LinearParameter("H1");
+
+        public LinearParameter Parameter_l1 = new LinearParameter("l1");
+
+
+
 
         public override bool CheckValidation()
         {
-            try
+            if (Parameter_b.PrimaryValidation() && Parameter_l1.PrimaryValidation() && ParameterH.PrimaryValidation() && ParameterH1.PrimaryValidation())
             {
 
-
-                double b = Convert.ToDouble(Sizeb);
-                double H = Convert.ToDouble(SizeH);
-                double H1 = Convert.ToDouble(SizeH1);
-                double l1 = Convert.ToDouble(Sizel1);
-
-
-                bool IsHDominant = ((new double[] { b, H, H1, l1 }.Max() == H) && (H - (b + H1) > 0));
-                bool IsbBiggerThenl1 = (b > l1);
-                
-
-
-                return (IsHDominant && IsbBiggerThenl1);
+                return ParameterH.SecondaryValidation() && 
+                           Parameter_l1.SecondaryValidation() && 
+                               Parameter_b.SecondaryValidation() &&
+                                   ParameterH1.SecondaryValidation() &&
+                                        (Convert.ToDouble(ParameterH.Value) - (Convert.ToDouble(Parameter_b.Value) + Convert.ToDouble(ParameterH1.Value)) > 0);
             }
-            catch
-            {
-                return false;
-            }
+            return false;
+        }
+
+
+
+
+
+
+
+        public HeightsValidator()
+        {
+            Parameter_b.Dominant = ParameterH;
+            Parameter_b.Oppresed = Parameter_l1;
+
+            Parameter_l1.Dominant = Parameter_b;
+            ParameterH1.Dominant = ParameterH;
         }
     }
 }
