@@ -104,8 +104,7 @@ namespace Collar_flange_configurator.ViewModel.Validation_classes
 
             if(Parameter_n.PrimaryValidation())
             {
-                Parameter_n.SetMax(Math.PI * Convert.ToDouble(ParameterR1.Value) / Convert.ToDouble(ParameterDm.Value) * 0.5);
-
+                Parameter_n.SetMax(Math.Floor(Math.PI * Convert.ToDouble(ParameterD2.Value) / Convert.ToDouble(Parameter_d.Value) * 0.5));
 
                 return Parameter_n.SecondaryValidation();
             }

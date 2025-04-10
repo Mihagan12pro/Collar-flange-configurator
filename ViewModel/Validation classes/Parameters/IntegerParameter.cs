@@ -16,22 +16,15 @@ namespace Collar_flange_configurator.ViewModel.Validation_classes.Parameters
 
         public override bool SecondaryValidation()
         {
-
             return _rule.Validate(Value,_cultureInfo).IsValid;
         }
 
 
 
-        public void SetMax(int max)
+
+        public void SetMax(object max)
         {
             _rule.MaxValue = max;
-        }
-
-
-
-        public void SetMax(double max)
-        {
-            _rule.MaxValue = Math.Floor(max);
         }
 
 
