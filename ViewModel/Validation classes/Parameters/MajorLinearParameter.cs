@@ -8,7 +8,7 @@ namespace Collar_flange_configurator.ViewModel.Validation_classes.Parameters
 {
     class MajorLinearParameter : LinearParameter
     {
-        public HashSet<LinearParameter> OppressedParameters = new HashSet<LinearParameter>();
+        public LinearParameter[] OppressedParameters;
         public override bool SecondaryValidation()
         {
             foreach (LinearParameter oppressedItem in OppressedParameters)
@@ -25,10 +25,12 @@ namespace Collar_flange_configurator.ViewModel.Validation_classes.Parameters
 
 
 
-        public MajorLinearParameter(string ID) : base(ID)
+        public MajorLinearParameter(string ID,int sizeOfArray) : base(ID)
         {
             _validationRule.MaxIsStrict = false;
             _validationRule.MaxValue = Value;
+
+            OppressedParameters = new LinearParameter[sizeOfArray];
         }
     }
 }

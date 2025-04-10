@@ -33,7 +33,7 @@ namespace Collar_flange_configurator.ViewModel.Validation_classes
 
         public IntegerParameter Parameter_n = new IntegerParameter("n",2);
 
-        public MajorLinearParameter ParmeterD = new MajorLinearParameter("D");
+        public MajorLinearParameter ParmeterD = new MajorLinearParameter("D",7);
 
         public LinearParameter ParameterD1 = new LinearParameter("D1");
 
