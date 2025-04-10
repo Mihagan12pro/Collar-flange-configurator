@@ -41,14 +41,10 @@ namespace Collar_flange_configurator.WPF_override.TextBoxOverride
                 new FrameworkPropertyMetadata(true, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, new PropertyChangedCallback(IsTextValidChanged))
         );
 
-        //private void NumericBox_TextChanged(object sender, TextChangedEventArgs e)
-        //{
-        //     if (Text.Contains(','))
-        //     {
-        //        Text = Text.Replace(",",".");
-        //        CaretIndex = Text.Length;
-        //     }
-        //}
+
+
+
+
         private void NumericBox_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
            if (!IsKeyLegal(e.Key))
@@ -59,7 +55,10 @@ namespace Collar_flange_configurator.WPF_override.TextBoxOverride
 
 
         protected abstract bool IsKeyLegal(Key key);
-        
+       
+
+
+
         public NumericBox()
         {
             KeyDown += NumericBox_KeyDown;
