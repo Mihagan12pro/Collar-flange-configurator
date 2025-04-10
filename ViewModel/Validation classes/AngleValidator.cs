@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Collar_flange_configurator.ViewModel.Validation_classes.Parameters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,29 +9,27 @@ namespace Collar_flange_configurator.ViewModel.Validation_classes
 {
     class AngleValidator : ParameterValidator
     {
-        public readonly double Max, Min;
+        public AngleParameter AngleParameter;
 
-        public object Angle { get; set; }
+
+
+
 
         public override bool CheckValidation()
         {
-            try
+            if (AngleParameter.PrimaryValidation())
             {
-                double angle = Convert.ToDouble(Angle);
-
-                return (angle < Max && angle > Min);
+                return AngleParameter.SecondaryValidation();
             }
-
-            catch
-            {
-                return false;
-            }
+            return false;
         }
 
-        public AngleValidator(double min,double max)
+
+
+
+        public AngleValidator(string ID,double min,double max)
         {
-            Min = min;
-            Max = max;
+            AngleParameter = new AngleParameter(ID,min,max);
         }
     }
 }

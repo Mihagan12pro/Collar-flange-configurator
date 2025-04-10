@@ -9,14 +9,6 @@ namespace Collar_flange_configurator.ViewModel.Validation_classes
 {
     class HeightsValidator : ParameterValidator
     {
-        //public string Sizeb { get; set; }
-        //public string SizeH { get; set; }
-        //public string SizeH1 { get; set; }
-        //public string Sizel1 { get; set; }
-
-
-
-
         public MajorLinearParameter ParameterH = new MajorLinearParameter("H");
 
         public LinearParameter Parameter_b = new LinearParameter("b");

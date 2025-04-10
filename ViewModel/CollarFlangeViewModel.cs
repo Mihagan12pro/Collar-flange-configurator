@@ -14,7 +14,7 @@ namespace Collar_flange_configurator.ViewModel
 {
     internal class CollarFlangeViewModel : INotifyPropertyChanged
     {
-        private readonly AngleValidator fAngleValidation = new AngleValidator(0,90);
+        private readonly AngleValidator fAngleValidation = new AngleValidator("f",0,90);
 
         private readonly HeightsValidator heightsValidation = new HeightsValidator();
 
@@ -454,7 +454,7 @@ namespace Collar_flange_configurator.ViewModel
             {
                 valueOffSize = value;
 
-                fAngleValidation.Angle = value;
+                fAngleValidation.AngleParameter.Value = valueOffSize;
                 IsfValid = fAngleValidation.CheckValidation();
 
                 OnPropertyChanged();

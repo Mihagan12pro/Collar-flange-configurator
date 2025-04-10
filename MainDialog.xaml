@@ -22,9 +22,12 @@
 
                 <StackPanel Name="MainTabItemStackPanel"  Orientation="Vertical"  Style="{StaticResource MajorStackPanel}">
 
+
                     <Border BorderBrush="Black" BorderThickness="2">
                         <Image Name="MainTabImage" Source="Images/Other/Intro(config).png" Stretch="Fill" Height="350" Width="587"   ></Image>
                     </Border>
+
+
 
                     <StackPanel Orientation="Vertical" Margin="0 5">
                         <GroupBox Header="Выбор способа создания">
