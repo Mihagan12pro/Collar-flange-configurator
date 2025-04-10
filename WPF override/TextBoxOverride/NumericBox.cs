@@ -69,6 +69,8 @@ namespace Collar_flange_configurator.WPF_override.TextBoxOverride
             ContextMenu = null;
 
             CommandBindings.Add(new CommandBinding(ApplicationCommands.Paste, (sender, e) => { }));
+            CommandBindings.Add(new CommandBinding(ApplicationCommands.Redo,(sender, e) => { }));
+            CommandBindings.Add(new CommandBinding(ApplicationCommands.Undo, (sender, e) => { }));
         }
 
        
