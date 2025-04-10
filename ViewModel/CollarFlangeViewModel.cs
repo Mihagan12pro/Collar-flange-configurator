@@ -398,6 +398,7 @@ namespace Collar_flange_configurator.ViewModel
                 valueOfnSize = value;
 
                 //diametersValidation.CountOfn = value;
+                diametersValidation.Parameter_n.Value = value;
                 AreFlangeDiametersValid = diametersValidation.CheckValidation();
 
                 OnPropertyChanged();

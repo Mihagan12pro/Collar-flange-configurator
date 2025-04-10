@@ -24,7 +24,7 @@ namespace Collar_flange_configurator.ViewModel.Validation_classes
         {
             if (Parameter_b.PrimaryValidation() && Parameter_l1.PrimaryValidation() && ParameterH.PrimaryValidation() && ParameterH1.PrimaryValidation())
             {
-
+                ParameterH.OppressedParameters = new HashSet<LinearParameter>{ Parameter_b,Parameter_l1,ParameterH1};
                 return ParameterH.SecondaryValidation() && 
                            Parameter_l1.SecondaryValidation() && 
                                Parameter_b.SecondaryValidation() &&
